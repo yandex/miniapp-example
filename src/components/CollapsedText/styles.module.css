@@ -1,0 +1,22 @@
+.short {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hidden {
+    position: absolute;
+
+    display: none;
+
+    pointer-events: none;
+}
+
+.button {
+    height: 28px;
+
+    font-size: 13px;
+    line-height: 28px;
+
+    color: #04b;
+}

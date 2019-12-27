@@ -1,0 +1,99 @@
+{
+    "event": {
+        "id": "event-concert-id7",
+        "title": "Kremlin",
+        "argument": null,
+        "contentRating": "16+",
+        "description": "Камерный оркестр Kremlin.\n\nХудожественный руководитель - Миша Рахлевский\n\nСеренады для струнных Эльгара, Вирена и Дворжака.\n\nПрограмма вечера: сбор гостей, чай-кофе за полчаса до начала концерта. Концерт. После концерта - небольшой фуршет.",
+        "tags": [
+            {
+                "name": "Концерт",
+                "code": "concert"
+            },
+            {
+                "name": "Классическая музыка",
+                "code": "classical_music"
+            }
+        ],
+        "image": {
+            "bgColor": "#2e6f6f",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s840x840",
+                "width": 840,
+                "height": 506
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#2e6f6f",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/960x690_noncrop",
+                    "width": 900,
+                    "height": 506
+                }
+            }
+        ],
+        "type": {
+            "name": "Концерт"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 50000,
+                    "max": 200000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "id",
+            "title": "Exposed",
+            "address": "ул. Шаболовка, 31г",
+            "type": {
+                "name": "Выставочный зал"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Октябрьская",
+                    "colors": ["#ff7f00", "#7f0000"]
+                },
+                {
+                    "name": "Шаболовская",
+                    "colors": ["#ff7f00"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.61093399999999,
+                "latitude": 55.72108199999999
+            }
+        },
+        "placePreview": "Exposed",
+        "preview": {
+            "text": "Декабрь — май",
+            "singleDate": null
+        }
+    }
+}

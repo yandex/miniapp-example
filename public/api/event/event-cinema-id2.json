@@ -1,0 +1,356 @@
+{
+    "event": {
+        "id": "event-cinema-id2",
+        "title": "Полицейский с Рублёвки. Новогодний беспредел 2",
+        "argument": "Сиквел детективной комедии с Сергеем Буруновым — без Александра Петрова",
+        "contentRating": "12+",
+        "description": "Близится новый год, и сотрудники отдела полиции Барвихи планируют праздновать его за городом в тёплой компании старых друзей и коллег. Но непредвиденные обстоятельства в лице преступников, ограбивших крупное ювелирное предприятие, ставят праздник под угрозу. Смогут ли рублёвские полицейские вернуть украденные драгоценные камни стоимостью миллионы долларов и спасти свой праздник до того, как часы пробьют полночь?",
+        "tags": [
+            {
+                "name": "Комедия",
+                "code": "comedy"
+            },
+            {
+                "name": "Кино",
+                "code": "cinema"
+            }
+        ],
+        "image": {
+            "bgColor": "#3b3835",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/28638/e76bdfb130ceb6601f6251645812e89a/s840x840",
+                "width": 840,
+                "height": 840
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/e76bdfb130ceb6601f6251645812e89a/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/e76bdfb130ceb6601f6251645812e89a/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/e76bdfb130ceb6601f6251645812e89a/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/e76bdfb130ceb6601f6251645812e89a/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#8c3130",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/9aa97f840aaa62d09affff1064b11a18/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/9aa97f840aaa62d09affff1064b11a18/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/9aa97f840aaa62d09affff1064b11a18/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/9aa97f840aaa62d09affff1064b11a18/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#8c3130",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/2b0ad45cd04be62cdb52f75ba13e7f0e/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/2b0ad45cd04be62cdb52f75ba13e7f0e/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/2b0ad45cd04be62cdb52f75ba13e7f0e/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/28638/2b0ad45cd04be62cdb52f75ba13e7f0e/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/f1a9afd6dde304cad7e19be2d2c4b106/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/f1a9afd6dde304cad7e19be2d2c4b106/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/f1a9afd6dde304cad7e19be2d2c4b106/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/f1a9afd6dde304cad7e19be2d2c4b106/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#8c3130",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/cebe966e66d400ac519bbcbdb2b04f6e/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/cebe966e66d400ac519bbcbdb2b04f6e/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/cebe966e66d400ac519bbcbdb2b04f6e/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/cebe966e66d400ac519bbcbdb2b04f6e/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#8c3130",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/f8823cefa122873ddb92ff410b651f0c/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/f8823cefa122873ddb92ff410b651f0c/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/f8823cefa122873ddb92ff410b651f0c/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/f8823cefa122873ddb92ff410b651f0c/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#862636",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/37252689add0133b7736632edd859c21/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/37252689add0133b7736632edd859c21/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/37252689add0133b7736632edd859c21/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/37252689add0133b7736632edd859c21/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/b5a911cd6715abee4a9445fefec52101/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/b5a911cd6715abee4a9445fefec52101/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/b5a911cd6715abee4a9445fefec52101/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/b5a911cd6715abee4a9445fefec52101/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#384e78",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/27d8a03cdcfdf41fd7f07d7959c6ed97/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/27d8a03cdcfdf41fd7f07d7959c6ed97/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/27d8a03cdcfdf41fd7f07d7959c6ed97/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/27d8a03cdcfdf41fd7f07d7959c6ed97/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#8c3130",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/36842/1d87c2232cb323e1718192c6a1b24e44/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/36842/1d87c2232cb323e1718192c6a1b24e44/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/36842/1d87c2232cb323e1718192c6a1b24e44/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/36842/1d87c2232cb323e1718192c6a1b24e44/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/fbbbd912385e310848e3a28542cc2da6/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/fbbbd912385e310848e3a28542cc2da6/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/fbbbd912385e310848e3a28542cc2da6/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/fbbbd912385e310848e3a28542cc2da6/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#862636",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/e221549320f415071174e57666e6f8e2/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/e221549320f415071174e57666e6f8e2/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/e221549320f415071174e57666e6f8e2/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/e221549320f415071174e57666e6f8e2/960x690_noncrop",
+                    "width": 900,
+                    "height": 690
+                }
+            }
+        ],
+        "type": {
+            "name": "Кино"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 7000,
+                    "max": 1000000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "placeid",
+            "title": "CGV Ангара",
+            "address": "Чонгарский бульв., 7",
+            "type": {
+                "name": "Кинотеатр"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Севастопольская",
+                    "colors": ["#a2a5b4"]
+                },
+                {
+                    "name": "Нахимовский проспект",
+                    "colors": ["#a2a5b4"]
+                },
+                {
+                    "name": "Чертановская",
+                    "colors": ["#a2a5b4"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.612389,
+                "latitude": 55.651379
+            }
+        },
+        "placePreview": "в 135 кинотеатрах",
+        "preview": {
+            "text": null,
+            "singleDate": null
+        }
+    }
+}

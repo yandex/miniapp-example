@@ -1,0 +1,27 @@
+.title {
+    margin: 26px 0 0;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+
+    color: #1a1a1a;
+}
+
+.events {
+    margin: 10px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.event {
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.link {
+    text-decoration: none;
+
+    color: #000;
+}

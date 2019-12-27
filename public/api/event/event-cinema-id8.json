@@ -1,0 +1,172 @@
+{
+    "event": {
+        "id": "event-cinema-id8",
+        "title": "Чёрное Рождество",
+        "argument": "Маньяки преследуют студенток во время рождественских каникул",
+        "contentRating": "18+",
+        "description": "Незнакомец преследует группу студенток во время рождественских каникул.",
+        "tags": [
+            {
+                "name": "Триллер",
+                "code": "thriller"
+            },
+            {
+                "name": "Детектив",
+                "code": "detective"
+            },
+            {
+                "name": "Ужасы",
+                "code": "horror"
+            },
+            {
+                "name": "Кино",
+                "code": "cinema"
+            }
+        ],
+        "image": {
+            "bgColor": "#3b3835",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/34116/f692677db8356c4542caf1f499b0b333/s840x840",
+                "width": 840,
+                "height": 840
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/f692677db8356c4542caf1f499b0b333/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/f692677db8356c4542caf1f499b0b333/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/f692677db8356c4542caf1f499b0b333/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/f692677db8356c4542caf1f499b0b333/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/d36de57f6656add3b8f7abbccbd91db0/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/d36de57f6656add3b8f7abbccbd91db0/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/d36de57f6656add3b8f7abbccbd91db0/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/d36de57f6656add3b8f7abbccbd91db0/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#262424",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/3a5a2ed0061c8459dd096c1d14cef0ba/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/3a5a2ed0061c8459dd096c1d14cef0ba/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/3a5a2ed0061c8459dd096c1d14cef0ba/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/3a5a2ed0061c8459dd096c1d14cef0ba/960x690_noncrop",
+                    "width": 947,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#4b4b75",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/fd8826b5679e3f1947865f80496e6d56/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/fd8826b5679e3f1947865f80496e6d56/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/fd8826b5679e3f1947865f80496e6d56/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/fd8826b5679e3f1947865f80496e6d56/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            }
+        ],
+        "type": {
+            "name": "Кино"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 10000,
+                    "max": 250000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "placeid",
+            "title": "CGV Саларис",
+            "address": "23-й км Киевского ш. (п. Московский), 1, ТРЦ «Саларис»",
+            "type": {
+                "name": "Кинотеатр"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Саларьево",
+                    "colors": ["#cc0000"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.422027,
+                "latitude": 55.623788
+            }
+        },
+        "placePreview": "в 102 кинотеатрах",
+        "preview": {
+            "text": null,
+            "singleDate": null
+        }
+    }
+}

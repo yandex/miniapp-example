@@ -1,0 +1,68 @@
+{
+    "event": {
+        "id": "event-concert-id5",
+        "title": "Хор Московской консерватории",
+        "argument": null,
+        "contentRating": "18+",
+        "description": " Камерный хор, созданный по инициативе профессора А. С. Соколова в декабре 1994 года дирижёром Борисом Тевлиным.",
+        "tags": [
+            {
+                "name": "Концерт",
+                "code": "concert"
+            }
+        ],
+        "image": null,
+        "images": [],
+        "type": {
+            "name": "Концерт"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 10000,
+                    "max": 10000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "id",
+            "title": "Консерватория им. Чайковского",
+            "address": "ул. Большая Никитская, 13/6",
+            "type": {
+                "name": "Концертный зал"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Арбатская",
+                    "colors": ["#003399"]
+                },
+                {
+                    "name": "Библиотека им. Ленина",
+                    "colors": ["#cc0000"]
+                },
+                {
+                    "name": "Охотный Ряд",
+                    "colors": ["#cc0000"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.60585545962319,
+                "latitude": 55.75631872698533
+            }
+        },
+        "placePreview": "Консерватория им. Чайковского",
+        "preview": {
+            "text": "25 и 27 декабря",
+            "singleDate": null
+        }
+    }
+}

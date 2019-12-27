@@ -1,0 +1,16 @@
+.block {
+    display: flex;
+    overflow: hidden;
+
+    padding: 23px 14px 4px;
+}
+
+.filter {
+    flex: none;
+
+    width: 89px;
+    height: 40px;
+    margin-right: 8px;
+
+    border-radius: 20px;
+}

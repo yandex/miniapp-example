@@ -1,0 +1,81 @@
+.modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 1px;
+    left: 0;
+
+    color: #fff;
+    background: #000;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+
+    height: 100%;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.image {
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100%;
+    margin-left: 20px;
+    scroll-snap-align: center;
+}
+
+.image img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.image:first-child {
+    margin-left: 0;
+}
+
+.close {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: calc(16px + 20px * 2);
+    height: calc(14px + 22px * 2);
+    padding: 20px;
+
+    font-size: 0;
+
+    color: #fff;
+    border: none;
+    outline: none;
+    background: url('./back.svg') center center no-repeat;
+    background-size: 16px 14px;
+}
+
+.counter {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    font-size: 14px;
+    line-height: 56px;
+    text-align: center;
+
+    background: rgba(0, 0, 0, .2);
+}

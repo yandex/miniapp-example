@@ -1,0 +1,75 @@
+{
+    "event": {
+        "id": "event-concert-id10",
+        "title": "Класс доцента А.В. Анчевской (скрипка)",
+        "argument": null,
+        "contentRating": "18+",
+        "description": null,
+        "tags": [
+            {
+                "name": "Концерт",
+                "code": "concert"
+            },
+            {
+                "name": "Классическая музыка",
+                "code": "classical_music"
+            }
+        ],
+        "image": null,
+        "images": [],
+        "type": {
+            "name": "Концерт"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 10000,
+                    "max": 10000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "id",
+            "title": "Консерватория им. Чайковского",
+            "address": "ул. Большая Никитская, 13/6",
+            "type": {
+                "name": "Концертный зал"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Арбатская",
+                    "colors": ["#003399"]
+                },
+                {
+                    "name": "Библиотека им. Ленина",
+                    "colors": ["#cc0000"]
+                },
+                {
+                    "name": "Охотный Ряд",
+                    "colors": ["#cc0000"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.60585545962319,
+                "latitude": 55.75631872698533
+            }
+        },
+        "placePreview": "Консерватория им. Чайковского",
+        "preview": {
+            "text": "Сегодня 25 декабря, 18:30",
+            "singleDate": {
+                "day": "25",
+                "month": "декабря"
+            }
+        }
+    }
+}

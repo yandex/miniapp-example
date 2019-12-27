@@ -1,0 +1,295 @@
+{
+    "event": {
+        "id": "event-cinema-id4",
+        "title": "Фиксики против кработов",
+        "argument": "Продолжение приключений маленьких человечков, живущих в приборах",
+        "contentRating": "6+",
+        "description": "Фиксики — маленькие добрые человечки, которые живут в машинах и приборах и заботятся о технике. От людей фиксики скрываются: в мире есть всего несколько счастливчиков, которые общаются с ними. В лаборатории профессора Чудакова находится школа фиксиков, о которой знают только мальчик ДимДимыч и его подруга Катя. Но однажды там появляются неуловимые существа. Они шпионят за фиксиками и угрожают их тайне. Кто такие эти странные роботы-кработы, что им нужно и кто стоит за ними? Оказывается, у Чудакова есть давний недоброжелатель, и профессора вызывают на дуэль, чтобы свести старые счёты! Новые друзья — Мега и Альт — придут на помощь нашим фиксикам, и все попадут в невероятный водоворот приключений!",
+        "tags": [
+            {
+                "name": "Приключения",
+                "code": "adventure"
+            },
+            {
+                "name": "Мультфильм",
+                "code": "cartoon"
+            },
+            {
+                "name": "Кино",
+                "code": "cinema"
+            },
+            {
+                "name": "Детям",
+                "code": "kids"
+            }
+        ],
+        "image": {
+            "bgColor": "#862636",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/29882/639fe841a017de0f8864368c04cea745/s840x840",
+                "width": 840,
+                "height": 840
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#862636",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/639fe841a017de0f8864368c04cea745/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/639fe841a017de0f8864368c04cea745/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/639fe841a017de0f8864368c04cea745/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/639fe841a017de0f8864368c04cea745/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#245770",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/9bd2504b0d8155ac9f33873796fcd01c/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/9bd2504b0d8155ac9f33873796fcd01c/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/9bd2504b0d8155ac9f33873796fcd01c/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/9bd2504b0d8155ac9f33873796fcd01c/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#8c3130",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/55ca4b2b1a33d61a00f56037032224a4/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/55ca4b2b1a33d61a00f56037032224a4/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/55ca4b2b1a33d61a00f56037032224a4/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/55ca4b2b1a33d61a00f56037032224a4/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#862636",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/08a817ed9f385ae2822830e02d83cc84/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/08a817ed9f385ae2822830e02d83cc84/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/08a817ed9f385ae2822830e02d83cc84/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/08a817ed9f385ae2822830e02d83cc84/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#384e78",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/52f3be364010f4ab8592da3c2baf5677/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/52f3be364010f4ab8592da3c2baf5677/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/52f3be364010f4ab8592da3c2baf5677/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/52f3be364010f4ab8592da3c2baf5677/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#862636",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/22e761704adc33285b4e3902ae6d99fe/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/22e761704adc33285b4e3902ae6d99fe/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/22e761704adc33285b4e3902ae6d99fe/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/22e761704adc33285b4e3902ae6d99fe/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#366d48",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/419d6a6ee244a894c2f50d809c15ba60/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/419d6a6ee244a894c2f50d809c15ba60/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/419d6a6ee244a894c2f50d809c15ba60/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/419d6a6ee244a894c2f50d809c15ba60/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#245770",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/5084803a9109971f8e4f6b2d6e601506/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/5084803a9109971f8e4f6b2d6e601506/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/5084803a9109971f8e4f6b2d6e601506/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23114/5084803a9109971f8e4f6b2d6e601506/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#245770",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21626/fcfac12a9de8ecdb2b3bc75daf1f2438/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21626/fcfac12a9de8ecdb2b3bc75daf1f2438/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21626/fcfac12a9de8ecdb2b3bc75daf1f2438/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21626/fcfac12a9de8ecdb2b3bc75daf1f2438/960x690_noncrop",
+                    "width": 843,
+                    "height": 690
+                }
+            }
+        ],
+        "type": {
+            "name": "Кино"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 5000,
+                    "max": 800000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "placeid",
+            "title": "Победа",
+            "address": "ул. Абельмановская, 17а",
+            "type": {
+                "name": "Кинотеатр"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Крестьянская Застава",
+                    "colors": ["#99cc33"]
+                },
+                {
+                    "name": "Марксистская",
+                    "colors": ["#ffdd03"]
+                },
+                {
+                    "name": "Пролетарская",
+                    "colors": ["#92007b"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.670851,
+                "latitude": 55.734516
+            }
+        },
+        "placePreview": "в 137 кинотеатрах",
+        "preview": {
+            "text": null,
+            "singleDate": null
+        }
+    }
+}

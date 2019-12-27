@@ -1,0 +1,19 @@
+.backward-icon {
+    display: inline-block;
+
+    width: 16px;
+    height: 14px;
+    mask-image: url('backward.svg');
+}
+
+.icon-white {
+    background-color: #fff;
+}
+
+.icon-black {
+    background-color: #444;
+}
+
+.backward-button {
+    height: 15px;
+}

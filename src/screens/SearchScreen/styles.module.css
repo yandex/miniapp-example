@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    box-sizing: border-box;
+    height: 56px;
+    padding: 18px 16px;
+
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, .25);
+}
+
+.content {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 0 18px 16px;
+}

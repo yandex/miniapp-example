@@ -1,0 +1,16 @@
+{
+    "cityInfo": {
+        "name": "Москва",
+        "geoid": 213,
+        "eventsMenu": [
+            {
+                "name": "Кино",
+                "code": "cinema"
+            },
+            {
+                "name": "Концерт",
+                "code": "concert"
+            }
+        ]
+    }
+}

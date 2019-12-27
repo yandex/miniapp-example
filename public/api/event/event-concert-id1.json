@@ -1,0 +1,102 @@
+{
+    "event": {
+        "id": "event-concert-id1",
+        "title": "Лариса Долина",
+        "argument": null,
+        "contentRating": "6+",
+        "description": "Советская и российская эстрадная джазовая певица, актриса. Народная артистка РФ (1998)[3]. Трёхкратная обладательница Национальной российской премии «Овация».",
+        "tags": [
+            {
+                "name": "Концерт",
+                "code": "concert"
+            },
+            {
+                "name": "Джаз и блюз",
+                "code": "jazz-blues"
+            }
+        ],
+        "image": {
+            "bgColor": "#262424",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s840x840",
+                "width": 840,
+                "height": 840
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#262424",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            }
+        ],
+        "type": {
+            "name": "Концерт"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 128000,
+                    "max": 176000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "id",
+            "title": "Джаз-клуб Игоря Бутмана на Таганке",
+            "address": "ул. Верхняя Радищевская, 21",
+            "type": {
+                "name": "Джаз-клуб"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Таганская",
+                    "colors": ["#92007b", "#7f0000"]
+                },
+                {
+                    "name": "Марксистская",
+                    "colors": ["#ffdd03"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.653837,
+                "latitude": 55.742939
+            }
+        },
+        "placePreview": "Джаз-клуб Игоря Бутмана на Таганке",
+        "preview": {
+            "text": "Сегодня 25 декабря, 20:30",
+            "singleDate": {
+                "day": "25",
+                "month": "декабря"
+            }
+        }
+    }
+}

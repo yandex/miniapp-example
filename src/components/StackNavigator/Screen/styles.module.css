@@ -1,0 +1,17 @@
+.screen {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 1px;
+    left: 0;
+
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    background: #fff;
+}
+
+.hidden {
+    display: none;
+}

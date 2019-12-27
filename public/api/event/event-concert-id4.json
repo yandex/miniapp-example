@@ -1,0 +1,106 @@
+{
+    "event": {
+        "id": "event-concert-id4",
+        "title": "The Jazz Loft",
+        "argument": null,
+        "contentRating": "18+",
+        "description": "Джаз неповторим, и если уж слушать такую музыку — то только в исполнении лучших музыкантов, например — группы The Jazz Loft. Никаких нот и микрофонов, они играют неповторимой красоты новоорлеанский джаз, а программа концерта создается непосредственно на месте.\n\nThe Jazz Loft — это сгусток положительной энергии и драйва. Музыканты с огромным удовольствием ознакомят вас с традиционным джазом из Нового Орлеана и доставят массу позитивных мгновений.",
+        "tags": [
+            {
+                "name": "Концерт",
+                "code": "concert"
+            },
+            {
+                "name": "Джаз и блюз",
+                "code": "jazz-blues"
+            }
+        ],
+        "image": {
+            "bgColor": "#5f4e81",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s840x840",
+                "width": 840,
+                "height": 840
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#5f4e81",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            }
+        ],
+        "type": {
+            "name": "Концерт"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 70000,
+                    "max": 150000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "id",
+            "title": "Rhythm & Blues Cafe",
+            "address": "Староваганьковский пер., 19, стр. 2",
+            "type": {
+                "name": "Клуб"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Арбатская",
+                    "colors": ["#003399"]
+                },
+                {
+                    "name": "Александровский сад",
+                    "colors": ["#0099cc"]
+                },
+                {
+                    "name": "Библиотека им. Ленина",
+                    "colors": ["#cc0000"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.60679300000001,
+                "latitude": 55.751138
+            }
+        },
+        "placePreview": "Rhythm & Blues Cafe",
+        "preview": {
+            "text": "Сегодня 25 декабря, 20:30",
+            "singleDate": {
+                "day": "25",
+                "month": "декабря"
+            }
+        }
+    }
+}

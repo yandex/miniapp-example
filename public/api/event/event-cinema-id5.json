@@ -1,0 +1,274 @@
+{
+    "event": {
+        "id": "event-cinema-id5",
+        "title": "Холоп",
+        "argument": "Комедия о превращении избалованного мажора в холопа Гришку",
+        "contentRating": "12+",
+        "description": "Молодой мажор Гриша заигрался в красивую жизнь и решил, что ему всё дозволено. Он натворил много дел, и теперь ему грозит тюрьма. Чтобы исправить своего сына, отчаявшийся отец-олигарх идёт на крайние меры. Вместе со своим старинным другом-психологом он придумывает уникальный проект: на базе заброшенной деревни воссоздаётся атмосфера России девятнадцатого века. Гриша попадает в подстроенную аварию и якобы переносится в прошлое.\n\nНа самом деле, над ним проводится изощрённый психологический эксперимент — избалованного мажора превращают в обычного холопа Гришку, живущего в хлеву на территории барской усадьбы. Его окружают актёры, чья цель — изменить его жизнь и личность. За каждым его движением пристально следит команда психолога с помощью множества камер. Грише предстоит заново научиться общаться с людьми, ценить простые удовольствия, работать, а также обрести истинную любовь.",
+        "tags": [
+            {
+                "name": "Комедия",
+                "code": "comedy"
+            },
+            {
+                "name": "Кино",
+                "code": "cinema"
+            }
+        ],
+        "image": {
+            "bgColor": "#2e6f6f",
+            "touchPrimary": {
+                "url": "https://avatars.mds.yandex.net/get-afishanew/35821/737b7861dd3966e6b34a0150b6dc2b5f/s840x840",
+                "width": 840,
+                "height": 720
+            }
+        },
+        "images": [
+            {
+                "bgColor": "#2e6f6f",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/737b7861dd3966e6b34a0150b6dc2b5f/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/737b7861dd3966e6b34a0150b6dc2b5f/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/737b7861dd3966e6b34a0150b6dc2b5f/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/737b7861dd3966e6b34a0150b6dc2b5f/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#862636",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/4292ad414ce83dd500589cd120668ecb/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/4292ad414ce83dd500589cd120668ecb/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/4292ad414ce83dd500589cd120668ecb/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/21422/4292ad414ce83dd500589cd120668ecb/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#517439",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/937db87c4c5ef8eebb1b856c8792b238/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/937db87c4c5ef8eebb1b856c8792b238/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/937db87c4c5ef8eebb1b856c8792b238/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/937db87c4c5ef8eebb1b856c8792b238/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#3e6f3e",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/fff0746fd234cb823e9a5c30f98519d8/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/fff0746fd234cb823e9a5c30f98519d8/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/fff0746fd234cb823e9a5c30f98519d8/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/fff0746fd234cb823e9a5c30f98519d8/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#9c3f30",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/e086c5fa8a7d0e73b33d2b1e5626a740/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/e086c5fa8a7d0e73b33d2b1e5626a740/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/e086c5fa8a7d0e73b33d2b1e5626a740/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/29882/e086c5fa8a7d0e73b33d2b1e5626a740/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#517439",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/d19cbafeb46db45e52b14cc729491a03/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/d19cbafeb46db45e52b14cc729491a03/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/d19cbafeb46db45e52b14cc729491a03/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/d19cbafeb46db45e52b14cc729491a03/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#517439",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/3b5acadaf54e2f47fba8e69821dfef4c/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/3b5acadaf54e2f47fba8e69821dfef4c/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/3b5acadaf54e2f47fba8e69821dfef4c/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/3b5acadaf54e2f47fba8e69821dfef4c/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#657a25",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/30eedb63e9a6c1eb20ea9426d015764c/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/30eedb63e9a6c1eb20ea9426d015764c/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/30eedb63e9a6c1eb20ea9426d015764c/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/34116/30eedb63e9a6c1eb20ea9426d015764c/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            },
+            {
+                "bgColor": "#3b3835",
+                "thumbnail": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/3c3b266aebf1398f73a8759ed317f6ec/s240x160",
+                    "width": 240,
+                    "height": 160
+                },
+                "thumbnail2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/3c3b266aebf1398f73a8759ed317f6ec/s420x280",
+                    "width": 420,
+                    "height": 280
+                },
+                "large": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/3c3b266aebf1398f73a8759ed317f6ec/s690x460",
+                    "width": 690,
+                    "height": 460
+                },
+                "large2x": {
+                    "url": "https://avatars.mds.yandex.net/get-afishanew/35821/3c3b266aebf1398f73a8759ed317f6ec/960x690_noncrop",
+                    "width": 960,
+                    "height": 690
+                }
+            }
+        ],
+        "type": {
+            "name": "Кино"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 7000,
+                    "max": 1000000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "placeid",
+            "title": "City Stars Звёздный (Краснознаменск)",
+            "address": "Московская обл., г. Краснознаменск, ул. Молодёжная, 2/1, ТРЦ «Звёздный»",
+            "type": {
+                "name": "Кинотеатр"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [],
+            "coordinates": {
+                "longitude": 37.044647,
+                "latitude": 55.601321
+            }
+        },
+        "placePreview": "в 116 кинотеатрах",
+        "preview": {
+            "text": "Премьера",
+            "singleDate": null
+        }
+    }
+}

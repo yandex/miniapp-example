@@ -1,0 +1,72 @@
+.card {
+    display: flex;
+
+    text-decoration: none;
+}
+
+.title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+    margin-top: 5px;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 22px;
+    word-break: break-word;
+
+    color: #000;
+}
+
+.annotation {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+    font-size: 12px;
+    line-height: 16px;
+
+    color: rgba(0, 0, 0, .5);
+}
+
+.image-wrapper {
+    position: relative;
+
+    overflow: hidden;
+    flex: none;
+
+    width: 152px;
+    height: 100px;
+    margin-right: 18px;
+
+    border-radius: 8px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, .2);
+}
+
+.image,
+.preview {
+    display: block;
+
+    width: 152px;
+    height: 100px;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.preview {
+    background: #eaeaea;
+}

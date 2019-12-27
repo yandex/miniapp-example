@@ -1,0 +1,10 @@
+.title {
+    margin: 20px 0 16px;
+
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 40px;
+
+    opacity: .9;
+    color: #202020;
+}

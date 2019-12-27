@@ -1,0 +1,72 @@
+{
+    "event": {
+        "id": "event-concert-id6",
+        "title": "V Фестиваль классической музыки памяти Наума Штаркмана",
+        "argument": null,
+        "contentRating": "18+",
+        "description": "Штаркман широко признан как интерпретатор романтического и постромантического репертуара — прежде всего, произведений Шумана, Шопена, Листа, Чайковского и Рахманинова.",
+        "tags": [
+            {
+                "name": "Концерт",
+                "code": "concert"
+            },
+            {
+                "name": "Классическая музыка",
+                "code": "classical_music"
+            }
+        ],
+        "image": null,
+        "images": [],
+        "type": {
+            "name": "Концерт"
+        },
+        "userRating": null,
+        "tickets": [
+            {
+                "id": "id",
+                "price": {
+                    "currency": "rub",
+                    "min": 30000,
+                    "max": 50000
+                }
+            }
+        ]
+    },
+    "scheduleInfo": {
+        "oneOfPlaces": {
+            "id": "id",
+            "title": "Башмет Центр",
+            "address": "ул. Большая Полянка д. 45",
+            "type": {
+                "name": "Дом культуры"
+            },
+            "city": {
+                "name": "Москва",
+                "geoid": 213
+            },
+            "metro": [
+                {
+                    "name": "Полянка",
+                    "colors": ["#a2a5b4"]
+                },
+                {
+                    "name": "Добрынинская",
+                    "colors": ["#7f0000"]
+                },
+                {
+                    "name": "Октябрьская",
+                    "colors": ["#ff7f00"]
+                }
+            ],
+            "coordinates": {
+                "longitude": 37.6199299,
+                "latitude": 55.73321
+            }
+        },
+        "placePreview": "Башмет Центр",
+        "preview": {
+            "text": "Декабрь",
+            "singleDate": null
+        }
+    }
+}

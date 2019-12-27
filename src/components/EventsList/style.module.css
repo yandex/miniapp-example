@@ -1,0 +1,15 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 16px;
+}
+
+.button {
+    width: 100%;
+}

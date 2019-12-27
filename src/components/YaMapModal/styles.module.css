@@ -1,0 +1,99 @@
+.modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    color: #000;
+    background-color: #fafafa;
+    background-image: url('loader.svg');
+    background-repeat: no-repeat;
+    background-position: 50% calc(50% - 70px);
+    background-size: 50px;
+}
+
+.close {
+    position: fixed;
+    z-index: 1;
+    top: 13px;
+    left: 16px;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 25px;
+    background-color: #fff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+}
+
+.close-button {
+    width: calc(16px + 17px * 2);
+    height: calc(14px + 18px * 2);
+    padding: 18px 17px;
+
+    font-size: 0;
+
+    color: #fff;
+    border: none;
+    outline: none;
+    background: url('./back.svg') center center no-repeat;
+    background-size: 16px 14px;
+}
+
+.metro-containter {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 12px 16px 28px;
+
+    font-size: 15px;
+    line-height: 18px;
+
+    background-color: #fff;
+}
+
+.metro-containter::after {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    left: 0;
+
+    height: 12px;
+
+    content: '';
+
+    border-radius: 12px 12px 0 0;
+    background-color: #fff;
+}
+
+.metro-containter::before {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    left: 0;
+
+    height: 24px;
+
+    content: '';
+
+    background: linear-gradient(360deg, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, 0) 106.25%);
+}
+
+.station {
+    padding-bottom: 7px;
+}
+
+.metro-point {
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+
+    border-radius: 50%;
+}

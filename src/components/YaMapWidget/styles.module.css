@@ -1,0 +1,12 @@
+.map {
+    position: relative;
+
+    width: 100vw;
+    height: 88px;
+    margin-bottom: 16px;
+    margin-left: -12px;
+
+    background-color: #fef33a;
+    background-position: 50% 50%;
+    background-size: cover;
+}

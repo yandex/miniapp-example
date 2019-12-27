@@ -1,0 +1,1596 @@
+{
+    "title": "Веселые выходные",
+    "events": {
+        "items": [
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": {
+                            "day": "25",
+                            "month": "дек"
+                        }
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id4",
+                    "title": "The Jazz Loft",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "jazz-blues",
+                            "name": "Джаз и блюз"
+                        }
+                    ],
+                    "contentRating": "18+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 70000,
+                                "max": 150000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": {
+                        "bgColor": "#5f4e81",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    }
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": null
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id7",
+                    "title": "Kremlin",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "classical_music",
+                            "name": "Классическая музыка"
+                        }
+                    ],
+                    "contentRating": "16+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 50000,
+                                "max": 200000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": {
+                        "bgColor": "#2e6f6f",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    }
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": {
+                            "day": "25",
+                            "month": "дек"
+                        }
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id1",
+                    "title": "Лариса Долина",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "jazz-blues",
+                            "name": "Джаз и блюз"
+                        }
+                    ],
+                    "contentRating": "6+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 128000,
+                                "max": 176000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": {
+                        "bgColor": "#262424",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    }
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": null
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id6",
+                    "title": "V Фестиваль классической музыки памяти Наума Штаркмана",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "classical_music",
+                            "name": "Классическая музыка"
+                        }
+                    ],
+                    "contentRating": "18+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 30000,
+                                "max": 50000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": null
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": {
+                            "day": "25",
+                            "month": "дек"
+                        }
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id10",
+                    "title": "Класс доцента А.В. Анчевской (скрипка)",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "classical_music",
+                            "name": "Классическая музыка"
+                        }
+                    ],
+                    "contentRating": "18+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 10000,
+                                "max": 10000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": null
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": null
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id5",
+                    "title": "Хор Московской консерватории",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        }
+                    ],
+                    "contentRating": "18+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 10000,
+                                "max": 10000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": null
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": {
+                            "day": "25",
+                            "month": "дек"
+                        }
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id9",
+                    "title": "Kle2Go",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "jazz-blues",
+                            "name": "Джаз и блюз"
+                        }
+                    ],
+                    "contentRating": "18+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 43000,
+                                "max": 150000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": {
+                        "bgColor": "#262424",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    }
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": null
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id2",
+                    "title": "Антропоценфония. Песни машин и механизмов",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "avant-garde",
+                            "name": "Экспериментальная музыка"
+                        }
+                    ],
+                    "contentRating": "16+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 30000,
+                                "max": 80000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": {
+                        "bgColor": "#657a25",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    }
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": {
+                            "day": "27",
+                            "month": "апреля"
+                        }
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id3",
+                    "title": "Jethro Tull",
+                    "argument": null,
+                    "contentRating": "12+",
+                    "tags": [
+                        {
+                            "name": "Рок",
+                            "code": "rock"
+                        },
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Поп",
+                            "code": "pop"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#8c3130",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    },
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 350000,
+                                "max": 1200000
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "scheduleInfo": {
+                    "placesTotal": 1,
+                    "preview": {
+                        "singleDate": null
+                    }
+                },
+                "eventPreview": {
+                    "id": "event-concert-id8",
+                    "title": "Вейланд Родд",
+                    "argument": null,
+                    "type": {
+                        "code": "concert",
+                        "name": "Концерт"
+                    },
+                    "tags": [
+                        {
+                            "code": "soul",
+                            "name": "Соул"
+                        },
+                        {
+                            "code": "concert",
+                            "name": "Концерт"
+                        },
+                        {
+                            "code": "jazz-blues",
+                            "name": "Джаз и блюз"
+                        }
+                    ],
+                    "contentRating": "18+",
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 90000,
+                                "max": 460000
+                            }
+                        }
+                    ],
+                    "userRating": {
+                        "overall": {
+                            "count": 0,
+                            "value": 0
+                        }
+                    },
+                    "image": {
+                        "bgColor": "#9c3f30",
+                        "eventListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s180x120",
+                            "width": 180,
+                            "height": 120
+                        },
+                        "eventListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s360x240",
+                            "width": 360,
+                            "height": 240
+                        },
+                        "actualListCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s220x144",
+                            "width": 220,
+                            "height": 144
+                        },
+                        "actualListCard2x": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s420x280",
+                            "width": 420,
+                            "height": 280
+                        },
+                        "selectionCard": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s540x270",
+                            "width": 540,
+                            "height": 270
+                        }
+                    }
+                }
+            }
+        ],
+        "paging": {
+            "offset": 0,
+            "total": 18
+        },
+        "prefetchItems": [
+            {
+                "event": {
+                    "id": "event-concert-id4",
+                    "title": "The Jazz Loft",
+                    "argument": null,
+                    "contentRating": "18+",
+                    "description": "Джаз неповторим, и если уж слушать такую музыку — то только в исполнении лучших музыкантов, например — группы The Jazz Loft. Никаких нот и микрофонов, они играют неповторимой красоты новоорлеанский джаз, а программа концерта создается непосредственно на месте.\n\nThe Jazz Loft — это сгусток положительной энергии и драйва. Музыканты с огромным удовольствием ознакомят вас с традиционным джазом из Нового Орлеана и доставят массу позитивных мгновений.",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Джаз и блюз",
+                            "code": "jazz-blues"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#5f4e81",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s840x840",
+                            "width": 840,
+                            "height": 840
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#5f4e81",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/35821/0ff99c378f83c190bc2617891c47a467/960x690_noncrop",
+                                "width": 960,
+                                "height": 690
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 70000,
+                                "max": 150000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Rhythm & Blues Cafe",
+                        "address": "Староваганьковский пер., 19, стр. 2",
+                        "type": {
+                            "name": "Клуб"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Арбатская",
+                                "colors": ["#003399"]
+                            },
+                            {
+                                "name": "Александровский сад",
+                                "colors": ["#0099cc"]
+                            },
+                            {
+                                "name": "Библиотека им. Ленина",
+                                "colors": ["#cc0000"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.60679300000001,
+                            "latitude": 55.751138
+                        }
+                    },
+                    "placePreview": "Rhythm & Blues Cafe",
+                    "preview": {
+                        "text": "Сегодня 25 декабря, 20:30",
+                        "singleDate": {
+                            "day": "25",
+                            "month": "декабря"
+                        }
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id7",
+                    "title": "Kremlin",
+                    "argument": null,
+                    "contentRating": "16+",
+                    "description": "Камерный оркестр Kremlin.\n\nХудожественный руководитель - Миша Рахлевский\n\nСеренады для струнных Эльгара, Вирена и Дворжака.\n\nПрограмма вечера: сбор гостей, чай-кофе за полчаса до начала концерта. Концерт. После концерта - небольшой фуршет.",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Классическая музыка",
+                            "code": "classical_music"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#2e6f6f",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s840x840",
+                            "width": 840,
+                            "height": 506
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#2e6f6f",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/58cae696ccf6480ad303282c0c7e48fa/960x690_noncrop",
+                                "width": 900,
+                                "height": 506
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 50000,
+                                "max": 200000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Exposed",
+                        "address": "ул. Шаболовка, 31г",
+                        "type": {
+                            "name": "Выставочный зал"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Октябрьская",
+                                "colors": ["#ff7f00", "#7f0000"]
+                            },
+                            {
+                                "name": "Шаболовская",
+                                "colors": ["#ff7f00"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.61093399999999,
+                            "latitude": 55.72108199999999
+                        }
+                    },
+                    "placePreview": "Exposed",
+                    "preview": {
+                        "text": "Декабрь — май",
+                        "singleDate": null
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id1",
+                    "title": "Лариса Долина",
+                    "argument": null,
+                    "contentRating": "6+",
+                    "description": "Советская и российская эстрадная джазовая певица, актриса. Народная артистка РФ (1998)[3]. Трёхкратная обладательница Национальной российской премии «Овация».",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Джаз и блюз",
+                            "code": "jazz-blues"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#262424",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s840x840",
+                            "width": 840,
+                            "height": 840
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#262424",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/1bd4ac64d556335d27e2d7df5a29204b/960x690_noncrop",
+                                "width": 960,
+                                "height": 690
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 128000,
+                                "max": 176000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Джаз-клуб Игоря Бутмана на Таганке",
+                        "address": "ул. Верхняя Радищевская, 21",
+                        "type": {
+                            "name": "Джаз-клуб"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Таганская",
+                                "colors": ["#92007b", "#7f0000"]
+                            },
+                            {
+                                "name": "Марксистская",
+                                "colors": ["#ffdd03"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.653837,
+                            "latitude": 55.742939
+                        }
+                    },
+                    "placePreview": "Джаз-клуб Игоря Бутмана на Таганке",
+                    "preview": {
+                        "text": "Сегодня 25 декабря, 20:30",
+                        "singleDate": {
+                            "day": "25",
+                            "month": "декабря"
+                        }
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id6",
+                    "title": "V Фестиваль классической музыки памяти Наума Штаркмана",
+                    "argument": null,
+                    "contentRating": "18+",
+                    "description": "Штаркман широко признан как интерпретатор романтического и постромантического репертуара — прежде всего, произведений Шумана, Шопена, Листа, Чайковского и Рахманинова.",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Классическая музыка",
+                            "code": "classical_music"
+                        }
+                    ],
+                    "image": null,
+                    "images": [],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 30000,
+                                "max": 50000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Башмет Центр",
+                        "address": "ул. Большая Полянка д. 45",
+                        "type": {
+                            "name": "Дом культуры"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Полянка",
+                                "colors": ["#a2a5b4"]
+                            },
+                            {
+                                "name": "Добрынинская",
+                                "colors": ["#7f0000"]
+                            },
+                            {
+                                "name": "Октябрьская",
+                                "colors": ["#ff7f00"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.6199299,
+                            "latitude": 55.73321
+                        }
+                    },
+                    "placePreview": "Башмет Центр",
+                    "preview": {
+                        "text": "Декабрь",
+                        "singleDate": null
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id10",
+                    "title": "Класс доцента А.В. Анчевской (скрипка)",
+                    "argument": null,
+                    "contentRating": "18+",
+                    "description": null,
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Классическая музыка",
+                            "code": "classical_music"
+                        }
+                    ],
+                    "image": null,
+                    "images": [],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 10000,
+                                "max": 10000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Консерватория им. Чайковского",
+                        "address": "ул. Большая Никитская, 13/6",
+                        "type": {
+                            "name": "Концертный зал"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Арбатская",
+                                "colors": ["#003399"]
+                            },
+                            {
+                                "name": "Библиотека им. Ленина",
+                                "colors": ["#cc0000"]
+                            },
+                            {
+                                "name": "Охотный Ряд",
+                                "colors": ["#cc0000"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.60585545962319,
+                            "latitude": 55.75631872698533
+                        }
+                    },
+                    "placePreview": "Консерватория им. Чайковского",
+                    "preview": {
+                        "text": "Сегодня 25 декабря, 18:30",
+                        "singleDate": {
+                            "day": "25",
+                            "month": "декабря"
+                        }
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id5",
+                    "title": "Хор Московской консерватории",
+                    "argument": null,
+                    "contentRating": "18+",
+                    "description": " Камерный хор, созданный по инициативе профессора А. С. Соколова в декабре 1994 года дирижёром Борисом Тевлиным.",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        }
+                    ],
+                    "image": null,
+                    "images": [],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 10000,
+                                "max": 10000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Консерватория им. Чайковского",
+                        "address": "ул. Большая Никитская, 13/6",
+                        "type": {
+                            "name": "Концертный зал"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Арбатская",
+                                "colors": ["#003399"]
+                            },
+                            {
+                                "name": "Библиотека им. Ленина",
+                                "colors": ["#cc0000"]
+                            },
+                            {
+                                "name": "Охотный Ряд",
+                                "colors": ["#cc0000"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.60585545962319,
+                            "latitude": 55.75631872698533
+                        }
+                    },
+                    "placePreview": "Консерватория им. Чайковского",
+                    "preview": {
+                        "text": "25 и 27 декабря",
+                        "singleDate": null
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id9",
+                    "title": "Kle2Go",
+                    "argument": null,
+                    "contentRating": "18+",
+                    "description": "Kle2Go — это музыка! Настоящая, чувством наполненная, мастерски расцвеченная и с радостью поданная. Любите, жалуйте!\n\nВыйдут на сцену три удивительных музыканта, будут веселиться, посмеиваться друг над дружкой, наигрывать что-то прекрасно-мелодичное и никому из зрителей даже в голову не придет, что прямо на их глазах эти трое пишут одну из первых, а потому и главных, страниц новой русской музыки.\n\nС первыми же звуками встрепенется радостно душа, взметнется к самому куполу хрустальному, и откроется взору картина великолепная, картина удивительная — мира, в котором довелось родиться и прожить отпущенный век. Слух уловит звуки волшебные, сплетет в единый хор пение птиц, звон горного ручья и гулкий шум ветра в чаще — криком счастья, словом исконным разнесется окрест призыв к великому празднику. Возрадуются сердца, высохнут слезы, затихнет на время шум битвы каждодневной, утомительно-бесконечной. И обратятся лица к солнцу, и исчезнет пустое, вмиг развеется словно дым, даже памяти по себе не оставив, и заполнит все сущее музыка! Разольется по лугам и полям, напоит страждущего, одарит теплом и ласкою, согреет истосковавшихся по истинному, Богом начертанному, и надежду вселит.",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Джаз и блюз",
+                            "code": "jazz-blues"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#262424",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s840x840",
+                            "width": 840,
+                            "height": 600
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#262424",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/0bd7390394c73a4c3c00a7545bd04141/960x690_noncrop",
+                                "width": 940,
+                                "height": 600
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 43000,
+                                "max": 150000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Клуб Алексея Козлова",
+                        "address": "ул. Маросейка, 9/2, Left Bank",
+                        "type": {
+                            "name": "Клуб"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Китай-город",
+                                "colors": ["#ff7f00", "#92007b"]
+                            },
+                            {
+                                "name": "Лубянка",
+                                "colors": ["#cc0000"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.634119,
+                            "latitude": 55.757698
+                        }
+                    },
+                    "placePreview": "Клуб Алексея Козлова",
+                    "preview": {
+                        "text": "Сегодня 25 декабря, 20:30",
+                        "singleDate": {
+                            "day": "25",
+                            "month": "декабря"
+                        }
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id2",
+                    "title": "Антропоценфония. Песни машин и механизмов",
+                    "argument": null,
+                    "contentRating": "16+",
+                    "description": "Антропоцен — термин, обозначающий геологическую эпоху с уровнем человеческой активности, играющей существенную роль в экосистеме Земли.\n\n«Кто слышит шум машин — я услышал музыку машин» — писал композитор Александр Мосолов по поводу своей знаменитой пьесы для симфонического оркестра «Завод». Это высказывание вполне могло бы стать эпиграфом к новой работе Антропоценфония — сочинения для перкуссии, электроники и смешанного хора ad libitum.\n\nВ основе партитуры — реальные звучания действующих заводских цехов. Акустические картины самых разных производственных процессов соединены в единую музыкальную ткань. Звуки, являющиеся побочным эффектом реального производства, рассмотрены здесь с точки зрения чистой музыки.\n\nВ партитуре используются всевозможные перкуссионные инструменты, как традиционные, так и экспериментальные, (включая найденные объекты), а кроме того — специально сконструированные аналоговые электронные инструменты и электроакустические системы. В инструментарии перформанса сосуществуют самые разные, иногда неожиданные предметы: травматическое оружие и полицейские дубинки, фольга для бань и маракас из головы пластмассовой куклы, посуда, чемодан и фанерные ящики, силиконовый фаллос и колесо от скейт-борда.",
+                    "tags": [
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Экспериментальная музыка",
+                            "code": "avant-garde"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#657a25",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s840x840",
+                            "width": 840,
+                            "height": 524
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#657a25",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/36842/0b6c651e48fb76fc188f9cf4bfe3ca13/960x690_noncrop",
+                                "width": 960,
+                                "height": 524
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 30000,
+                                "max": 80000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Школа драматического искусства",
+                        "address": "ул. Сретенка, 19/27",
+                        "type": {
+                            "name": "Театр"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Сухаревская",
+                                "colors": ["#ff7f00"]
+                            },
+                            {
+                                "name": "Сретенский бульвар",
+                                "colors": ["#99cc33"]
+                            },
+                            {
+                                "name": "Трубная",
+                                "colors": ["#99cc33"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.630517,
+                            "latitude": 55.770269
+                        }
+                    },
+                    "placePreview": "Школа драматического искусства",
+                    "preview": {
+                        "text": "25 декабря, 1, 2 февраля",
+                        "singleDate": null
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id3",
+                    "title": "Jethro Tull",
+                    "argument": null,
+                    "contentRating": "12+",
+                    "description": "В начале 1968 года группа молодых британских музыкантов, рожденных из пепла различных неудавшихся региональных групп, собралась вместе в голоде, нищете и скромном оптимизме в Лутоне, к северу от Лондона. С общей любовью к блюзу и признательностью, между ними, различных других музыкальных форм, они начали завоевывать небольшую, но восторженную аудиторию в различных пабах и клубах Южной Англии. Прорыв произошел, когда им предложили ночную резиденцию в четверг вечером в знаменитом лондонском клубе Marquee на Уордор-стрит, Сохо.\n\nРанний Jethro Tull выпустил свой первый альбом, ориентированный на Блюз, это было во второй половине 1968 года, прежде чем перейти к более доморощенным и эклектичным усилиям в 1969 году с Stand Up и шквалом одиночных релизов, включая Living In the Past, на рынке Великобритании.\n\nЗатем последовали Benefit, Aqualung и Thick As A Brick, и успех группы вырос на международном уровне. Различные участники группы приходили и уходили, но харизматичный фронтмен и композитор, флейтист и певец Ян Андерсон продолжал вести группу через ее различные музыкальные воплощения.\n\nДжетро Талл был, к середине семидесятых годов, одним из самых успешных живых выступлений на мировой сцене, соперничая с Zeppelin, Elton John и даже The Rolling Stones. Удивительно, действительно, для группы, чья более сложная и развитая стилистическая экстравагантность была далека от поп-и рок-нормы той эпохи.\n\nИмея в настоящее время около 30 с лишним альбомов на их кредит и продажи в общей сложности более 50 миллионов, по-видимому, uncommercial Tull продолжали в течение следующих трех десятилетий путешествовать вблизи и далеко от поклонников по всему миру.\n\nПосле сорока лет на дне, на вершине и в различных точках между ними, репертуар Tull по-прежнему выполняется, как правило, более ста концертов каждый год Яном Андерсоном в его продолжающихся турах по всему миру. Ян остается в центре группы иногда меняющихся, но очень способных – действительно превосходных – музыкантов.\n\nСостав до 2019 года является:\nЯн Андерсон. Флейта, вокал, акустическая гитара\nФлориан Офале, гитарист\nСкотт Хаммонд, барабанщик\nДжон О'Хара на фортепиано, аккордеоне и вокале\nДэвид Гудье на бас-гитаре и вокале\n\nГруппа продолжает радовать зрителей во всем мире и представляет продолжающееся наследие музыки Tull с его богатым разнообразием и глубиной выражения везде, где поклонники, молодые и старые, хотят услышать рок, фолк, джаз и классическую музыку для взрослых.",
+                    "tags": [
+                        {
+                            "name": "Рок",
+                            "code": "rock"
+                        },
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Поп",
+                            "code": "pop"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#8c3130",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s840x840",
+                            "width": 840,
+                            "height": 840
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#8c3130",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/21626/1baa57647b68a1ce7cc40629668a57b2/960x690_noncrop",
+                                "width": 960,
+                                "height": 690
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 350000,
+                                "max": 1200000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Крокус Сити Холл",
+                        "address": "г. Красногорск, ул. Международная, 20 (66-й км МКАД)",
+                        "type": {
+                            "name": "Концертный зал"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [],
+                        "coordinates": {
+                            "longitude": 37.390642,
+                            "latitude": 55.825442
+                        }
+                    },
+                    "placePreview": "Крокус Сити Холл",
+                    "preview": {
+                        "text": "27 апреля, 20:00",
+                        "singleDate": {
+                            "day": "27",
+                            "month": "апреля"
+                        }
+                    }
+                }
+            },
+            {
+                "event": {
+                    "id": "event-concert-id8",
+                    "title": "Вейланд Родд",
+                    "argument": null,
+                    "contentRating": "18+",
+                    "description": "Вейланд Родд представляет свою программу джазовых, блюзовых и соуловых композиций. Вас приятно порадует разнообразие и целостность программы. Сильное и чувственное исполнение потрясает слушателей и, несомненно, увлекает в музыкальный лабиринт мыслей, эмоций и движений, в котором каждая песня — эпизод жизни любого попавшего в него. Вы оказываетесь в атмосфере театра и блаженства, создаваемых музыкой.\n\nПрограмма наполнена композициями Америки, Великобритании, Франции и России разных времён. Вейланд представляет эксклюзивную интерпретацию песен Александра Вертинского. Вы услышите также сочетание джаза с рэпом в исполнении Майкла Родда и Вейланда Родда. Вам остаётся только прийти и стать соучастниками этого необычного концерта. Вас ждёт много сюрпризов!\n\nКлавиши — Игорь Лямцев, бас-гитара — Антон Горбунов, гитара — Леонид Бирзович, ударные — Александр Розенбаум, саксофон — Денис Прушинский.",
+                    "tags": [
+                        {
+                            "name": "Соул",
+                            "code": "soul"
+                        },
+                        {
+                            "name": "Концерт",
+                            "code": "concert"
+                        },
+                        {
+                            "name": "Джаз и блюз",
+                            "code": "jazz-blues"
+                        }
+                    ],
+                    "image": {
+                        "bgColor": "#9c3f30",
+                        "touchPrimary": {
+                            "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s840x840",
+                            "width": 840,
+                            "height": 840
+                        }
+                    },
+                    "images": [
+                        {
+                            "bgColor": "#9c3f30",
+                            "thumbnail": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s240x160",
+                                "width": 240,
+                                "height": 160
+                            },
+                            "thumbnail2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s420x280",
+                                "width": 420,
+                                "height": 280
+                            },
+                            "large": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/s690x460",
+                                "width": 690,
+                                "height": 460
+                            },
+                            "large2x": {
+                                "url": "https://avatars.mds.yandex.net/get-afishanew/23222/537b962e2ab296ef8afb660233e1697a/960x690_noncrop",
+                                "width": 960,
+                                "height": 690
+                            }
+                        }
+                    ],
+                    "type": {
+                        "name": "Концерт"
+                    },
+                    "userRating": null,
+                    "tickets": [
+                        {
+                            "id": "id",
+                            "price": {
+                                "currency": "rub",
+                                "min": 90000,
+                                "max": 460000
+                            }
+                        }
+                    ]
+                },
+                "scheduleInfo": {
+                    "oneOfPlaces": {
+                        "id": "id",
+                        "title": "Союз композиторов",
+                        "address": "Брюсов пер., 8/10, стр. 2",
+                        "type": {
+                            "name": "Джаз-клуб"
+                        },
+                        "city": {
+                            "name": "Москва",
+                            "geoid": 213
+                        },
+                        "metro": [
+                            {
+                                "name": "Пушкинская",
+                                "colors": ["#92007b"]
+                            },
+                            {
+                                "name": "Тверская",
+                                "colors": ["#0a6f20"]
+                            },
+                            {
+                                "name": "Охотный Ряд",
+                                "colors": ["#cc0000"]
+                            }
+                        ],
+                        "coordinates": {
+                            "longitude": 37.60904699999998,
+                            "latitude": 55.75928899999988
+                        }
+                    },
+                    "placePreview": "Союз композиторов",
+                    "preview": {
+                        "text": "25 декабря и 29 января",
+                        "singleDate": null
+                    }
+                }
+            }
+        ]
+    }
+}
