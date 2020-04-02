@@ -1,0 +1,66 @@
+{
+  "name": "MiniApp Example",
+  "short_name": "MiniApp",
+  "description": "MiniApp Example",
+  "icons": [
+    {
+      "src": "https://yandex.github.io/miniapp-example/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://yandex.github.io/miniapp-example/logo192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://yandex.github.io/miniapp-example/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "ru",
+  "start_url": "https://yandex.github.io/miniapp-example",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "yandex": {
+    "manifest_version": 1,
+    "app_version": "20200402.1736",
+    "base_url": "https://yandex.github.io/miniapp-example",
+    "splash_screen_color": "#f0f3f5",
+    "cache": {
+      "resources": [
+        "https://yandex.github.io/miniapp-example",
+        "/miniapp-example/static/css/event-screen.b262a366.chunk.css",
+        "/miniapp-example/static/css/main-screen.1b44af0f.chunk.css",
+        "/miniapp-example/static/css/main.57c57c52.chunk.css",
+        "/miniapp-example/static/css/recommended-events.3010c848.chunk.css",
+        "/miniapp-example/static/css/rubric-screen.b65687db.chunk.css",
+        "/miniapp-example/static/css/selection-screen.b65687db.chunk.css",
+        "/miniapp-example/static/js/10.b52b5b11.chunk.js",
+        "/miniapp-example/static/js/11.7b4bc433.chunk.js",
+        "/miniapp-example/static/js/8.f1f4896b.chunk.js",
+        "/miniapp-example/static/js/8.f1f4896b.chunk.js.LICENSE.txt",
+        "/miniapp-example/static/js/9.27db9b56.chunk.js",
+        "/miniapp-example/static/js/event-screen.63fba745.chunk.js",
+        "/miniapp-example/static/js/main-screen.a3fda135.chunk.js",
+        "/miniapp-example/static/js/main.5040ce97.chunk.js",
+        "/miniapp-example/static/js/recommended-events.2220542d.chunk.js",
+        "/miniapp-example/static/js/rubric-screen.1ce5a1bc.chunk.js",
+        "/miniapp-example/static/js/runtime-main.9c5c58f9.js",
+        "/miniapp-example/static/js/selection-screen.0f82587d.chunk.js",
+        "/miniapp-example/static/js/ya-map-modal.45ffbd22.chunk.js",
+        "/miniapp-example/static/media/avatar.bb88daed.svg",
+        "/miniapp-example/static/media/back.b5c1bb55.svg",
+        "/miniapp-example/static/media/back.f5b73479.svg",
+        "/miniapp-example/static/media/backward.7b161aa1.svg",
+        "/miniapp-example/static/media/down.328613e7.svg",
+        "/miniapp-example/static/media/down.760a8ea5.svg",
+        "/miniapp-example/static/media/loader.bd6c4f68.svg",
+        "/miniapp-example/static/media/menu-burger.d5d21d97.svg",
+        "/miniapp-example/static/media/search.a9788cb0.svg"
+      ]
+    }
+  }
+}
