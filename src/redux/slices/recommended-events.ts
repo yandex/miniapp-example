@@ -127,7 +127,7 @@ export const loadRecommendedEvents = (): AppThunk => async(dispatch, getState) =
 
         dispatch(fetchSuccess({ key, data }));
     } catch (err) {
-        console.error({ err });
+        console.error(err);
         dispatch(fetchError({ key, error: err }));
     }
 };

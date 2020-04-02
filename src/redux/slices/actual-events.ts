@@ -11,9 +11,8 @@ import {
     getTransformUIPersistance,
 } from '../helpers/persist';
 import { setEvents } from './event';
-import { AppThunk, RootReducer } from '..';
-
 import { DateFilter } from './date-filter';
+import { AppThunk, RootReducer } from '..';
 
 export type ActualEventsListState = {
     data: {

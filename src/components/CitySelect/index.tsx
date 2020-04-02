@@ -31,7 +31,7 @@ const CityOption: React.FC<CityOptionProps> = props => {
 
     const onCitySelectHandler = useCallback(() => {
         onCityClick(city);
-    }, [city, onCityClick]);
+    }, [onCityClick, city]);
 
     return (
         <li className={styles['city-item']} onClick={onCitySelectHandler}>

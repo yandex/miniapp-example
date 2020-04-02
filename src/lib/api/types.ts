@@ -2,7 +2,6 @@ import { ActualEvents } from './fragments/actual-events';
 import { EventData } from './fragments/event';
 import { ActualEvent } from './fragments/actual-event';
 import { City } from './fragments/city';
-import { CityListItem } from './fragments/city-list-item';
 import { Suggest } from './fragments/suggest';
 
 export type RubricEventsResponse = {
@@ -35,7 +34,7 @@ export type CityInfoResponse = {
 };
 
 export type CityListResponse = {
-    cities: CityListItem[];
+    cities: City[];
 };
 
 export type SuggestResponse = {

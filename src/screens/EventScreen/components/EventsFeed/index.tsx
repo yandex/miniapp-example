@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { RecommendedEvents } from '../../../../redux/slices/recommended-events';
 import { getRubricUrl } from '../../../../lib/url-builder';
+import { RecommendedEvents } from '../../../../redux/slices/recommended-events';
 
 import EventsSlider from '../../../../components/EventsSlider';
 import EventCardVertical from '../../../../components/EventCardVertical';

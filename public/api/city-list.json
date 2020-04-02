@@ -2,1839 +2,6051 @@
     "cities": [
         {
             "name": "Абакан",
-            "geoid": 1095
+            "geoid": 1095,
+            "longitude": 91.4437792,
+            "latitude": 53.7223661,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Абдулино",
-            "geoid": 20031
+            "geoid": 20031,
+            "longitude": 53.6473115,
+            "latitude": 53.6778096,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Абинск",
-            "geoid": 20183
+            "geoid": 20183,
+            "longitude": 38.1618437,
+            "latitude": 44.8679931,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Азнакаево",
-            "geoid": 11120
+            "geoid": 11120,
+            "longitude": 53.0745505,
+            "latitude": 54.8599054,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Азов",
-            "geoid": 11030
+            "geoid": 11030,
+            "longitude": 39.4232597,
+            "latitude": 47.1120631,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Аксай",
-            "geoid": 29520
-        },
-        {
-            "name": "Актау",
-            "geoid": 29575
-        },
-        {
-            "name": "Актобе",
-            "geoid": 20273
+            "geoid": 29520,
+            "longitude": 39.8755485,
+            "latitude": 47.2676075,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Алапаевск",
-            "geoid": 20695
+            "geoid": 20695,
+            "longitude": 61.6693934,
+            "latitude": 57.8475542,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Александров",
-            "geoid": 10656
+            "geoid": 10656,
+            "longitude": 38.711035,
+            "latitude": 56.3919652,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Алексеевка",
-            "geoid": 20192
+            "geoid": 20192,
+            "longitude": 38.6881776,
+            "latitude": 50.6299932,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Алексин",
-            "geoid": 10825
-        },
-        {
-            "name": "Алматы",
-            "geoid": 162
+            "geoid": 10825,
+            "longitude": 37.047891,
+            "latitude": 54.5083788,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Алушта",
-            "geoid": 11471
+            "geoid": 11471,
+            "longitude": 34.4100387,
+            "latitude": 44.6764419,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Альметьевск",
-            "geoid": 11121
+            "geoid": 11121,
+            "longitude": 52.2970654,
+            "latitude": 54.9013662,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Анапа",
-            "geoid": 1107
+            "geoid": 1107,
+            "longitude": 37.3163142,
+            "latitude": 44.8950777,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ангарск",
-            "geoid": 11256
+            "geoid": 11256,
+            "longitude": 103.8885385,
+            "latitude": 52.5448102,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Анжеро-Судженск",
-            "geoid": 11276
+            "geoid": 11276,
+            "longitude": 86.0202207,
+            "latitude": 56.0787179,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Апатиты",
-            "geoid": 10894
+            "geoid": 10894,
+            "longitude": 33.4067218,
+            "latitude": 67.5678295,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Апшеронск",
-            "geoid": 10986
+            "geoid": 10986,
+            "longitude": 39.7300092,
+            "latitude": 44.4585239,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Арзамас",
-            "geoid": 11080
+            "geoid": 11080,
+            "longitude": 43.8407855,
+            "latitude": 55.3947544,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Армавир",
-            "geoid": 10987
-        },
-        {
-            "name": "Артём",
-            "geoid": 11406
+            "geoid": 10987,
+            "longitude": 41.132392,
+            "latitude": 45.0010338,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Архангельск",
-            "geoid": 20
+            "geoid": 20,
+            "longitude": 40.5170083,
+            "latitude": 64.5392985,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Асбест",
-            "geoid": 11160
+            "geoid": 11160,
+            "longitude": 61.4581071,
+            "latitude": 57.0052428,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Астрахань",
-            "geoid": 37
-        },
-        {
-            "name": "Атырау",
-            "geoid": 10291
+            "geoid": 37,
+            "longitude": 48.0559979,
+            "latitude": 46.3655808,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ахтубинск",
-            "geoid": 20167
+            "geoid": 20167,
+            "longitude": 46.1906741,
+            "latitude": 48.2753078,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ачинск",
-            "geoid": 11302
+            "geoid": 11302,
+            "longitude": 90.47949,
+            "latitude": 56.2538662,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Балаково",
-            "geoid": 11143
+            "geoid": 11143,
+            "longitude": 47.7828146,
+            "latitude": 52.0222694,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Балахна",
-            "geoid": 20035
+            "geoid": 20035,
+            "longitude": 43.5758953,
+            "latitude": 56.4949932,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Балашов",
-            "geoid": 11144
+            "geoid": 11144,
+            "longitude": 43.1839828,
+            "latitude": 51.5389502,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Барнаул",
-            "geoid": 197
+            "geoid": 197,
+            "longitude": 83.7798362,
+            "latitude": 53.3481145,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белая Калитва",
-            "geoid": 11034
-        },
-        {
-            "name": "Белая Церковь",
-            "geoid": 10369
+            "geoid": 11034,
+            "longitude": 40.8033169,
+            "latitude": 48.176948,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белгород",
-            "geoid": 4
+            "geoid": 4,
+            "longitude": 36.5858236,
+            "latitude": 50.5977351,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белебей",
-            "geoid": 20714
+            "geoid": 20714,
+            "longitude": 54.1111878,
+            "latitude": 54.1033832,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белово",
-            "geoid": 11277
+            "geoid": 11277,
+            "longitude": 86.3036438,
+            "latitude": 54.4221442,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белорецк",
-            "geoid": 20259
+            "geoid": 20259,
+            "longitude": 58.4099562,
+            "latitude": 53.9675927,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белореченск",
-            "geoid": 10988
+            "geoid": 10988,
+            "longitude": 39.8780457,
+            "latitude": 44.7652733,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Белоярский",
-            "geoid": 11179
-        },
-        {
-            "name": "Бердянск",
-            "geoid": 27101
+            "geoid": 11179,
+            "longitude": 66.6772357,
+            "latitude": 63.712181,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Березники",
-            "geoid": 20237
-        },
-        {
-            "name": "Бижбуляк",
-            "geoid": 101170
+            "geoid": 20237,
+            "longitude": 56.8040725,
+            "latitude": 59.4079898,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Бийск",
-            "geoid": 975
+            "geoid": 975,
+            "longitude": 85.2138852,
+            "latitude": 52.5393683,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Биробиджан",
-            "geoid": 11393
+            "geoid": 11393,
+            "longitude": 132.9217594,
+            "latitude": 48.7945975,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Благовещенск",
-            "geoid": 77
+            "geoid": 77,
+            "longitude": 127.5272186,
+            "latitude": 50.2905935,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Благовещенск",
-            "geoid": 11112
+            "geoid": 11112,
+            "longitude": 127.5272186,
+            "latitude": 50.2905935,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Богородицк",
-            "geoid": 20667
+            "geoid": 20667,
+            "longitude": 38.1225308,
+            "latitude": 53.7700516,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Боровичи",
-            "geoid": 10906
+            "geoid": 10906,
+            "longitude": 33.9176761,
+            "latitude": 58.3839866,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Братск",
-            "geoid": 976
-        },
-        {
-            "name": "Брест",
-            "geoid": 153
+            "geoid": 976,
+            "longitude": 101.6339892,
+            "latitude": 56.1513951,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Брянск",
-            "geoid": 191
+            "geoid": 191,
+            "longitude": 34.3652716,
+            "latitude": 53.2420071,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Бугульма",
-            "geoid": 11122
+            "geoid": 11122,
+            "longitude": 52.7895286,
+            "latitude": 54.5363428,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Бугуруслан",
-            "geoid": 11085
-        },
-        {
-            "name": "Будённовск",
-            "geoid": 11055
+            "geoid": 11085,
+            "longitude": 52.4326166,
+            "latitude": 53.6522636,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Бузулук",
-            "geoid": 11086
-        },
-        {
-            "name": "Буланаш",
-            "geoid": 121261
+            "geoid": 11086,
+            "longitude": 52.2623757,
+            "latitude": 52.7881434,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Бутурлиновка",
-            "geoid": 10676
+            "geoid": 10676,
+            "longitude": 40.5977541,
+            "latitude": 50.8313227,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Валуйки",
-            "geoid": 20193
+            "geoid": 20193,
+            "longitude": 38.0998765,
+            "latitude": 50.2112799,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Великие Луки",
-            "geoid": 10928
+            "geoid": 10928,
+            "longitude": 30.550757,
+            "latitude": 56.3321847,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Великий Новгород",
-            "geoid": 24
+            "geoid": 24,
+            "longitude": 31.2755051,
+            "latitude": 58.5214003,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Вельск",
-            "geoid": 10843
-        },
-        {
-            "name": "Венёв",
-            "geoid": 10826
+            "geoid": 10843,
+            "longitude": 42.1032858,
+            "latitude": 61.0660057,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Верхняя Салда",
-            "geoid": 11161
-        },
-        {
-            "name": "Винница",
-            "geoid": 963
-        },
-        {
-            "name": "Витебск",
-            "geoid": 154
+            "geoid": 11161,
+            "longitude": 60.5560397,
+            "latitude": 58.0466039,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Владивосток",
-            "geoid": 75
+            "geoid": 75,
+            "longitude": 131.882348,
+            "latitude": 43.1163807,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Владикавказ",
-            "geoid": 33
+            "geoid": 33,
+            "longitude": 44.6819383,
+            "latitude": 43.0205039,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Владимир",
-            "geoid": 192
-        },
-        {
-            "name": "Владимир-Волынский",
-            "geoid": 27275
+            "geoid": 192,
+            "longitude": 40.4082995,
+            "latitude": 56.1281561,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Волгоград",
-            "geoid": 38
+            "geoid": 38,
+            "longitude": 44.5170207,
+            "latitude": 48.7072005,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Волгодонск",
-            "geoid": 11036
+            "geoid": 11036,
+            "longitude": 42.1984531,
+            "latitude": 47.5165181,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Волжск",
-            "geoid": 20721
+            "geoid": 20721,
+            "longitude": 48.371553,
+            "latitude": 55.8622987,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Вологда",
-            "geoid": 21
+            "geoid": 21,
+            "longitude": 39.8356461,
+            "latitude": 59.2484186,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Волхов",
-            "geoid": 10864
+            "geoid": 10864,
+            "longitude": 32.35212,
+            "latitude": 59.9006057,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Волчанск",
-            "geoid": 103820
+            "geoid": 103820,
+            "longitude": 60.0797964,
+            "latitude": 59.9350515,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Вольск",
-            "geoid": 11145
+            "geoid": 11145,
+            "longitude": 47.3873504,
+            "latitude": 52.0459932,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Воркута",
-            "geoid": 10940
+            "geoid": 10940,
+            "longitude": 64.0611045,
+            "latitude": 67.4973484,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Воронеж",
-            "geoid": 193
+            "geoid": 193,
+            "longitude": 39.1968284,
+            "latitude": 51.6592378,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Воскресенск",
-            "geoid": 10722
+            "geoid": 10722,
+            "longitude": 38.7026949,
+            "latitude": 55.3071305,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Воткинск",
-            "geoid": 11149
+            "geoid": 11149,
+            "longitude": 53.9874635,
+            "latitude": 57.0517641,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Выборг",
-            "geoid": 969
+            "geoid": 969,
+            "longitude": 28.7328813,
+            "latitude": 60.7130748,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Выкса",
-            "geoid": 20040
-        },
-        {
-            "name": "Вышний Волочёк",
-            "geoid": 10807
+            "geoid": 20040,
+            "longitude": 42.1679169,
+            "latitude": 55.3207103,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Вязники",
-            "geoid": 10659
+            "geoid": 10659,
+            "longitude": 42.2687311,
+            "latitude": 56.2976528,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Вязьма",
-            "geoid": 10782
+            "geoid": 10782,
+            "longitude": 34.2951196,
+            "latitude": 55.2115563,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Вятские Поляны",
-            "geoid": 20020
+            "geoid": 20020,
+            "longitude": 51.0614666,
+            "latitude": 56.2286058,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Галич",
-            "geoid": 10703
+            "geoid": 10703,
+            "longitude": 42.3654563,
+            "latitude": 58.3826861,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Гатчина",
-            "geoid": 10867
+            "geoid": 10867,
+            "longitude": 30.1281859,
+            "latitude": 59.5650861,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Геленджик",
-            "geoid": 10990
+            "geoid": 10990,
+            "longitude": 38.0790184,
+            "latitude": 44.5631053,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Глазов",
-            "geoid": 11150
-        },
-        {
-            "name": "Гомель",
-            "geoid": 155
+            "geoid": 11150,
+            "longitude": 52.6634998,
+            "latitude": 58.1359111,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Горно-Алтайск",
-            "geoid": 11319
+            "geoid": 11319,
+            "longitude": 85.9602957,
+            "latitude": 51.9582681,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Городец",
-            "geoid": 20041
+            "geoid": 20041,
+            "longitude": 43.4722975,
+            "latitude": 56.6447459,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Гороховец",
-            "geoid": 10660
+            "geoid": 10660,
+            "longitude": 42.692517,
+            "latitude": 56.2021059,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Грайворон",
-            "geoid": 20194
-        },
-        {
-            "name": "Гродно",
-            "geoid": 10274
+            "geoid": 20194,
+            "longitude": 35.6662957,
+            "latitude": 50.4862699,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Грозный",
-            "geoid": 1106
+            "geoid": 1106,
+            "longitude": 45.6981102,
+            "latitude": 43.3179243,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Губкин",
-            "geoid": 10646
+            "geoid": 10646,
+            "longitude": 37.5347608,
+            "latitude": 51.2836362,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Губкинский",
-            "geoid": 11228
+            "geoid": 11228,
+            "longitude": 76.4714559,
+            "latitude": 64.4456575,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Гудермес",
-            "geoid": 11026
+            "geoid": 11026,
+            "longitude": 46.1036052,
+            "latitude": 43.3519164,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Гуково",
-            "geoid": 11037
+            "geoid": 11037,
+            "longitude": 39.9484635,
+            "latitude": 48.0449422,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Гулькевичи",
-            "geoid": 20675
+            "geoid": 20675,
+            "longitude": 40.6918484,
+            "latitude": 45.3605769,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Гусев",
-            "geoid": 20138
+            "geoid": 20138,
+            "longitude": 22.1944114,
+            "latitude": 54.5915477,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Данилов",
-            "geoid": 10835
+            "geoid": 10835,
+            "longitude": 40.1796765,
+            "latitude": 58.1859542,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Димитровград",
-            "geoid": 11155
+            "geoid": 11155,
+            "longitude": 49.6261645,
+            "latitude": 54.2168446,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Дмитров",
-            "geoid": 10723
-        },
-        {
-            "name": "Днепр",
-            "geoid": 141
+            "geoid": 10723,
+            "longitude": 37.5267184,
+            "latitude": 56.3477176,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Дубна",
-            "geoid": 215
+            "geoid": 215,
+            "longitude": 37.1757163,
+            "latitude": 56.7417949,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Евпатория",
-            "geoid": 11463
+            "geoid": 11463,
+            "longitude": 33.3667685,
+            "latitude": 45.1904322,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ейск",
-            "geoid": 10993
+            "geoid": 10993,
+            "longitude": 38.2764915,
+            "latitude": 46.7114611,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Екатеринбург",
-            "geoid": 54
+            "geoid": 54,
+            "longitude": 60.6054887,
+            "latitude": 56.8386326,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Елабуга",
-            "geoid": 11123
+            "geoid": 11123,
+            "longitude": 52.0544438,
+            "latitude": 55.7566727,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Елец",
-            "geoid": 10713
+            "geoid": 10713,
+            "longitude": 38.5289121,
+            "latitude": 52.6151738,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ефремов",
-            "geoid": 10828
-        },
-        {
-            "name": "Жанаозен",
-            "geoid": 29577
+            "geoid": 10828,
+            "longitude": 38.0922412,
+            "latitude": 53.1465725,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Железногорск",
-            "geoid": 10710
-        },
-        {
-            "name": "Житикара",
-            "geoid": 29555
-        },
-        {
-            "name": "Житомир",
-            "geoid": 10343
-        },
-        {
-            "name": "Жлобин",
-            "geoid": 26966
+            "geoid": 10710,
+            "longitude": 93.532167,
+            "latitude": 56.2529346,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Жуковка",
-            "geoid": 10652
-        },
-        {
-            "name": "Запорожье",
-            "geoid": 960
+            "geoid": 10652,
+            "longitude": 33.7302166,
+            "latitude": 53.5341219,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Заречный",
-            "geoid": 20657
+            "geoid": 20657,
+            "longitude": 45.1691502,
+            "latitude": 53.1961009,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Зеленоградск",
-            "geoid": 20139
+            "geoid": 20139,
+            "longitude": 20.4753274,
+            "latitude": 54.9600226,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Зеленодольск",
-            "geoid": 11125
+            "geoid": 11125,
+            "longitude": 48.5010882,
+            "latitude": 55.8466751,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Зерноград",
-            "geoid": 11040
+            "geoid": 11040,
+            "longitude": 40.312765,
+            "latitude": 46.8494991,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Златоуст",
-            "geoid": 11202
-        },
-        {
-            "name": "Ивано-Франковск",
-            "geoid": 10345
+            "geoid": 11202,
+            "longitude": 59.6726264,
+            "latitude": 55.1715695,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Иваново",
-            "geoid": 5
+            "geoid": 5,
+            "longitude": 40.9728231,
+            "latitude": 56.9994677,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ижевск",
-            "geoid": 44
+            "geoid": 44,
+            "longitude": 53.2113961,
+            "latitude": 56.8527444,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ипатово",
-            "geoid": 11061
+            "geoid": 11061,
+            "longitude": 42.8969695,
+            "latitude": 45.7181897,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ирбит",
-            "geoid": 11163
+            "geoid": 11163,
+            "longitude": 63.0576639,
+            "latitude": 57.6838406,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Иркутск",
-            "geoid": 63
+            "geoid": 63,
+            "longitude": 104.280655,
+            "latitude": 52.2863513,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Искитим",
-            "geoid": 20100
+            "geoid": 20100,
+            "longitude": 83.2951444,
+            "latitude": 54.6266869,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Истра",
-            "geoid": 10731
+            "geoid": 10731,
+            "longitude": 36.8600854,
+            "latitude": 55.9061087,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ишим",
-            "geoid": 11173
+            "geoid": 11173,
+            "longitude": 69.4643292,
+            "latitude": 56.0952037,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Йошкар-Ола",
-            "geoid": 41
+            "geoid": 41,
+            "longitude": 47.8998445,
+            "latitude": 56.6343763,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Казань",
-            "geoid": 43
+            "geoid": 43,
+            "longitude": 49.1115312,
+            "latitude": 55.7943877,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Калач",
-            "geoid": 10677
+            "geoid": 10677,
+            "longitude": 41.0162858,
+            "latitude": 50.4241213,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Калининград",
-            "geoid": 22
-        },
-        {
-            "name": "Калининец",
-            "geoid": 116396
-        },
-        {
-            "name": "Калинковичи",
-            "geoid": 102235
+            "geoid": 22,
+            "longitude": 20.5072458,
+            "latitude": 54.7073218,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Калуга",
-            "geoid": 6
-        },
-        {
-            "name": "Каменец-Подольский",
-            "geoid": 27784
+            "geoid": 6,
+            "longitude": 36.2515933,
+            "latitude": 54.5060439,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Каменка",
-            "geoid": 11099
+            "geoid": 11099,
+            "longitude": 44.0468501,
+            "latitude": 53.1855474,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Каменск-Уральский",
-            "geoid": 11164
+            "geoid": 11164,
+            "longitude": 61.9189837,
+            "latitude": 56.4149095,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Каменск-Шахтинский",
-            "geoid": 11043
+            "geoid": 11043,
+            "longitude": 40.268874,
+            "latitude": 48.3204412,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кандалакша",
-            "geoid": 10895
+            "geoid": 10895,
+            "longitude": 32.4142303,
+            "latitude": 67.1567298,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Канск",
-            "geoid": 11307
-        },
-        {
-            "name": "Караганда",
-            "geoid": 164
+            "geoid": 11307,
+            "longitude": 95.7051246,
+            "latitude": 56.2049776,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Касимов",
-            "geoid": 10773
+            "geoid": 10773,
+            "longitude": 41.3912912,
+            "latitude": 54.9373788,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Качканар",
-            "geoid": 20234
+            "geoid": 20234,
+            "longitude": 59.4840198,
+            "latitude": 58.7051759,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кемерово",
-            "geoid": 64
+            "geoid": 64,
+            "longitude": 86.0467864,
+            "latitude": 55.3909721,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Керчь",
-            "geoid": 11464
-        },
-        {
-            "name": "Киев",
-            "geoid": 143
+            "geoid": 11464,
+            "longitude": 36.4674285,
+            "latitude": 45.3561128,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кизляр",
-            "geoid": 11009
+            "geoid": 11009,
+            "longitude": 46.7232828,
+            "latitude": 43.8483915,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кимры",
-            "geoid": 10811
+            "geoid": 10811,
+            "longitude": 37.3557064,
+            "latitude": 56.873359,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кингисепп",
-            "geoid": 10870
+            "geoid": 10870,
+            "longitude": 28.6112981,
+            "latitude": 59.3739407,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кириши",
-            "geoid": 10871
+            "geoid": 10871,
+            "longitude": 32.0625536,
+            "latitude": 59.4742626,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Киров",
-            "geoid": 46
+            "geoid": 46,
+            "longitude": 34.3077508,
+            "latitude": 54.0790823,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кировград",
-            "geoid": 20604
-        },
-        {
-            "name": "Климово",
-            "geoid": 100676
+            "geoid": 20604,
+            "longitude": 60.0623588,
+            "latitude": 57.4298451,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Клин",
-            "geoid": 10733
+            "geoid": 10733,
+            "longitude": 36.7240912,
+            "latitude": 56.3424886,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Клинцы",
-            "geoid": 10653
+            "geoid": 10653,
+            "longitude": 32.2339161,
+            "latitude": 52.7529052,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ковдор",
-            "geoid": 20153
-        },
-        {
-            "name": "Ковель",
-            "geoid": 27598
+            "geoid": 20153,
+            "longitude": 30.4742082,
+            "latitude": 67.5661466,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ковров",
-            "geoid": 10664
+            "geoid": 10664,
+            "longitude": 41.3169568,
+            "latitude": 56.3553895,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Козьмодемьянск",
-            "geoid": 20630
+            "geoid": 20630,
+            "longitude": 46.5466282,
+            "latitude": 56.333346,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Коломна",
-            "geoid": 10734
+            "geoid": 10734,
+            "longitude": 38.7531734,
+            "latitude": 55.1027797,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Колпашево",
-            "geoid": 11349
+            "geoid": 11349,
+            "longitude": 82.9027528,
+            "latitude": 58.3114716,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кольчугино",
-            "geoid": 10665
+            "geoid": 10665,
+            "longitude": 39.391201,
+            "latitude": 56.3327616,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Комсомольск-на-Амуре",
-            "geoid": 11453
+            "geoid": 11453,
+            "longitude": 137.0079286,
+            "latitude": 50.550011,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Конаково",
-            "geoid": 10812
+            "geoid": 10812,
+            "longitude": 36.8011699,
+            "latitude": 56.7275533,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кондопога",
-            "geoid": 10934
+            "geoid": 10934,
+            "longitude": 34.2681778,
+            "latitude": 62.2059866,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кондрово",
-            "geoid": 10696
+            "geoid": 10696,
+            "longitude": 35.9276099,
+            "latitude": 54.796051,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Коряжма",
-            "geoid": 10845
-        },
-        {
-            "name": "Костанай",
-            "geoid": 10295
+            "geoid": 10845,
+            "longitude": 47.1002315,
+            "latitude": 61.2885993,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кострома",
-            "geoid": 7
+            "geoid": 7,
+            "longitude": 40.9907282,
+            "latitude": 57.8029445,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Котлас",
-            "geoid": 10846
+            "geoid": 10846,
+            "longitude": 46.6331915,
+            "latitude": 61.2529842,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кохма",
-            "geoid": 10690
-        },
-        {
-            "name": "Краснобродский",
-            "geoid": 110939
-        },
-        {
-            "name": "Красногвардейское",
-            "geoid": 27699
+            "geoid": 10690,
+            "longitude": 41.0933071,
+            "latitude": 56.9325151,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Краснодар",
-            "geoid": 35
+            "geoid": 35,
+            "longitude": 38.9760801,
+            "latitude": 45.040235,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Красноперекопск",
-            "geoid": 27693
+            "geoid": 27693,
+            "longitude": 33.7921523,
+            "latitude": 45.9537956,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Краснотурьинск",
-            "geoid": 11165
+            "geoid": 11165,
+            "longitude": 60.1934451,
+            "latitude": 59.7636934,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Красноуфимск",
-            "geoid": 20691
+            "geoid": 20691,
+            "longitude": 57.7636958,
+            "latitude": 56.6122864,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Красноярск",
-            "geoid": 62
-        },
-        {
-            "name": "Кременчуг",
-            "geoid": 21609
-        },
-        {
-            "name": "Кривой Рог",
-            "geoid": 10347
-        },
-        {
-            "name": "Кропивницкий",
-            "geoid": 20221
+            "geoid": 62,
+            "longitude": 92.8524162,
+            "latitude": 56.009466,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кубинка",
-            "geoid": 21625
+            "geoid": 21625,
+            "longitude": 36.6952487,
+            "latitude": 55.5755679,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кузнецк",
-            "geoid": 11101
+            "geoid": 11101,
+            "longitude": 46.6052497,
+            "latitude": 53.1131686,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Куйбышев",
-            "geoid": 20103
+            "geoid": 20103,
+            "longitude": 78.3241042,
+            "latitude": 55.4684104,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кулебаки",
-            "geoid": 20045
+            "geoid": 20045,
+            "longitude": 42.512483,
+            "latitude": 55.429716,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кумертау",
-            "geoid": 11113
+            "geoid": 11113,
+            "longitude": 55.7969915,
+            "latitude": 52.7565537,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Курган",
-            "geoid": 53
+            "geoid": 53,
+            "longitude": 65.3161339,
+            "latitude": 55.4443448,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Курганинск",
-            "geoid": 20702
+            "geoid": 20702,
+            "longitude": 40.5913858,
+            "latitude": 44.8876442,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Курск",
-            "geoid": 8
+            "geoid": 8,
+            "longitude": 36.1926448,
+            "latitude": 51.7303391,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кушва",
-            "geoid": 11166
+            "geoid": 11166,
+            "longitude": 59.7646113,
+            "latitude": 58.2825406,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Кыштым",
-            "geoid": 11210
+            "geoid": 11210,
+            "longitude": 60.5563271,
+            "latitude": 55.7060048,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лабинск",
-            "geoid": 21018
+            "geoid": 21018,
+            "longitude": 40.724385,
+            "latitude": 44.6353153,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лангепас",
-            "geoid": 11181
+            "geoid": 11181,
+            "longitude": 75.1807905,
+            "latitude": 61.2536667,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ленинск-Кузнецкий",
-            "geoid": 11285
+            "geoid": 11285,
+            "longitude": 86.1796724,
+            "latitude": 54.6674092,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ленск",
-            "geoid": 11435
+            "geoid": 11435,
+            "longitude": 114.9549103,
+            "latitude": 60.7276036,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лесной",
-            "geoid": 11167
+            "geoid": 11167,
+            "longitude": 59.7980528,
+            "latitude": 58.634981,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лесосибирск",
-            "geoid": 20090
+            "geoid": 20090,
+            "longitude": 92.5036986,
+            "latitude": 58.2218201,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ливны",
-            "geoid": 10769
+            "geoid": 10769,
+            "longitude": 37.603944,
+            "latitude": 52.4285122,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Липецк",
-            "geoid": 9
+            "geoid": 9,
+            "longitude": 39.5946266,
+            "latitude": 52.6103027,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лиски",
-            "geoid": 10678
+            "geoid": 10678,
+            "longitude": 39.518302,
+            "latitude": 50.9944734,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лодейное Поле",
-            "geoid": 10874
-        },
-        {
-            "name": "Луцк",
-            "geoid": 20222
+            "geoid": 10874,
+            "longitude": 33.5522225,
+            "latitude": 60.7320564,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лысково",
-            "geoid": 20047
+            "geoid": 20047,
+            "longitude": 45.0356702,
+            "latitude": 56.0262298,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лысьва",
-            "geoid": 20244
-        },
-        {
-            "name": "Львов",
-            "geoid": 144
+            "geoid": 20244,
+            "longitude": 57.8085728,
+            "latitude": 58.0995987,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Людиново",
-            "geoid": 20201
+            "geoid": 20201,
+            "longitude": 34.4385498,
+            "latitude": 53.8701406,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Лянтор",
-            "geoid": 20676
+            "geoid": 20676,
+            "longitude": 72.1793828,
+            "latitude": 61.6391639,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Магадан",
-            "geoid": 79
+            "geoid": 79,
+            "longitude": 150.8085289,
+            "latitude": 59.5681763,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Магнитогорск",
-            "geoid": 235
+            "geoid": 235,
+            "longitude": 58.9791432,
+            "latitude": 53.4071891,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Майкоп",
-            "geoid": 1093
+            "geoid": 1093,
+            "longitude": 40.1006527,
+            "latitude": 44.6098268,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Малоярославец",
-            "geoid": 10697
+            "geoid": 10697,
+            "longitude": 36.4632122,
+            "latitude": 55.0176756,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мантурово",
-            "geoid": 20217
+            "geoid": 20217,
+            "longitude": 44.7575036,
+            "latitude": 58.3264667,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мариинский Посад",
-            "geoid": 20076
-        },
-        {
-            "name": "Мариуполь",
-            "geoid": 10366
+            "geoid": 20076,
+            "longitude": 47.7142676,
+            "latitude": 56.111968,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Маркс",
-            "geoid": 20063
+            "geoid": 20063,
+            "longitude": 46.7400684,
+            "latitude": 51.7133973,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Махачкала",
-            "geoid": 28
+            "geoid": 28,
+            "longitude": 47.5046303,
+            "latitude": 42.9848572,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мегион",
-            "geoid": 11182
+            "geoid": 11182,
+            "longitude": 76.1024772,
+            "latitude": 61.0318946,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Медногорск",
-            "geoid": 20032
+            "geoid": 20032,
+            "longitude": 57.5832185,
+            "latitude": 51.4039421,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Миасс",
-            "geoid": 11212
+            "geoid": 11212,
+            "longitude": 60.1077757,
+            "latitude": 55.0455774,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Миллерово",
-            "geoid": 11047
-        },
-        {
-            "name": "Минск",
-            "geoid": 157
+            "geoid": 11047,
+            "longitude": 40.3983302,
+            "latitude": 48.925821,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Минусинск",
-            "geoid": 11310
+            "geoid": 11310,
+            "longitude": 91.6871866,
+            "latitude": 53.7105509,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мичуринск",
-            "geoid": 10803
-        },
-        {
-            "name": "Могилёв",
-            "geoid": 158
+            "geoid": 10803,
+            "longitude": 40.510475,
+            "latitude": 52.891294,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Можайск",
-            "geoid": 10739
+            "geoid": 10739,
+            "longitude": 36.0240724,
+            "latitude": 55.5069819,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Моздок",
-            "geoid": 11022
-        },
-        {
-            "name": "Мозырь",
-            "geoid": 21274
+            "geoid": 11022,
+            "longitude": 44.6571456,
+            "latitude": 43.7471209,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мончегорск",
-            "geoid": 10896
+            "geoid": 10896,
+            "longitude": 32.9358886,
+            "latitude": 67.9385206,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Москва",
-            "geoid": 213
-        },
-        {
-            "name": "Мостовской",
-            "geoid": 21030
+            "geoid": 213,
+            "longitude": 37.6203735,
+            "latitude": 55.7538789,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Муравленко",
-            "geoid": 11174
+            "geoid": 11174,
+            "longitude": 74.494913,
+            "latitude": 63.794188,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мурманск",
-            "geoid": 23
+            "geoid": 23,
+            "longitude": 33.0686019,
+            "latitude": 69.0076958,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Муром",
-            "geoid": 10668
+            "geoid": 10668,
+            "longitude": 42.023006,
+            "latitude": 55.5632276,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мценск",
-            "geoid": 10770
+            "geoid": 10770,
+            "longitude": 36.574992,
+            "latitude": 53.2790021,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мыски",
-            "geoid": 11288
+            "geoid": 11288,
+            "longitude": 87.8056657,
+            "latitude": 53.7125516,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Мышкин",
-            "geoid": 10836
+            "geoid": 10836,
+            "longitude": 38.4542816,
+            "latitude": 57.7881664,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Набережные Челны",
-            "geoid": 236
+            "geoid": 236,
+            "longitude": 52.3958739,
+            "latitude": 55.7436475,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Надым",
-            "geoid": 11229
+            "geoid": 11229,
+            "longitude": 72.5182746,
+            "latitude": 65.5377514,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Назарово",
-            "geoid": 20091
+            "geoid": 20091,
+            "longitude": 90.4167947,
+            "latitude": 56.0113176,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нальчик",
-            "geoid": 30
+            "geoid": 30,
+            "longitude": 43.6070316,
+            "latitude": 43.4846312,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Наро-Фоминск",
-            "geoid": 10741
+            "geoid": 10741,
+            "longitude": 36.7608038,
+            "latitude": 55.3802749,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нарьян-Мар",
-            "geoid": 10902
+            "geoid": 10902,
+            "longitude": 53.0069336,
+            "latitude": 67.6381525,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Находка",
-            "geoid": 974
+            "geoid": 974,
+            "longitude": 132.8927812,
+            "latitude": 42.8240404,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Невельск",
-            "geoid": 20160
+            "geoid": 20160,
+            "longitude": 141.8631741,
+            "latitude": 46.6527314,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Невинномысск",
-            "geoid": 11064
+            "geoid": 11064,
+            "longitude": 41.9476147,
+            "latitude": 44.6227404,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нелидово",
-            "geoid": 10816
+            "geoid": 10816,
+            "longitude": 32.7766656,
+            "latitude": 56.2232417,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нерехта",
-            "geoid": 10702
+            "geoid": 10702,
+            "longitude": 40.5725438,
+            "latitude": 57.4543706,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нефтекамск",
-            "geoid": 11114
+            "geoid": 11114,
+            "longitude": 54.2483391,
+            "latitude": 56.0883075,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нефтеюганск",
-            "geoid": 11184
+            "geoid": 11184,
+            "longitude": 72.6164185,
+            "latitude": 61.0882837,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижневартовск",
-            "geoid": 1091
+            "geoid": 1091,
+            "longitude": 76.5696206,
+            "latitude": 60.9397379,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижнекамск",
-            "geoid": 11127
+            "geoid": 11127,
+            "longitude": 51.814407,
+            "latitude": 55.6311963,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижнеудинск",
-            "geoid": 11268
+            "geoid": 11268,
+            "longitude": 99.0313481,
+            "latitude": 54.8969105,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижний Ломов",
-            "geoid": 11104
+            "geoid": 11104,
+            "longitude": 43.6729216,
+            "latitude": 53.5301274,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижний Новгород",
-            "geoid": 47
+            "geoid": 47,
+            "longitude": 44.0053948,
+            "latitude": 56.3242093,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижний Тагил",
-            "geoid": 11168
+            "geoid": 11168,
+            "longitude": 59.9813242,
+            "latitude": 57.9101038,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нижняя Тура",
-            "geoid": 11169
-        },
-        {
-            "name": "Николаев",
-            "geoid": 148
+            "geoid": 11169,
+            "longitude": 59.8521265,
+            "latitude": 58.6310942,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Николаевск-на-Амуре",
-            "geoid": 11454
+            "geoid": 11454,
+            "longitude": 140.7109642,
+            "latitude": 53.1461943,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новодвинск",
-            "geoid": 20117
+            "geoid": 20117,
+            "longitude": 40.8208003,
+            "latitude": 64.4136023,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новозыбков",
-            "geoid": 10654
+            "geoid": 10654,
+            "longitude": 31.9356826,
+            "latitude": 52.5371426,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новокузнецк",
-            "geoid": 237
+            "geoid": 237,
+            "longitude": 87.2144046,
+            "latitude": 53.7942757,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новомосковск",
-            "geoid": 10830
+            "geoid": 10830,
+            "longitude": 38.2915652,
+            "latitude": 54.0109754,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новороссийск",
-            "geoid": 970
-        },
-        {
-            "name": "Новосергиевка",
-            "geoid": 11089
+            "geoid": 970,
+            "longitude": 37.7687218,
+            "latitude": 44.7234264,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новосибирск",
-            "geoid": 65
+            "geoid": 65,
+            "longitude": 82.9210575,
+            "latitude": 55.0281016,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новоуральск",
-            "geoid": 11170
+            "geoid": 11170,
+            "longitude": 60.095701,
+            "latitude": 57.2471507,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новочеркасск",
-            "geoid": 238
+            "geoid": 238,
+            "longitude": 40.1042066,
+            "latitude": 47.4119248,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Новый Уренгой",
-            "geoid": 11230
+            "geoid": 11230,
+            "longitude": 76.6810032,
+            "latitude": 66.0840036,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ногинск",
-            "geoid": 10742
+            "geoid": 10742,
+            "longitude": 38.4621635,
+            "latitude": 55.8686239,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Норильск",
-            "geoid": 11311
+            "geoid": 11311,
+            "longitude": 88.2009965,
+            "latitude": 69.3490828,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ноябрьск",
-            "geoid": 11231
-        },
-        {
-            "name": "Нур-Султан (Астана)",
-            "geoid": 163
+            "geoid": 11231,
+            "longitude": 75.4509665,
+            "latitude": 63.201846,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нурлат",
-            "geoid": 11128
+            "geoid": 11128,
+            "longitude": 50.8050431,
+            "latitude": 54.4281578,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Нягань",
-            "geoid": 11186
+            "geoid": 11186,
+            "longitude": 65.3944361,
+            "latitude": 62.1454839,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Обнинск",
-            "geoid": 967
-        },
-        {
-            "name": "Одесса",
-            "geoid": 145
-        },
-        {
-            "name": "Озёрск",
-            "geoid": 11214
-        },
-        {
-            "name": "Озёры",
-            "geoid": 10744
+            "geoid": 967,
+            "longitude": 36.6121785,
+            "latitude": 55.0943892,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Октябрьский",
-            "geoid": 20235
+            "geoid": 20235,
+            "longitude": 53.4656611,
+            "latitude": 54.4815344,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Омск",
-            "geoid": 66
+            "geoid": 66,
+            "longitude": 73.3674638,
+            "latitude": 54.9848136,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Омутнинск",
-            "geoid": 20028
+            "geoid": 20028,
+            "longitude": 52.1893554,
+            "latitude": 58.6697684,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Оренбург",
-            "geoid": 48
+            "geoid": 48,
+            "longitude": 55.1017379,
+            "latitude": 51.7875191,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Орехово-Зуево",
-            "geoid": 10745
+            "geoid": 10745,
+            "longitude": 38.9870711,
+            "latitude": 55.8151729,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Орск",
-            "geoid": 11091
+            "geoid": 11091,
+            "longitude": 58.4751889,
+            "latitude": 51.2293069,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Орёл",
-            "geoid": 10
-        },
-        {
-            "name": "Осиповичи",
-            "geoid": 26012
+            "geoid": 10,
+            "longitude": 36.0696479,
+            "latitude": 52.9672573,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Осташков",
-            "geoid": 10818
+            "geoid": 10818,
+            "longitude": 33.1116707,
+            "latitude": 57.1457205,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Павлово",
-            "geoid": 11082
+            "geoid": 11082,
+            "longitude": 43.0996232,
+            "latitude": 55.9797995,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Павловский Посад",
-            "geoid": 10746
-        },
-        {
-            "name": "Павлодар",
-            "geoid": 190
+            "geoid": 10746,
+            "longitude": 38.6596047,
+            "latitude": 55.7806718,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Пенза",
-            "geoid": 49
+            "geoid": 49,
+            "longitude": 45.0347408,
+            "latitude": 53.1753884,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Первоуральск",
-            "geoid": 11171
+            "geoid": 11171,
+            "longitude": 59.9429205,
+            "latitude": 56.9081665,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Пермь",
-            "geoid": 50
+            "geoid": 50,
+            "longitude": 56.2341778,
+            "latitude": 58.0103211,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Петровск",
-            "geoid": 20065
+            "geoid": 20065,
+            "longitude": 45.3851649,
+            "latitude": 52.3093782,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Петрозаводск",
-            "geoid": 18
-        },
-        {
-            "name": "Петропавловск",
-            "geoid": 10298
+            "geoid": 18,
+            "longitude": 34.3596263,
+            "latitude": 61.78909,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Петропавловск-Камчатский",
-            "geoid": 78
+            "geoid": 78,
+            "longitude": 158.6559142,
+            "latitude": 53.0370213,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Печора",
-            "geoid": 10942
+            "geoid": 10942,
+            "longitude": 57.22388,
+            "latitude": 65.1485717,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Пионерский",
-            "geoid": 20144
+            "geoid": 20144,
+            "longitude": 20.227697,
+            "latitude": 54.9516927,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Покровск",
-            "geoid": 20615
+            "geoid": 20615,
+            "longitude": 129.1482195,
+            "latitude": 61.4843538,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Полевской",
-            "geoid": 21726
-        },
-        {
-            "name": "Полтава",
-            "geoid": 964
+            "geoid": 21726,
+            "longitude": 60.2366314,
+            "latitude": 56.4958085,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Полярные Зори",
-            "geoid": 20156
+            "geoid": 20156,
+            "longitude": 32.497541,
+            "latitude": 67.3730192,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Поронайск",
-            "geoid": 20161
+            "geoid": 20161,
+            "longitude": 143.1007104,
+            "latitude": 49.2387983,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Почеп",
-            "geoid": 20186
+            "geoid": 20186,
+            "longitude": 33.4744608,
+            "latitude": 52.9154724,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Прокопьевск",
-            "geoid": 11291
+            "geoid": 11291,
+            "longitude": 86.7183428,
+            "latitude": 53.8604562,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Прохладный",
-            "geoid": 20174
-        },
-        {
-            "name": "Прохоровка",
-            "geoid": 10648
+            "geoid": 20174,
+            "longitude": 44.0101936,
+            "latitude": 43.7589521,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Псков",
-            "geoid": 25
+            "geoid": 25,
+            "longitude": 28.3318188,
+            "latitude": 57.819284,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Пугачев",
-            "geoid": 20066
+            "geoid": 20066,
+            "longitude": 48.7972652,
+            "latitude": 52.0158464,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Пыть-Ях",
-            "geoid": 11188
+            "geoid": 11188,
+            "longitude": 72.8366445,
+            "latitude": 60.7585769,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Пятигорск",
-            "geoid": 11067
+            "geoid": 11067,
+            "longitude": 43.0661091,
+            "latitude": 44.0411669,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Радужный",
-            "geoid": 11189
+            "geoid": 11189,
+            "longitude": 40.3323247,
+            "latitude": 55.9961034,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Раменское",
-            "geoid": 10750
+            "geoid": 10750,
+            "longitude": 38.273015,
+            "latitude": 55.549529,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ревда",
-            "geoid": 20224
-        },
-        {
-            "name": "Рефтинский",
-            "geoid": 114796
-        },
-        {
-            "name": "Речица",
-            "geoid": 26008
+            "geoid": 20224,
+            "longitude": 59.9071464,
+            "latitude": 56.79869,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ржев",
-            "geoid": 10820
-        },
-        {
-            "name": "Ровно",
-            "geoid": 10355
-        },
-        {
-            "name": "Рогачёв",
-            "geoid": 26027
+            "geoid": 10820,
+            "longitude": 34.3291178,
+            "latitude": 56.2629393,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Рославль",
-            "geoid": 10792
+            "geoid": 10792,
+            "longitude": 32.8479617,
+            "latitude": 53.9449601,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Россошь",
-            "geoid": 10681
+            "geoid": 10681,
+            "longitude": 39.6225534,
+            "latitude": 50.170089,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ростов",
-            "geoid": 10838
+            "geoid": 10838,
+            "longitude": 39.4378357,
+            "latitude": 57.2050177,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ростов-на-Дону",
-            "geoid": 39
+            "geoid": 39,
+            "longitude": 39.7187866,
+            "latitude": 47.2224364,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ртищево",
-            "geoid": 20067
+            "geoid": 20067,
+            "longitude": 43.7842399,
+            "latitude": 52.2616298,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Рубцовск",
-            "geoid": 11251
+            "geoid": 11251,
+            "longitude": 81.2077729,
+            "latitude": 51.5013075,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Руза",
-            "geoid": 10751
+            "geoid": 10751,
+            "longitude": 36.1960043,
+            "latitude": 55.7015302,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Рыбинск",
-            "geoid": 10839
+            "geoid": 10839,
+            "longitude": 38.858338,
+            "latitude": 58.0483802,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Рязань",
-            "geoid": 11
+            "geoid": 11,
+            "longitude": 39.7359992,
+            "latitude": 54.625457,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Саки",
-            "geoid": 20556
+            "geoid": 20556,
+            "longitude": 33.6032508,
+            "latitude": 45.1342889,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Салават",
-            "geoid": 11115
+            "geoid": 11115,
+            "longitude": 55.9245559,
+            "latitude": 53.3616311,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Салехард",
-            "geoid": 58
+            "geoid": 58,
+            "longitude": 66.6083994,
+            "latitude": 66.5493568,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сальск",
-            "geoid": 11051
+            "geoid": 11051,
+            "longitude": 41.5412229,
+            "latitude": 46.4751689,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Самара",
-            "geoid": 51
+            "geoid": 51,
+            "longitude": 50.1067691,
+            "latitude": 53.1951657,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Санкт-Петербург",
-            "geoid": 2
+            "geoid": 2,
+            "longitude": 30.3158225,
+            "latitude": 59.939125,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Саранск",
-            "geoid": 42
+            "geoid": 42,
+            "longitude": 45.1862263,
+            "latitude": 54.1807601,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Саратов",
-            "geoid": 194
+            "geoid": 194,
+            "longitude": 45.9530257,
+            "latitude": 51.530376,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Саров",
-            "geoid": 11083
+            "geoid": 11083,
+            "longitude": 43.3447792,
+            "latitude": 54.9227002,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сасово",
-            "geoid": 10777
+            "geoid": 10777,
+            "longitude": 41.9117458,
+            "latitude": 54.350807,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сафоново",
-            "geoid": 10794
+            "geoid": 10794,
+            "longitude": 33.233799,
+            "latitude": 55.1199868,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Севастополь",
-            "geoid": 959
+            "geoid": 959,
+            "longitude": 33.6100739,
+            "latitude": 44.6135153,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Северодвинск",
-            "geoid": 10849
-        },
-        {
-            "name": "Северодонецк",
-            "geoid": 24893
+            "geoid": 10849,
+            "longitude": 39.8182715,
+            "latitude": 64.56253,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Североморск",
-            "geoid": 10898
+            "geoid": 10898,
+            "longitude": 33.4178354,
+            "latitude": 69.0765029,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Североуральск",
-            "geoid": 20672
-        },
-        {
-            "name": "Семей",
-            "geoid": 165
+            "geoid": 20672,
+            "longitude": 59.9525274,
+            "latitude": 60.1533333,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Семикаракорск",
-            "geoid": 20638
+            "geoid": 20638,
+            "longitude": 40.811585,
+            "latitude": 47.5177981,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сергач",
-            "geoid": 20051
+            "geoid": 20051,
+            "longitude": 45.4813193,
+            "latitude": 55.5200364,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сергиев Посад",
-            "geoid": 10752
+            "geoid": 10752,
+            "longitude": 38.1502568,
+            "latitude": 56.3063411,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сердобск",
-            "geoid": 11106
+            "geoid": 11106,
+            "longitude": 44.2122688,
+            "latitude": 52.4697532,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Серов",
-            "geoid": 11172
+            "geoid": 11172,
+            "longitude": 60.5752136,
+            "latitude": 59.6048651,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Серпухов",
-            "geoid": 10754
+            "geoid": 10754,
+            "longitude": 37.4032682,
+            "latitude": 54.9225396,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Симферополь",
-            "geoid": 146
+            "geoid": 146,
+            "longitude": 34.100117,
+            "latitude": 44.9482645,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Славгород",
-            "geoid": 11252
+            "geoid": 11252,
+            "longitude": 78.6459674,
+            "latitude": 52.9993053,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Славянск-на-Кубани",
-            "geoid": 20704
+            "geoid": 20704,
+            "longitude": 38.1260725,
+            "latitude": 45.2605079,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Смоленск",
-            "geoid": 12
+            "geoid": 12,
+            "longitude": 31.8153366,
+            "latitude": 54.7867168,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Снежинск",
-            "geoid": 11218
+            "geoid": 11218,
+            "longitude": 60.7324989,
+            "latitude": 56.085232,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Советск",
-            "geoid": 10860
+            "geoid": 10860,
+            "longitude": 21.8886272,
+            "latitude": 55.0810474,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Советский",
-            "geoid": 11190
+            "geoid": 11190,
+            "longitude": 63.566863,
+            "latitude": 61.3706695,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сокол",
-            "geoid": 20124
+            "geoid": 20124,
+            "longitude": 40.1114414,
+            "latitude": 59.4759156,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Соликамск",
-            "geoid": 11110
+            "geoid": 11110,
+            "longitude": 56.7710358,
+            "latitude": 59.6483518,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Солнечногорск",
-            "geoid": 10755
+            "geoid": 10755,
+            "longitude": 37.0967653,
+            "latitude": 56.2148655,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сосновый Бор",
-            "geoid": 10891
+            "geoid": 10891,
+            "longitude": 29.1290866,
+            "latitude": 59.8772921,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сочи",
-            "geoid": 239
+            "geoid": 239,
+            "longitude": 39.7231419,
+            "latitude": 43.5855829,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Спасск-Дальний",
-            "geoid": 11425
+            "geoid": 11425,
+            "longitude": 132.8157564,
+            "latitude": 44.5900929,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ставрополь",
-            "geoid": 36
+            "geoid": 36,
+            "longitude": 41.9690168,
+            "latitude": 45.0445439,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Старая Русса",
-            "geoid": 10923
-        },
-        {
-            "name": "Староминская",
-            "geoid": 100640
+            "geoid": 10923,
+            "longitude": 31.3555076,
+            "latitude": 57.9906873,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Старый Оскол",
-            "geoid": 10649
+            "geoid": 10649,
+            "longitude": 37.8349849,
+            "latitude": 51.2965991,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Стерлитамак",
-            "geoid": 11116
+            "geoid": 11116,
+            "longitude": 55.9315707,
+            "latitude": 53.6302498,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ступино",
-            "geoid": 10756
+            "geoid": 10756,
+            "longitude": 38.1186976,
+            "latitude": 54.9238403,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Суворов",
-            "geoid": 10831
+            "geoid": 10831,
+            "longitude": 36.4806933,
+            "latitude": 54.1345367,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Судак",
-            "geoid": 11472
+            "geoid": 11472,
+            "longitude": 34.9761591,
+            "latitude": 44.8505913,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Суздаль",
-            "geoid": 10671
-        },
-        {
-            "name": "Сумы",
-            "geoid": 965
+            "geoid": 10671,
+            "longitude": 40.4525581,
+            "latitude": 56.4273814,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сургут",
-            "geoid": 973
+            "geoid": 973,
+            "longitude": 73.3961726,
+            "latitude": 61.2539773,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сызрань",
-            "geoid": 11139
+            "geoid": 11139,
+            "longitude": 48.4745419,
+            "latitude": 53.1557213,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Сыктывкар",
-            "geoid": 19
+            "geoid": 19,
+            "longitude": 50.8356491,
+            "latitude": 61.668789,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тавда",
-            "geoid": 20685
+            "geoid": 20685,
+            "longitude": 65.2743232,
+            "latitude": 58.0434196,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Таганрог",
-            "geoid": 971
+            "geoid": 971,
+            "longitude": 38.935154,
+            "latitude": 47.2094907,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тамбов",
-            "geoid": 13
-        },
-        {
-            "name": "Тараз",
-            "geoid": 21094
+            "geoid": 13,
+            "longitude": 41.452258,
+            "latitude": 52.7213021,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тарко-Сале",
-            "geoid": 20255
+            "geoid": 20255,
+            "longitude": 77.7610204,
+            "latitude": 64.9117649,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тверь",
-            "geoid": 14
+            "geoid": 14,
+            "longitude": 35.9117898,
+            "latitude": 56.8585396,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Темрюк",
-            "geoid": 20677
-        },
-        {
-            "name": "Тернополь",
-            "geoid": 10357
+            "geoid": 20677,
+            "longitude": 37.445519,
+            "latitude": 45.2611082,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тихвин",
-            "geoid": 10892
+            "geoid": 10892,
+            "longitude": 33.5072307,
+            "latitude": 59.6273809,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тобольск",
-            "geoid": 11175
+            "geoid": 11175,
+            "longitude": 68.2538392,
+            "latitude": 58.2016828,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тольятти",
-            "geoid": 240
+            "geoid": 240,
+            "longitude": 49.389461,
+            "latitude": 53.5206438,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Томск",
-            "geoid": 67
+            "geoid": 67,
+            "longitude": 84.9481737,
+            "latitude": 56.4847036,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Топки",
-            "geoid": 11297
+            "geoid": 11297,
+            "longitude": 85.6153223,
+            "latitude": 55.2766036,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Троицк",
-            "geoid": 11220
-        },
-        {
-            "name": "Трёхгорный",
-            "geoid": 11219
+            "geoid": 11220,
+            "longitude": 61.5585503,
+            "latitude": 54.0844132,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Туапсе",
-            "geoid": 1058
-        },
-        {
-            "name": "Тугулым",
-            "geoid": 100834
+            "geoid": 1058,
+            "longitude": 39.082645,
+            "latitude": 44.1103707,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тула",
-            "geoid": 15
+            "geoid": 15,
+            "longitude": 37.6153885,
+            "latitude": 54.192017,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Тюмень",
-            "geoid": 55
+            "geoid": 55,
+            "longitude": 65.5343118,
+            "latitude": 57.1530824,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Углич",
-            "geoid": 10840
+            "geoid": 10840,
+            "longitude": 38.3019793,
+            "latitude": 57.5223866,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Удомля",
-            "geoid": 10824
-        },
-        {
-            "name": "Ужгород",
-            "geoid": 10358
+            "geoid": 10824,
+            "longitude": 35.016716,
+            "latitude": 57.8787885,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Улан-Удэ",
-            "geoid": 198
+            "geoid": 198,
+            "longitude": 107.5841511,
+            "latitude": 51.8334378,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ульяновск",
-            "geoid": 195
+            "geoid": 195,
+            "longitude": 48.3748717,
+            "latitude": 54.3080674,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Унеча",
-            "geoid": 20191
-        },
-        {
-            "name": "Уральск",
-            "geoid": 10305
+            "geoid": 20191,
+            "longitude": 32.6757071,
+            "latitude": 52.8460665,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Усинск",
-            "geoid": 10944
+            "geoid": 10944,
+            "longitude": 57.5570054,
+            "latitude": 65.9941116,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Усмань",
-            "geoid": 20214
+            "geoid": 20214,
+            "longitude": 39.7264516,
+            "latitude": 52.0444165,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Усолье-Сибирское",
-            "geoid": 11272
+            "geoid": 11272,
+            "longitude": 103.6387694,
+            "latitude": 52.7567192,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Уссурийск",
-            "geoid": 11426
+            "geoid": 11426,
+            "longitude": 131.9517262,
+            "latitude": 43.79726,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Усть-Илимск",
-            "geoid": 11273
-        },
-        {
-            "name": "Усть-Каменогорск",
-            "geoid": 10306
+            "geoid": 11273,
+            "longitude": 102.7414683,
+            "latitude": 57.9431325,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Уфа",
-            "geoid": 172
+            "geoid": 172,
+            "longitude": 55.9578647,
+            "latitude": 54.734853,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ухта",
-            "geoid": 10945
+            "geoid": 10945,
+            "longitude": 53.7014202,
+            "latitude": 63.5564779,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Феодосия",
-            "geoid": 11469
+            "geoid": 11469,
+            "longitude": 35.3824772,
+            "latitude": 45.031878,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Хабаровск",
-            "geoid": 76
+            "geoid": 76,
+            "longitude": 135.0598811,
+            "latitude": 48.4647991,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ханты-Мансийск",
-            "geoid": 57
-        },
-        {
-            "name": "Харьков",
-            "geoid": 147
-        },
-        {
-            "name": "Херсон",
-            "geoid": 962
-        },
-        {
-            "name": "Хмельницкий",
-            "geoid": 961
+            "geoid": 57,
+            "longitude": 69.0183322,
+            "latitude": 61.0024344,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Чайковский",
-            "geoid": 20243
+            "geoid": 20243,
+            "longitude": 54.1478482,
+            "latitude": 56.7780203,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Чебоксары",
-            "geoid": 45
+            "geoid": 45,
+            "longitude": 47.2488718,
+            "latitude": 56.1439378,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Челябинск",
-            "geoid": 56
-        },
-        {
-            "name": "Чердаклы",
-            "geoid": 101253
+            "geoid": 56,
+            "longitude": 61.4007858,
+            "latitude": 55.1603659,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Череповец",
-            "geoid": 968
-        },
-        {
-            "name": "Черкассы",
-            "geoid": 10363
+            "geoid": 968,
+            "longitude": 37.9092243,
+            "latitude": 59.1269214,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Черкесск",
-            "geoid": 1104
-        },
-        {
-            "name": "Чернигов",
-            "geoid": 966
-        },
-        {
-            "name": "Черновцы",
-            "geoid": 10365
-        },
-        {
-            "name": "Черноморское",
-            "geoid": 27394
+            "geoid": 1104,
+            "longitude": 42.0467829,
+            "latitude": 44.2268637,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Черняховск",
-            "geoid": 20149
+            "geoid": 20149,
+            "longitude": 21.7969179,
+            "latitude": 54.6243928,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Чехов",
-            "geoid": 10761
+            "geoid": 10761,
+            "longitude": 37.4532591,
+            "latitude": 55.1507175,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Чистополь",
-            "geoid": 11129
+            "geoid": 11129,
+            "longitude": 50.628495,
+            "latitude": 55.3699372,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Чита",
-            "geoid": 68
+            "geoid": 68,
+            "longitude": 113.4994884,
+            "latitude": 52.0340128,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Шадринск",
-            "geoid": 11159
+            "geoid": 11159,
+            "longitude": 63.6298234,
+            "latitude": 56.0870152,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Шатура",
-            "geoid": 10762
+            "geoid": 10762,
+            "longitude": 39.5443781,
+            "latitude": 55.5777942,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Шахты",
-            "geoid": 11053
+            "geoid": 11053,
+            "longitude": 40.2159154,
+            "latitude": 47.7084247,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Шебекино",
-            "geoid": 20196
+            "geoid": 20196,
+            "longitude": 36.8877988,
+            "latitude": 50.4005506,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Шуя",
-            "geoid": 10691
-        },
-        {
-            "name": "Шымкент",
-            "geoid": 221
+            "geoid": 10691,
+            "longitude": 41.3802455,
+            "latitude": 56.8560743,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Электросталь",
-            "geoid": 20523
+            "geoid": 20523,
+            "longitude": 38.4446531,
+            "latitude": 55.7847718,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Элиста",
-            "geoid": 1094
+            "geoid": 1094,
+            "longitude": 44.2701417,
+            "latitude": 46.3082947,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Югорск",
-            "geoid": 11177
+            "geoid": 11177,
+            "longitude": 63.3364787,
+            "latitude": 61.3124504,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Южно-Сахалинск",
-            "geoid": 80
+            "geoid": 80,
+            "longitude": 142.7381252,
+            "latitude": 46.959133,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Южноуральск",
-            "geoid": 11227
+            "geoid": 11227,
+            "longitude": 61.2581869,
+            "latitude": 54.4490124,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Юрга",
-            "geoid": 11299
+            "geoid": 11299,
+            "longitude": 84.8885516,
+            "latitude": 55.7202689,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Якутск",
-            "geoid": 74
+            "geoid": 74,
+            "longitude": 129.7325717,
+            "latitude": 62.0280273,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ялта",
-            "geoid": 11470
+            "geoid": 11470,
+            "longitude": 34.04455,
+            "latitude": 44.416366,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ялуторовск",
-            "geoid": 11178
+            "geoid": 11178,
+            "longitude": 66.297034,
+            "latitude": 56.649167,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         },
         {
             "name": "Ярославль",
-            "geoid": 16
-        },
-        {
-            "name": "Яшкино",
-            "geoid": 11300
+            "geoid": 16,
+            "longitude": 39.897878,
+            "latitude": 57.6216145,
+            "eventsMenu": [
+                {
+                    "name": "Кино",
+                    "code": "cinema"
+                },
+                {
+                    "name": "Концерт",
+                    "code": "concert"
+                }
+            ]
         }
     ]
 }

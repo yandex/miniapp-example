@@ -32,7 +32,7 @@ const MetroStation: React.FC<Metro> = props => {
 
 const YaMapModal: React.FC<Props> = props => {
     const { coordinates, metro, address } = props;
-    const place = useMemo<[number, number]>(() => [coordinates.latitude, coordinates.longitude], [coordinates]);
+    const place = useMemo<[number, number]>(() => [coordinates.longitude, coordinates.latitude], [coordinates]);
 
     return (
         <div className={styles.modal}>

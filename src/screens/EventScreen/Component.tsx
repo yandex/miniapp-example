@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef } from 'react';
+import React, { ReactElement, useRef, MutableRefObject } from 'react';
 import { useSelector } from 'react-redux';
 
 import { RootReducer } from '../../redux';
@@ -8,8 +8,9 @@ import PageHeader from '../../components/PageHeader';
 import Gallery from '../../components/Gallery';
 import CollapsedText from '../../components/CollapsedText';
 
-import { useVisible } from '../../hooks/useVisible';
-
+import { useScreenRef } from '../../components/StackNavigator';
+import { useScrollEffect } from '../../hooks/useScrollEffect';
+import { isIOS } from '../../lib/is-ios';
 import Title from './components/Title';
 import ContentBlock from './components/ContentBlock';
 import Cover from './components/Cover';
@@ -24,10 +25,19 @@ type Props = {
     skeleton: ReactElement;
 };
 
-const IMAGE_INTERSECTION_OBSERVER_OPTIONS = { threshold: [1] };
+const isScrollAtTop = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
+    if (isIOS()) {
+        return window.scrollY <= 0;
+    }
+
+    return !ref.current || ref.current?.scrollTop <= 0;
+};
 
 const Component: React.FC<Props> = ({ id, skeleton }) => {
     const mainImageRef = useRef<HTMLDivElement | null>(null);
+    const screenRef = useScreenRef();
+    const documentRef = useRef(document);
+    const scrollableRef: MutableRefObject<EventTarget | null> = isIOS() ? documentRef : screenRef;
 
     const eventPage: Partial<EventPage> = useSelector((state: RootReducer) => state.event.data[id]) || {};
     const event = (eventPage.event || {}) as Event;
@@ -38,8 +48,7 @@ const Component: React.FC<Props> = ({ id, skeleton }) => {
     const { preview } = schedule;
     const ticket = tickets && tickets[0];
 
-    const isImageVisible = useVisible(mainImageRef, IMAGE_INTERSECTION_OBSERVER_OPTIONS);
-    const isPageHeaderClear = isImageVisible || isImageVisible === undefined;
+    const isPageHeaderClear = useScrollEffect(scrollableRef, screenRef, isScrollAtTop);
 
     if (isLoading) {
         return skeleton;

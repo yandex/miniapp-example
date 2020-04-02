@@ -5,6 +5,7 @@ import { throttle } from 'throttle-debounce';
 import { loadPopularEvents, loadSearchResults, resetResults } from '../../redux/slices/search';
 
 import BackwardButton from '../../components/BackwardButton';
+
 import SuggestInput from './Input';
 import SearchResult from './SearchResult';
 import PopularResult from './PopularResult';

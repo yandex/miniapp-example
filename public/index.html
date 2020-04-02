@@ -2,64 +2,23 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8" />
-        <meta name="robots" content="noindex" />
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
         />
         <meta name="theme-color" content="#000000" />
-        <link rel="apple-touch-icon" href="logo192.png" />
+        <meta name="robots" content="noindex,nofollow" />
+
+        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
         <link rel="preconnect" href="//static-maps.yandex.ru/" />
 
         <title>MiniApp Example</title>
-        <style>
-            #splash-screen {
-                position: fixed;
-                z-index: 200;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                font-family: 'Helvetica Neue', Arial, sans-serif;
-                -webkit-font-smoothing: antialiased;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                background-color: #f0f3f5;
-                color: rgb(187, 189, 190);
-            }
-            #splash-screen::before {
-                content: '';
-                display: block;
-                width: 70px;
-                height: 70px;
-
-                background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.00037 16L9.00036 15.8672C9.00023 12.2062 9.00016 10.375 9.95528 9.0611C10.2637 8.63662 10.637 8.26334 11.0614 7.95494C12.3758 7.00002 14.2506 7.00002 18.0004 7.00002C21.7501 7.00002 23.625 7.00002 24.9393 7.95494C25.3638 8.26334 25.7371 8.63662 26.0455 9.0611C27.0004 10.3754 27.0004 12.2503 27.0004 16C27.0004 19.7498 27.0004 21.6246 26.0455 22.9389C25.7371 23.3634 25.3638 23.7367 24.9393 24.0451C23.625 25 21.7501 25 18.0004 25H18.0004C16.9532 25 16.0522 25 15.2688 24.9792C16.2077 24.3859 17.0475 23.7435 17.4898 23.4052L17.4901 23.405L17.4901 23.405C17.6084 23.3145 17.6982 23.2458 17.7539 23.2056C18.289 22.8179 18.2875 22.7758 18.2581 21.963L18.2547 21.8701L17.9715 19.8807C18.6821 19.3314 19.636 18.4512 20.4083 17.674C23.408 14.6547 23.0802 11.5571 22.7399 11.2142C22.397 10.8739 19.2994 10.5462 16.2801 13.5458C15.5029 14.3181 14.6227 15.272 14.0734 15.9826L12.084 15.6994L11.9911 15.696C11.1783 15.6666 11.1362 15.6651 10.7485 16.2002C10.7083 16.2559 10.6395 16.3458 10.5489 16.4643L10.5489 16.4643C10.2188 16.8958 9.59926 17.7057 9.01829 18.6169C9.00037 17.8606 9.00036 16.9965 9.00037 16ZM11.8981 20.1661C12.1518 19.7397 12.3327 19.4358 12.2429 19.3457C12.014 19.116 10.9522 18.5151 9.69224 19.775C8.43307 21.0342 8.00024 23.1912 8.00024 25.7095C10.5202 25.7095 12.6755 25.2775 13.9346 24.0175C15.1946 22.7583 14.5949 21.6977 14.3643 21.4671C14.2731 21.3762 13.9497 21.5529 13.4989 21.799C12.8137 22.1731 11.8343 22.7079 10.9294 22.7079C10.9294 21.794 11.5024 20.8311 11.8981 20.1661Z' fill='black' fill-opacity='0.25'/%3E%3C/svg%3E%0A");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: -1px 2px;
-                box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.14);
-                border-radius: 20px;
-            }
-            #splash-screen::after {
-                content: 'MiniApp Example';
-                display: block;
-                width: 130px;
-                height: 21px;
-                margin-top: 20px;
-            }
-        </style>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
-        <div id="splash-screen"></div>
     </body>
 </html>

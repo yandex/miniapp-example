@@ -120,7 +120,7 @@ export const loadPopularEvents = (): AppThunk => async(dispatch, getState) => {
         const actualEvents = await fetchActualEvents({ limit: 15, geoid });
         dispatch(fetchPopularSuccess(actualEvents.events.items));
     } catch (err) {
-        console.error({ err });
+        console.error(err);
         dispatch(fetchPopularError());
     }
 };
@@ -163,7 +163,7 @@ export const loadSearchResults = (text: string): AppThunk => async(dispatch, get
             return;
         }
 
-        console.error({ err });
+        console.error(err);
         dispatch(searchError());
     }
 };

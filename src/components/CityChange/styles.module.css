@@ -23,6 +23,24 @@
     overscroll-behavior-y: contain;
 }
 
+.wrapper::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    content: '';
+
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.wrapper_loading::after {
+    display: block;
+}
+
 .wrapper-visible_yes {
     transform: translate(0, 0);
     animation-name: slideUp;

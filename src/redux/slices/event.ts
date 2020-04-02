@@ -114,7 +114,7 @@ export const loadEvent = (id: string): AppThunk => async(dispatch, getState) => 
         const event = await fetchEvent(id);
         dispatch(fetchSuccess({ id, event }));
     } catch (err) {
-        console.error({ err });
+        console.error(err);
         dispatch(fetchError({ id, error: err }));
     }
 };

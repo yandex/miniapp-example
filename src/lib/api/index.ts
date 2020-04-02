@@ -1,3 +1,4 @@
+import { getDistanceBetweenPoints } from '../geolocation';
 import {
     RubricEventsResponse,
     ActualEventsResponse,
@@ -9,6 +10,14 @@ import {
     SuggestResponse,
     RecommendedEventsResponse,
 } from './types';
+import { City } from './fragments/city';
+
+export const MOSCOW = {
+    name: 'Москва',
+    geoid: 213,
+    longitude: 37.611347,
+    latitude: 55.760241,
+} as const;
 
 type DateFilter = {
     date: string;
@@ -20,6 +29,11 @@ export type GetEventsOptions = {
     offset?: number;
     limit?: number;
 } & Partial<DateFilter>;
+
+type GetCityInfoOptions = {
+    longitude: number;
+    latitude: number;
+};
 
 export type GetSelectionsOptions = DateFilter & { geoid: number };
 
@@ -70,8 +84,41 @@ export function fetchSelections(options?: GetSelectionsOptions) {
     return request<SelectionsResponse>('/api/selections.json', options);
 }
 
-export function fetchCityInfo(geoid: number) {
-    return request<CityInfoResponse>('/api/city-info.json', { geoid });
+export async function fetchCityInfo(options: GetCityInfoOptions): Promise<CityInfoResponse> {
+    const cityList = await fetchCityList();
+
+    const citiesWithDistance = cityList.cities.map(city => {
+        const distance = getDistanceBetweenPoints(options.latitude, options.longitude, city.latitude, city.longitude);
+
+        return {
+            ...city,
+            distance,
+        };
+    });
+
+    let minDistance = Infinity;
+
+    const nearestCity: City = citiesWithDistance.reduce<City>(
+        (nearestCity, city) => {
+            if (city.distance < minDistance) {
+                minDistance = city.distance;
+
+                delete city.distance;
+
+                return city;
+            }
+
+            return nearestCity;
+        },
+        {
+            ...MOSCOW,
+            eventsMenu: [],
+        }
+    );
+
+    return {
+        cityInfo: nearestCity,
+    };
 }
 
 export function fetchCityList() {

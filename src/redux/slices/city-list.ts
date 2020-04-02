@@ -4,12 +4,12 @@ import { persistReducer } from 'redux-persist';
 import { fetchCityList } from '../../lib/api';
 import { getPersistConfig } from '../helpers/persist';
 
-import { CityListItem } from '../../lib/api/fragments/city-list-item';
+import { City } from '../../lib/api/fragments/city';
 import { AppThunk } from '../index';
 
 export type CityListState = {
     isLoading: boolean;
-    items: CityListItem[];
+    items: City[];
 };
 
 const initialState: CityListState = {
@@ -39,8 +39,7 @@ export const loadCityList = (): AppThunk => async dispatch => {
         const { cities } = await fetchCityList();
         dispatch(setCityListResult(cities));
     } catch (err) {
-        // eslint-disable-next-line no-console
-        console.error({ err });
+        console.error(err);
     }
 
     dispatch(setLoading(false));

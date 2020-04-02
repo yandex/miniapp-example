@@ -1,6 +1,6 @@
 .input {
     position: relative;
 
-    width: calc(100% - 100px);
+    width: 100%;
     height: 56px;
 }

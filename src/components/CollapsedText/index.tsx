@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 import ClearButton from '../ClearButton';
 
@@ -28,6 +28,8 @@ const CollapsedText: React.FC<ContentProps> = props => {
         }
     }, [shortRef, fullRef, props.lines]);
 
+    const onClick = useCallback(() => setVisible(true), [setVisible]);
+
     return (
         <>
             {!visible && (
@@ -43,7 +45,7 @@ const CollapsedText: React.FC<ContentProps> = props => {
                 {props.children}
             </div>
             {!visible && (
-                <ClearButton className={styles.button} onClick={() => setVisible(true)}>
+                <ClearButton className={styles.button} onClick={onClick}>
                     {props.fullTextLabel}
                 </ClearButton>
             )}

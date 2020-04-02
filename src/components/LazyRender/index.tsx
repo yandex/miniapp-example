@@ -5,11 +5,12 @@ import { useVisibleOnce } from '../../hooks/useVisibleOnce';
 type Props = {
     children: ReactElement;
     skeleton?: ReactElement;
+    intersectionOptions?: IntersectionObserverInit;
 };
 
-const LazyRender: React.FC<Props> = ({ children, skeleton }) => {
+const LazyRender: React.FC<Props> = ({ children, skeleton, intersectionOptions }) => {
     const ref = useRef<HTMLDivElement | null>(null);
-    const canRender = useVisibleOnce(ref);
+    const canRender = useVisibleOnce(ref, intersectionOptions);
     const [needSkeleton, showSkeleton] = useState(false);
 
     useEffect(() => {
@@ -18,11 +19,7 @@ const LazyRender: React.FC<Props> = ({ children, skeleton }) => {
         }
     }, [canRender]);
 
-    if (!canRender) {
-        return <div ref={ref}>{needSkeleton && skeleton}</div>;
-    }
-
-    return children;
+    return <div ref={ref}>{canRender ? children : needSkeleton && skeleton}</div>;
 };
 
 export default LazyRender;

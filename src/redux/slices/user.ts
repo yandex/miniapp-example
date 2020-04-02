@@ -37,8 +37,7 @@ export const loadUserInfo = (): AppThunk => async dispatch => {
         const userInfo = await getCurrentUserInfo();
         dispatch(setUser(userInfo));
     } catch (err) {
-        // eslint-disable-next-line no-console
-        console.error({ err });
+        console.error(err);
     }
 };
 

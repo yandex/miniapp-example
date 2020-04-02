@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { RootReducer } from '../../../redux';
 import { getEventUrl } from '../../../lib/url-builder';
+import { RootReducer } from '../../../redux';
 
 import PopularResultSkeleton from './Skeleton';
+
 import styles from './styles.module.css';
 
 type Props = {

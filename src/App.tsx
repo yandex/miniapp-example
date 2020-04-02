@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import MainScreen from './screens/MainScreen';
 import EventScreen from './screens/EventScreen';
@@ -10,11 +10,11 @@ import SearchScreen from './screens/SearchScreen';
 import MenuModal from './components/MenuModal';
 import CityModal from './components/CityModal';
 
-import { RootReducer } from './redux';
 import { loadCityInfo } from './redux/slices/city';
 import { loadUserInfo } from './redux/slices/user';
 
 import { createStackNavigator } from './components/StackNavigator';
+import { isIOS } from './lib/is-ios';
 
 const Navigator = createStackNavigator(
     [
@@ -26,17 +26,17 @@ const Navigator = createStackNavigator(
         {
             path: '/event/:id',
             exact: true,
-            component: memo(params => <EventScreen id={params.id} />),
+            component: memo(({ params: { id } }) => <EventScreen id={id} />),
         },
         {
             path: '/events/:code',
             exact: true,
-            component: memo(params => <RubricScreen code={params.code} />),
+            component: memo(({ params: { code } }) => <RubricScreen code={code} />),
         },
         {
             path: '/selection/:code',
             exact: true,
-            component: memo(params => <SelectionScreen code={params.code} />),
+            component: memo(({ params: { code } }) => <SelectionScreen code={code} />),
         },
         {
             path: '/search',
@@ -51,12 +51,12 @@ const Navigator = createStackNavigator(
     {
         // Сохраняем в истории максимум 10 экранов
         maxDepth: 10,
+        transitions: true,
     }
 );
 
 const App: React.FC = () => {
     const dispatch = useDispatch();
-    const city = useSelector((state: RootReducer) => state.city.currentCity);
 
     const [cityModalVisible, setCityModalVisible] = useState<boolean>(false);
 
@@ -68,19 +68,16 @@ const App: React.FC = () => {
     );
 
     useEffect(() => {
-        dispatch(loadCityInfo(city.geoid));
-    }, [dispatch, city.geoid]);
+        dispatch(loadCityInfo());
+    }, [dispatch]);
 
     useEffect(() => {
         dispatch(loadUserInfo());
     }, [dispatch]);
 
     useEffect(() => {
-        const splashScreen = document.querySelector<HTMLDivElement>('#splash-screen');
-
-        if (splashScreen) {
-            // Ждем некоторое время, чтобы заглушка резко не исчезала
-            setTimeout(() => splashScreen.parentNode!.removeChild(splashScreen), 400);
+        if (isIOS()) {
+            document.body.style.overflow = 'auto';
         }
     }, []);
 

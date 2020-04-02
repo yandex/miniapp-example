@@ -1,4 +1,7 @@
 import React, { ChangeEvent } from 'react';
+import { useSelector } from 'react-redux';
+
+import { RootReducer } from '../../redux';
 
 import Checkbox from '../Checkbox';
 import ActionButton from '../ActionButton';
@@ -25,9 +28,12 @@ const CityChange: React.FC<CityChangeProps> = ({
     onGeolocationChanged,
     selectedCity,
 }) => {
+    const isFetchingLocation = useSelector((state: RootReducer) => state.city.isFetchingLocation);
+
     const className = [
         styles.wrapper,
         visible || wasClosed ? styles[`wrapper-visible_${visible ? 'yes' : 'no'}`] : '',
+        isFetchingLocation && styles.wrapper_loading,
     ].join(' ');
 
     return (

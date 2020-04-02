@@ -4,17 +4,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useClickAway } from 'react-use';
 
 import { RootReducer } from '../../redux';
-import { setCity as saveCity } from '../../redux/slices/city';
-import { CityListState } from '../../redux/slices/city-list';
+import { setCity as saveCity, toggleGeolocation, loadCityInfo, City as stateCity } from '../../redux/slices/city';
+import { usePrevious } from '../../hooks/usePrevious';
 
 import CityChange from '../CityChange';
 import CitySelect from '../CitySelect';
 
-import { getCurrentCity } from '../../lib/geolocation';
-
 import styles from './styles.module.css';
 
-export type City = CityListState['items'][0];
+export type City = stateCity['currentCity'];
 
 const CityModal: React.FC<{
     visible: boolean;
@@ -24,11 +22,12 @@ const CityModal: React.FC<{
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const savedCity = useSelector((state: RootReducer) => state.city.currentCity);
+    const currentCity = useSelector((state: RootReducer) => state.city.currentCity);
+    const useGeolocation = useSelector((state: RootReducer) => state.city.useGeolocation);
 
-    const [selectedCity, selectCity] = useState<RootReducer['city']['currentCity']>(savedCity);
-    const [currentCity, setCurrentCity] = useState<RootReducer['city']['currentCity'] | null>(null);
-    const [useGeolocation, setGeolocation] = useState<boolean>(true);
+    const previousCity = usePrevious<City>(currentCity);
+
+    const [selectedCity, selectCity] = useState<City>(currentCity);
 
     const [wasClosed, setWasClosed] = useState<boolean>(false);
     const [wasClosedModalChange, setWasClosedModalChange] = useState<boolean>(false);
@@ -42,32 +41,31 @@ const CityModal: React.FC<{
     ].join(' ');
 
     useEffect(() => {
-        getCurrentCity().then(city => setCurrentCity(city));
-    }, []);
-
-    useEffect(() => {
-        setGeolocation(selectedCity.geoid === (currentCity && currentCity.geoid));
-    }, [currentCity, selectedCity]);
-
-    useEffect(() => {
         setVisibleModalChange(isModalVisible);
-    }, [isModalVisible, setVisibleModalChange]);
+    }, [setVisibleModalChange, isModalVisible]);
 
     useEffect(() => {
-        if (useGeolocation && currentCity) {
-            selectCity(currentCity);
+        selectCity(currentCity);
+
+        if (previousCity && previousCity.name !== currentCity.name) {
+            console.warn('Go to `/` route');
+
+            history.replace('/');
         }
-    }, [currentCity, useGeolocation, selectCity]);
+    }, [selectCity, currentCity, previousCity, history]);
 
-    const onGeolocationChanged = useCallback(e => {
-        const isChecked = e.target.checked;
+    const onGeolocationChanged = useCallback(
+        e => {
+            const isChecked = e.target.checked;
 
-        setGeolocation(isChecked);
-    }, []);
+            dispatch(toggleGeolocation(isChecked));
+        },
+        [dispatch]
+    );
 
     const onClose = useCallback(() => {
-        if (selectedCity.name !== savedCity.name) {
-            selectCity(savedCity);
+        if (selectedCity.name !== currentCity.name) {
+            selectCity(currentCity);
         }
 
         setWasClosed(true);
@@ -75,10 +73,10 @@ const CityModal: React.FC<{
         setVisibleModalChange(false);
         setModalVisible(false);
     }, [
+        selectedCity,
+        currentCity,
         selectCity,
         setWasClosed,
-        selectedCity,
-        savedCity,
         setVisibleModalSelect,
         setVisibleModalChange,
         setModalVisible,
@@ -91,10 +89,10 @@ const CityModal: React.FC<{
 
         dispatch(saveCity(selectedCity));
 
-        if (selectedCity.name !== savedCity.name) {
-            history.push('/');
+        if (selectedCity.name !== currentCity.name) {
+            dispatch(loadCityInfo());
         }
-    }, [selectedCity, savedCity.name, dispatch, history, setModalVisible]);
+    }, [setVisibleModalChange, setModalVisible, dispatch, selectedCity, currentCity]);
 
     const onCitySelect = useCallback(
         (city: City) => {
@@ -102,8 +100,10 @@ const CityModal: React.FC<{
             setWasClosedModalSelect(true);
             setVisibleModalSelect(false);
             setVisibleModalChange(true);
+
+            dispatch(toggleGeolocation(false));
         },
-        [selectCity, setWasClosedModalSelect, setVisibleModalSelect, setVisibleModalChange]
+        [dispatch, selectCity, setWasClosedModalSelect, setVisibleModalSelect, setVisibleModalChange]
     );
 
     const openCityModal = useCallback(() => {
