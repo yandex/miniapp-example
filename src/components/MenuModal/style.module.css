@@ -28,12 +28,12 @@
     top: 0;
     bottom: 0;
 
-    overflow-x: hidden;
-    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
 
     box-sizing: border-box;
     width: 290px;
-    padding: 18px 16px;
+    padding: 18px 16px 0;
 
     background: #fff;
 
@@ -75,6 +75,28 @@
     animation-name: slideRight;
     animation-duration: .2s;
     animation-timing-function: ease-out;
+}
+
+.menu-modal-body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-grow: 1;
+
+    padding-bottom: 18px;
+}
+
+.psuid {
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.logout {
+    height: 55px;
+
+    line-height: 55px;
+
+    border-top: 1px solid #efefef;
 }
 
 @keyframes slideLeft {

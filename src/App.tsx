@@ -11,7 +11,6 @@ import MenuModal from './components/MenuModal';
 import CityModal from './components/CityModal';
 
 import { loadCityInfo } from './redux/slices/city';
-import { loadUserInfo } from './redux/slices/user';
 
 import { createStackNavigator } from './components/StackNavigator';
 import { isIOS } from './lib/is-ios';
@@ -69,10 +68,6 @@ const App: React.FC = () => {
 
     useEffect(() => {
         dispatch(loadCityInfo());
-    }, [dispatch]);
-
-    useEffect(() => {
-        dispatch(loadUserInfo());
     }, [dispatch]);
 
     useEffect(() => {

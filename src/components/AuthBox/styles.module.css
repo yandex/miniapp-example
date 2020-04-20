@@ -1,5 +1,5 @@
 .container {
-    height: 24px;
+    height: 32px;
     padding-bottom: 8px;
 }
 
@@ -15,8 +15,8 @@
     display: block;
     overflow: hidden;
 
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
 
     border-radius: 50%;
 }
@@ -38,5 +38,20 @@
 
     font-size: 16px;
     font-weight: bold;
-    line-height: 22px;
+    line-height: 32px;
+}
+
+.anonymous {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 12px;
+    padding: 5px 6px;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    color: #04b;
+    border: 1px solid #0054b9;
+    border-radius: 4px;
 }
