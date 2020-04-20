@@ -1,83 +1,83 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b5f4d0fe6d0934783d548c15e603afc",
+    "revision": "eaac40a290ccdcc156128562caf394b1",
     "url": "/miniapp-example/index.html"
   },
   {
-    "revision": "a49277da1d845951ef76",
+    "revision": "494eda44e3f4c1e68139",
     "url": "/miniapp-example/static/css/event-screen.b262a366.chunk.css"
   },
   {
-    "revision": "0599238f35f72b776668",
+    "revision": "34747e8cadd7909db118",
     "url": "/miniapp-example/static/css/main-screen.1b44af0f.chunk.css"
   },
   {
-    "revision": "d2bd5939904d54024d5b",
-    "url": "/miniapp-example/static/css/main.57c57c52.chunk.css"
+    "revision": "76a76175b0d12dc6eddc",
+    "url": "/miniapp-example/static/css/main.8cf2cbd3.chunk.css"
   },
   {
-    "revision": "a84a0a50f739cb761c9e",
+    "revision": "e0773e7f78451d448487",
     "url": "/miniapp-example/static/css/recommended-events.3010c848.chunk.css"
   },
   {
-    "revision": "4f2fb91f06e03d5a457e",
+    "revision": "e1fbecb31e25dec4e44f",
     "url": "/miniapp-example/static/css/rubric-screen.b65687db.chunk.css"
   },
   {
-    "revision": "b8ef991ed394944f4c01",
+    "revision": "927ed09d0c2dfad9ed45",
     "url": "/miniapp-example/static/css/selection-screen.b65687db.chunk.css"
   },
   {
-    "revision": "b995f95de96817cdd3f2",
-    "url": "/miniapp-example/static/js/10.b52b5b11.chunk.js"
+    "revision": "75da3a1e2d98efd29223",
+    "url": "/miniapp-example/static/js/10.d5fa6cc6.chunk.js"
   },
   {
-    "revision": "36bb10ff18e1367e8391",
-    "url": "/miniapp-example/static/js/11.7b4bc433.chunk.js"
+    "revision": "0d8657338578564bd01d",
+    "url": "/miniapp-example/static/js/11.996f691f.chunk.js"
   },
   {
-    "revision": "986b6836f214a7874a06",
-    "url": "/miniapp-example/static/js/8.f1f4896b.chunk.js"
+    "revision": "8c3368f0b452bd5f37a6",
+    "url": "/miniapp-example/static/js/8.53a5e25c.chunk.js"
   },
   {
     "revision": "f2fc174cadbfea3a39f9fff01c952a60",
-    "url": "/miniapp-example/static/js/8.f1f4896b.chunk.js.LICENSE.txt"
+    "url": "/miniapp-example/static/js/8.53a5e25c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5e7c0151e020111baf2",
-    "url": "/miniapp-example/static/js/9.27db9b56.chunk.js"
+    "revision": "f1092df4ab3977d8de16",
+    "url": "/miniapp-example/static/js/9.db0f0145.chunk.js"
   },
   {
-    "revision": "a49277da1d845951ef76",
-    "url": "/miniapp-example/static/js/event-screen.63fba745.chunk.js"
+    "revision": "494eda44e3f4c1e68139",
+    "url": "/miniapp-example/static/js/event-screen.7cdfbf40.chunk.js"
   },
   {
-    "revision": "0599238f35f72b776668",
-    "url": "/miniapp-example/static/js/main-screen.a3fda135.chunk.js"
+    "revision": "34747e8cadd7909db118",
+    "url": "/miniapp-example/static/js/main-screen.076974f0.chunk.js"
   },
   {
-    "revision": "d2bd5939904d54024d5b",
-    "url": "/miniapp-example/static/js/main.5040ce97.chunk.js"
+    "revision": "76a76175b0d12dc6eddc",
+    "url": "/miniapp-example/static/js/main.20b1ea93.chunk.js"
   },
   {
-    "revision": "a84a0a50f739cb761c9e",
-    "url": "/miniapp-example/static/js/recommended-events.2220542d.chunk.js"
+    "revision": "e0773e7f78451d448487",
+    "url": "/miniapp-example/static/js/recommended-events.d018cbc5.chunk.js"
   },
   {
-    "revision": "4f2fb91f06e03d5a457e",
-    "url": "/miniapp-example/static/js/rubric-screen.1ce5a1bc.chunk.js"
+    "revision": "e1fbecb31e25dec4e44f",
+    "url": "/miniapp-example/static/js/rubric-screen.487c9a6f.chunk.js"
   },
   {
-    "revision": "41b80bdc1321c04bb67a",
-    "url": "/miniapp-example/static/js/runtime-main.9c5c58f9.js"
+    "revision": "01a14dd1104d9c61751e",
+    "url": "/miniapp-example/static/js/runtime-main.e947113a.js"
   },
   {
-    "revision": "b8ef991ed394944f4c01",
-    "url": "/miniapp-example/static/js/selection-screen.0f82587d.chunk.js"
+    "revision": "927ed09d0c2dfad9ed45",
+    "url": "/miniapp-example/static/js/selection-screen.10f36551.chunk.js"
   },
   {
-    "revision": "7d4fb2c0e0c1590a2261",
-    "url": "/miniapp-example/static/js/ya-map-modal.45ffbd22.chunk.js"
+    "revision": "5a9597c151d8cf953bc1",
+    "url": "/miniapp-example/static/js/ya-map-modal.70af4c50.chunk.js"
   },
   {
     "revision": "bb88daed14728363a368d3a855b6b045",
