@@ -4,7 +4,7 @@ const path = require('path');
 const buildDir = path.join(__dirname, '../build/');
 const files = fs.readdirSync(buildDir);
 const isIndexFile = path => path.endsWith('/index.html');
-const baseUrl = process.env.BASE_URL || 'https://yandex.github.io/miniapp-example';
+const baseUrl = process.env.BASE_URL || 'https://yandex.github.io/miniapp-example/';
 const publicUrl = process.env.PUBLIC_URL || 'https://yandex.github.io/miniapp-example';
 const appVersion = generateVersion();
 
