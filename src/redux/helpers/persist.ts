@@ -62,7 +62,7 @@ export function getPersistConfig<S>(key: string, options?: PersistOptions<S>): P
         serialize: false,
         // @ts-ignore
         deserialize: false,
-        version: 4,
+        version: 5,
         migrate: (persistedState, currentVersion) => {
             // Достаем версию сохраненных в кэше данных.
             const persistedVersion = persistedState && persistedState._persist.version;

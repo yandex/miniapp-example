@@ -3,3 +3,7 @@
     border-radius: 100px;
     background-color: #ffdb4d;
 }
+
+.disabled {
+    opacity: .6;
+}

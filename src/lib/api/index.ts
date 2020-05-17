@@ -1,4 +1,5 @@
 import { getDistanceBetweenPoints } from '../geolocation';
+import { get, post } from './request';
 import {
     RubricEventsResponse,
     ActualEventsResponse,
@@ -9,6 +10,7 @@ import {
     CityListResponse,
     SuggestResponse,
     RecommendedEventsResponse,
+    CreateOrderResponse,
 } from './types';
 import { City } from './fragments/city';
 
@@ -37,51 +39,23 @@ type GetCityInfoOptions = {
 
 export type GetSelectionsOptions = DateFilter & { geoid: number };
 
-type QueryParams = {
-    [key: string]: string | number | string[] | undefined;
-};
-
-function queryParams(params: QueryParams) {
-    return Object.keys(params)
-        .map(k => {
-            const encodeKey = encodeURIComponent(k);
-
-            if (Array.isArray(params[k])) {
-                return (params[k] as string[]).map(v => `${encodeKey}=${encodeURIComponent(v)}`).join('&');
-            }
-
-            return `${encodeKey}=${encodeURIComponent(params[k]!.toString())}`;
-        })
-        .join('&');
-}
-
-async function request<T extends object>(url: string, query?: QueryParams, signal?: AbortSignal): Promise<T> {
-    const response = await fetch(
-        [process.env.REACT_APP_API_HOST, url, query ? '?' + queryParams(query) : ''].join(''),
-        { signal }
-    );
-
-    if (response.ok) {
-        return response.json();
-    }
-
-    return Promise.reject(response);
-}
+const API_HOST = process.env.REACT_APP_API_HOST ?? '';
+const PAYMENT_API_HOST = process.env.REACT_APP_PAYMENT_API_HOST ?? '';
 
 export function fetchEvent(id: string) {
-    return request<EventResponse>(`/api/event/${id}.json`);
+    return get<EventResponse>(API_HOST, `/api/event/${id}.json`);
 }
 
 export function fetchRubricEvents(tag: string, options?: GetEventsOptions) {
-    return request<RubricEventsResponse>(`/api/rubric-events/${tag}.json`, options);
+    return get<RubricEventsResponse>(API_HOST, `/api/rubric-events/${tag}.json`, options);
 }
 
 export function fetchActualEvents(options?: GetEventsOptions) {
-    return request<ActualEventsResponse>('/api/actual-events.json', options);
+    return get<ActualEventsResponse>(API_HOST, '/api/actual-events.json', options);
 }
 
 export function fetchSelections(options?: GetSelectionsOptions) {
-    return request<SelectionsResponse>('/api/selections.json', options);
+    return get<SelectionsResponse>(API_HOST, '/api/selections.json', options);
 }
 
 export async function fetchCityInfo(options: GetCityInfoOptions): Promise<CityInfoResponse> {
@@ -122,17 +96,29 @@ export async function fetchCityInfo(options: GetCityInfoOptions): Promise<CityIn
 }
 
 export function fetchCityList() {
-    return request<CityListResponse>('/api/city-list.json');
+    return get<CityListResponse>(API_HOST, '/api/city-list.json');
 }
 
 export function fetchSelectionEvents(code: string, options?: GetEventsOptions) {
-    return request<SelectionEventsResponse>(`/api/selection-events/${code}.json`, options);
+    return get<SelectionEventsResponse>(API_HOST, `/api/selection-events/${code}.json`, options);
 }
 
 export function fetchSuggest(text: string, geoid: number, signal: AbortSignal) {
-    return request<SuggestResponse>('/api/suggest.json', { text, geoid }, signal);
+    return get<SuggestResponse>(API_HOST, '/api/suggest.json', { text, geoid }, signal);
 }
 
 export function fetchRecommendedEvents(options?: GetEventsOptions) {
-    return request<RecommendedEventsResponse>('/api/recommended-events.json', options);
+    return get<RecommendedEventsResponse>(API_HOST, '/api/recommended-events.json', options);
+}
+
+export function createOrder(eventId: string, jwtToken: string) {
+    return post<CreateOrderResponse>(PAYMENT_API_HOST, '/payment', {
+        headers: {
+            Authorization: jwtToken
+        },
+        body: JSON.stringify({
+            eventId,
+            amount: 1
+        }),
+    });
 }

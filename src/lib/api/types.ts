@@ -54,3 +54,9 @@ export type RecommendedEventsResponse = {
     [Places.Concert]?: ActualEvents;
     [Places.Theatre]?: ActualEvents;
 };
+
+export type CreateOrderResponse = {
+    paymentToken: string;
+    id: number,
+    cost: number,
+};

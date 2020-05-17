@@ -14,6 +14,7 @@ import { loadCityInfo } from './redux/slices/city';
 
 import { createStackNavigator } from './components/StackNavigator';
 import { isIOS } from './lib/is-ios';
+import { checkSession } from './redux/slices/user';
 
 const Navigator = createStackNavigator(
     [
@@ -68,6 +69,10 @@ const App: React.FC = () => {
 
     useEffect(() => {
         dispatch(loadCityInfo());
+    }, [dispatch]);
+
+    useEffect(() => {
+        dispatch(checkSession());
     }, [dispatch]);
 
     useEffect(() => {

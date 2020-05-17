@@ -1,4 +1,7 @@
 .wrapper {
+    position: relative;
+    z-index: 2;
+
     margin-top: -16px;
     padding: 4px 12px 0;
 

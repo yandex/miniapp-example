@@ -15,6 +15,7 @@ import menuReducer from './slices/menu';
 import dateFilterReducer from './slices/date-filter';
 import recommendedReducer from './slices/recommended-events';
 import userReducer from './slices/user';
+import orderReducer from './slices/order';
 
 const PERSIST_ACTIONS = [
     PERSIST_CONTSTANS.FLUSH,
@@ -37,6 +38,7 @@ const rootReducer = combineReducers({
     dateFilter: dateFilterReducer,
     recommendedEvents: recommendedReducer,
     user: userReducer,
+    order: orderReducer,
 });
 const store = configureStore({
     reducer: rootReducer,

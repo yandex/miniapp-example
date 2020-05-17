@@ -13,7 +13,7 @@ declare global {
     }
 }
 
-const CLIENT_ID = '29155348f1804fa59520fdb55a90a003';
+const CLIENT_ID = '9e445c9aacec4266bf265302facb8293';
 
 export type UserInfo = {
     uid?: number;

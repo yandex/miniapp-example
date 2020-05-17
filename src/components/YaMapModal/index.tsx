@@ -1,4 +1,5 @@
 import React, { Suspense, MouseEvent, useMemo, lazy } from 'react';
+import { createPortal } from 'react-dom';
 
 import { Coordinates } from '../../lib/api/fragments/coordinates';
 import { Metro } from '../../lib/api/fragments/metro';
@@ -34,7 +35,7 @@ const YaMapModal: React.FC<Props> = props => {
     const { coordinates, metro, address } = props;
     const place = useMemo<[number, number]>(() => [coordinates.longitude, coordinates.latitude], [coordinates]);
 
-    return (
+    return createPortal(
         <div className={styles.modal}>
             <div className={styles.close}>
                 <button className={styles['close-button']} onClick={props.onBackClick}>
@@ -50,7 +51,8 @@ const YaMapModal: React.FC<Props> = props => {
                     {address}
                 </div>
             )}
-        </div>
+        </div>,
+        document.body
     );
 };
 

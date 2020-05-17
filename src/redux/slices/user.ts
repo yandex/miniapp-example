@@ -3,6 +3,7 @@ import { persistReducer } from 'redux-persist';
 
 import {
     authorize,
+    getCurrentUserId,
     identify,
     UserInfo,
     YandexAuthScope
@@ -13,6 +14,7 @@ import { cleanup } from '../actions';
 import { getPersistConfig } from '../helpers/persist';
 
 export type User = {
+    jwtToken?: string;
     psuid?: string;
     currentUser: UserInfo;
     authorizedScopes: YandexAuthScope[];
@@ -30,6 +32,9 @@ const user = createSlice({
         setPsuid(state, action: PayloadAction<string>) {
             state.psuid = action.payload;
         },
+        setJwtToken(state, action: PayloadAction<string>) {
+            state.jwtToken = action.payload;
+        },
         setUser(state, action: PayloadAction<UserInfo>) {
             state.currentUser = action.payload;
         },
@@ -42,11 +47,12 @@ const user = createSlice({
     }
 });
 
-export const { setPsuid, setUser, setAuthorizedScopes } = user.actions;
+export const { setPsuid, setJwtToken, setUser, setAuthorizedScopes } = user.actions;
 
 const SCOPES = [
     YandexAuthScope.Avatar,
-    YandexAuthScope.Info
+    YandexAuthScope.Info,
+    YandexAuthScope.Email,
 ];
 
 export const loadUserInfo = (): AppThunk => async dispatch => {
@@ -63,21 +69,42 @@ export const loadUserInfo = (): AppThunk => async dispatch => {
     }
 };
 
-export const login = (): AppThunk => async(dispatch, getState) => {
+export const login = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
     try {
         const { user: { psuid } } = getState();
-        const { payload } = await identify();
+        const { jwtToken, payload } = await identify();
 
         if (psuid && psuid !== payload.psuid) {
             return dispatch(cleanup());
         }
 
         dispatch(setPsuid(payload.psuid));
+        dispatch(setJwtToken(jwtToken));
         dispatch(loadUserInfo());
+
+        afterLogin?.();
     } catch (err) {
         console.error(err);
         if (err.message !== 'user not logged') {
             alert('Не удалось войти. Попробуйте ещё раз');
+        }
+    }
+};
+
+export const checkSession = (): AppThunk => async(dispatch, getState) => {
+    const { psuid } = getState().user;
+
+    try {
+        const userId = await getCurrentUserId();
+
+        if (psuid && (!userId || userId.payload.psuid !== psuid)) {
+            dispatch(cleanup());
+        }
+    } catch (err) {
+        console.error(err);
+
+        if (psuid) {
+            dispatch(cleanup());
         }
     }
 };

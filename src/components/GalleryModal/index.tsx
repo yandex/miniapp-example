@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef, MouseEvent, useLayoutEffect } from 'react';
+import { createPortal } from 'react-dom';
+
 import { GalleryImage } from '../../lib/api/fragments/gallery-image';
 
 import Image from '../Image';
@@ -58,7 +60,7 @@ const GalleryModal: React.FC<Props> = props => {
         };
     }, [props.items, props.startIndex]);
 
-    return (
+    return createPortal(
         <div className={styles.modal}>
             <div className={styles.counter}>
                 {currentIndex + 1} из {props.items.length}
@@ -81,7 +83,8 @@ const GalleryModal: React.FC<Props> = props => {
                     );
                 })}
             </div>
-        </div>
+        </div>,
+        document.body
     );
 };
 
