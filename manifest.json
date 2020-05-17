@@ -20,18 +20,18 @@
     }
   ],
   "lang": "ru",
-  "start_url": "https://yandex.github.io/miniapp-example",
+  "start_url": "https://yandex.github.io/miniapp-example/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
   "yandex": {
     "manifest_version": 1,
-    "app_version": "20200517.1347",
-    "base_url": "https://yandex.github.io/miniapp-example",
+    "app_version": "20200517.1359",
+    "base_url": "https://yandex.github.io/miniapp-example/",
     "splash_screen_color": "#f0f3f5",
     "cache": {
       "resources": [
-        "https://yandex.github.io/miniapp-example",
+        "https://yandex.github.io/miniapp-example/",
         "/miniapp-example/static/css/event-screen.9b5adf61.chunk.css",
         "/miniapp-example/static/css/main-screen.1b44af0f.chunk.css",
         "/miniapp-example/static/css/main.1ba513fb.chunk.css",
