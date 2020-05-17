@@ -5,7 +5,7 @@
 [Demo](https://yandex.github.io/miniapp-example/)
 
 ## Оплата
-В приложении поддержана оплата билетов, для этого запускается отдельный [бэкенд](https://github.com/miniapp-example-backend).
+В приложении поддержана оплата билетов, для этого запускается отдельный [бэкенд](https://github.com/yandex/miniapp-example-backend).
 
 ## Технология реализации миниаппа
 
