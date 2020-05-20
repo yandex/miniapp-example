@@ -1,14 +1,10 @@
 import React from 'react';
 
-import { Currency, Ticket } from '../../lib/api/fragments/ticket';
+import { Ticket } from '../../lib/api/fragments/ticket';
+import { getCurrencySymbol } from '../../lib/price';
 
 type Props = {
     ticket: Ticket;
-};
-
-const currencySymbol: { [key in Currency]: string } = {
-    rub: '₽',
-    usd: '$',
 };
 
 const space = '\u00A0';
@@ -18,7 +14,7 @@ const TicketPrice: React.FC<Props> = ({ ticket }) => {
         return null;
     }
 
-    const text = ['от', (ticket.price.min || 0) / 100, currencySymbol[ticket.price.currency]].join(space);
+    const text = ['от', (ticket.price.min || 0) / 100, getCurrencySymbol(ticket.price.currency)].join(space);
 
     return <>{text}</>;
 };

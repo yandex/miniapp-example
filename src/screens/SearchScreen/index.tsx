@@ -5,6 +5,7 @@ import { throttle } from 'throttle-debounce';
 import { loadPopularEvents, loadSearchResults, resetResults } from '../../redux/slices/search';
 
 import BackwardButton from '../../components/BackwardButton';
+import { useMetrikaHit } from '../../hooks/useMetrikaHit';
 
 import SuggestInput from './Input';
 import SearchResult from './SearchResult';
@@ -21,6 +22,8 @@ const SearchScreen: React.FC = () => {
     useEffect(() => {
         dispatch(loadPopularEvents());
     }, [dispatch]);
+
+    useMetrikaHit();
 
     const onInputChange = useMemo(() => {
         return throttle(INPUT_THROTTLE, (text: string) => {

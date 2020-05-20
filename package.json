@@ -1,6 +1,6 @@
 {
     "name": "miniapp-example",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "private": true,
     "homepage": "https://yandex.github.io/miniapp-example/",
     "scripts": {

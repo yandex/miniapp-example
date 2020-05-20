@@ -1,9 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import { getRubricUrl } from '../../lib/url-builder';
+import { getOrdersUrl, getRubricUrl } from '../../lib/url-builder';
 
 import { MenuTag } from '../../lib/api/fragments/city';
+
+import { isIdentifiedSelector } from '../../redux/slices/user';
+import { ordersSelector } from '../../redux/slices/order';
 
 import styles from './style.module.css';
 
@@ -34,11 +38,36 @@ export type MenuListProps = {
     onItemClick: () => void;
 };
 const MenuList: React.FC<MenuListProps> = props => {
+    const isIdentified = useSelector(isIdentifiedSelector);
+    const orders = useSelector(ordersSelector);
+
     return (
         <ul className={styles.list}>
-            <MenuItem to="/" text="Главная" onItemClick={props.onItemClick} />
+            {isIdentified && (
+                <li className={[styles.item, styles.orders].join(' ')}>
+                    <NavLink
+                        exact
+                        onClick={props.onItemClick}
+                        className={[styles.link, styles['orders-text']].join(' ')}
+                        to={getOrdersUrl()}
+                    >
+                        Мои заказы
+                    </NavLink>
+                    {orders.length > 0 && <span>{orders.length}</span>}
+                </li>
+            )}
+            <MenuItem
+                to="/"
+                text="Главная"
+                onItemClick={props.onItemClick}
+            />
             {props.tags.map(tag => (
-                <MenuItem key={tag.code} to={getRubricUrl(tag.code)} text={tag.name} onItemClick={props.onItemClick} />
+                <MenuItem
+                    key={tag.code}
+                    to={getRubricUrl(tag.code)}
+                    text={tag.name}
+                    onItemClick={props.onItemClick}
+                />
             ))}
         </ul>
     );

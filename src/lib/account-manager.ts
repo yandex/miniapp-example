@@ -1,18 +1,3 @@
-declare global {
-    interface Window {
-        yandex: {
-            app: {
-                auth: {
-                    identify: (clientId: string) => Promise<YandexAuthPSUIDInfo>;
-                    getCurrentUserId: (clientId: string) => Promise<YandexAuthPSUIDInfo | null>;
-                    authorize: (clientId: string, scopes?: YandexAuthScope[]) => Promise<YandexAuthApiInfo>;
-                    updateUserInfo: (authToken: string) => Promise<YandexAuthInfo>;
-                }
-            }
-        }
-    }
-}
-
 const CLIENT_ID = '9e445c9aacec4266bf265302facb8293';
 
 export type UserInfo = {

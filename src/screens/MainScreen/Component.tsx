@@ -13,6 +13,7 @@ import EventsList from '../../components/EventsList';
 import EventsListSkeleton from '../../components/EventsList/Skeleton';
 import EventCardMain from '../../components/EventCardMain';
 import EventCardMainSkeleton from '../../components/EventCardMain/Skeleton';
+import { useMetrikaHit } from '../../hooks/useMetrikaHit';
 
 import Title from './Title';
 
@@ -37,6 +38,8 @@ const MainScreen: React.FC = () => {
         []
     );
     const selectionListSkeleton = useMemo(() => <SelectionListSkeleton />, []);
+
+    useMetrikaHit();
 
     return (
         <>

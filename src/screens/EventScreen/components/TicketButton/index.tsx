@@ -41,7 +41,7 @@ const TicketButton: React.FC<Props> = ({ event }) => {
 
     const paymentButtonRef = useRef<HTMLDivElement | null>(null);
     const dispatch = useDispatch();
-    const isLoading = useSelector((state: RootReducer) => state.order.ui.isLoading);
+    const isLoading = useSelector((state: RootReducer) => state.order.ui.isCreating);
     const screenRef = useScreenRef();
     const documentRef = useRef(document);
     const scrollableRef: MutableRefObject<EventTarget | null> = isIOS() ? documentRef : screenRef;

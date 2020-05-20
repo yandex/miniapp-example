@@ -57,6 +57,29 @@ export type RecommendedEventsResponse = {
 
 export type CreateOrderResponse = {
     paymentToken: string;
-    id: number,
-    cost: number,
+    id: number;
+    cost: number;
 };
+
+export enum PaymentStatus {
+    New = 'new',
+    InModeration = 'in_moderation',
+    Held = 'held',
+    InProgress = 'in_progress',
+    ModerationNegative = 'moderation_negative',
+    InCancel = 'in_cancel',
+    Canceled = 'canceled',
+    Rejected = 'rejected',
+    Paid = 'paid',
+}
+
+export type OrderResponse = {
+    id: number;
+    status: PaymentStatus;
+    apiResponseStatus: 'success' | 'fail';
+    cost: number;
+    event: {
+        id: string;
+        title: string;
+    }
+}

@@ -9,6 +9,7 @@ import Gallery from '../../components/Gallery';
 import CollapsedText from '../../components/CollapsedText';
 
 import { useScreenRef } from '../../components/StackNavigator';
+import { useMetrikaHit } from '../../hooks/useMetrikaHit';
 import { useScrollEffect } from '../../hooks/useScrollEffect';
 import { isIOS } from '../../lib/is-ios';
 import Title from './components/Title';
@@ -49,6 +50,8 @@ const Component: React.FC<Props> = ({ id, skeleton }) => {
     const ticket = tickets && tickets[0];
 
     const isPageHeaderClear = useScrollEffect(scrollableRef, screenRef, isScrollAtTop);
+
+    useMetrikaHit();
 
     if (isLoading) {
         return skeleton;

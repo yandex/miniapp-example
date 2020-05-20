@@ -26,6 +26,10 @@ export function getSearchUrl() {
     return '/search';
 }
 
+export function getOrdersUrl() {
+    return '/orders';
+}
+
 function getAvatarUrlByPath(avatarId: string, path: string) {
     const defaultId = '0/0-0';
 

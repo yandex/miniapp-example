@@ -6,6 +6,7 @@ import EventScreen from './screens/EventScreen';
 import RubricScreen from './screens/RubricScreen';
 import SelectionScreen from './screens/SelectionScreen';
 import SearchScreen from './screens/SearchScreen';
+import OrdersScreen from './screens/OrdersScreen';
 
 import MenuModal from './components/MenuModal';
 import CityModal from './components/CityModal';
@@ -42,6 +43,11 @@ const Navigator = createStackNavigator(
             path: '/search',
             exact: true,
             component: memo(() => <SearchScreen />),
+        },
+        {
+            path: '/orders',
+            exact: true,
+            component: memo(() => <OrdersScreen />),
         },
         {
             path: '*',

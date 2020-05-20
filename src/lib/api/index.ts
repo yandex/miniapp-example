@@ -11,6 +11,7 @@ import {
     SuggestResponse,
     RecommendedEventsResponse,
     CreateOrderResponse,
+    OrderResponse,
 } from './types';
 import { City } from './fragments/city';
 
@@ -104,7 +105,7 @@ export function fetchSelectionEvents(code: string, options?: GetEventsOptions) {
 }
 
 export function fetchSuggest(text: string, geoid: number, signal: AbortSignal) {
-    return get<SuggestResponse>(API_HOST, '/api/suggest.json', { text, geoid }, signal);
+    return get<SuggestResponse>(API_HOST, '/api/suggest.json', { text, geoid }, { signal });
 }
 
 export function fetchRecommendedEvents(options?: GetEventsOptions) {
@@ -120,5 +121,13 @@ export function createOrder(eventId: string, jwtToken: string) {
             eventId,
             amount: 1
         }),
+    });
+}
+
+export function fetchOrdersHistory(jwtToken: string) {
+    return get<OrderResponse[]>(PAYMENT_API_HOST, '/payments', undefined, {
+        headers: {
+            Authorization: jwtToken
+        }
     });
 }

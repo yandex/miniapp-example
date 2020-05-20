@@ -19,6 +19,10 @@ const assets = self.__precacheManifest;
 
 const filesToCache = assets.map(asset => asset.url).filter(path => !isIndexFile(path));
 
+const staticFiles = [
+    'https://mc.yandex.ru/metrika/tag_turboapp.js',
+];
+
 const manifest = {
     name: 'MiniApp Example',
     short_name: 'MiniApp',
@@ -47,11 +51,14 @@ const manifest = {
     background_color: '#ffffff',
     yandex: {
         manifest_version: 1,
+        app_id: '100375',
         app_version: appVersion,
+        client_id: '9e445c9aacec4266bf265302facb8293',
+        metrika_id: 62405404,
         base_url: baseUrl,
         splash_screen_color: '#f0f3f5',
         cache: {
-            resources: [baseUrl, ...filesToCache],
+            resources: [baseUrl, ...filesToCache, ...staticFiles],
         },
     },
 };

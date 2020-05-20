@@ -6,12 +6,14 @@ import {
     getCurrentUserId,
     identify,
     UserInfo,
-    YandexAuthScope
+    YandexAuthScope,
 } from '../../lib/account-manager';
 
-import { AppThunk } from '../index';
+import { AppThunk, RootReducer } from '../index';
 import { cleanup } from '../actions';
 import { getPersistConfig } from '../helpers/persist';
+
+import { fetchOrders } from './order';
 
 export type User = {
     jwtToken?: string;
@@ -29,17 +31,17 @@ const user = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setPsuid(state, action: PayloadAction<string>) {
-            state.psuid = action.payload;
+        identified(state, action: PayloadAction<{ psuid: string, token: string }>) {
+            state.jwtToken = action.payload.token;
+            state.psuid = action.payload.psuid;
         },
-        setJwtToken(state, action: PayloadAction<string>) {
-            state.jwtToken = action.payload;
+        authorized(state, action: PayloadAction<{ user: UserInfo, scopes: YandexAuthScope[] }>) {
+            state.currentUser = action.payload.user;
+            state.authorizedScopes = action.payload.scopes;
         },
-        setUser(state, action: PayloadAction<UserInfo>) {
-            state.currentUser = action.payload;
-        },
-        setAuthorizedScopes(state, action: PayloadAction<YandexAuthScope[]>) {
-            state.authorizedScopes = action.payload;
+        logout(state) {
+            state.currentUser = {};
+            state.authorizedScopes = [];
         },
     },
     extraReducers: builder => {
@@ -47,7 +49,11 @@ const user = createSlice({
     }
 });
 
-export const { setPsuid, setJwtToken, setUser, setAuthorizedScopes } = user.actions;
+export const { identified, authorized, logout } = user.actions;
+
+export const isIdentifiedSelector = (state: RootReducer) => Boolean(state.user.psuid);
+
+export const isAuthorizedSelector = (state: RootReducer) => Boolean(state.user.currentUser.uid);
 
 const SCOPES = [
     YandexAuthScope.Avatar,
@@ -59,8 +65,7 @@ export const loadUserInfo = (): AppThunk => async dispatch => {
     try {
         const { userInfo, tokenInfo: { authorizedScopes } } = await authorize(SCOPES);
 
-        dispatch(setUser(userInfo.payload));
-        dispatch(setAuthorizedScopes(authorizedScopes));
+        dispatch(authorized({ user: userInfo.payload, scopes: authorizedScopes }));
     } catch (err) {
         console.error(err);
         if (!['authorization denied', 'authorization cancelled'].includes(err.message)) {
@@ -72,15 +77,15 @@ export const loadUserInfo = (): AppThunk => async dispatch => {
 export const login = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
     try {
         const { user: { psuid } } = getState();
-        const { jwtToken, payload } = await identify();
+        const psuidInfo = await identify();
 
-        if (psuid && psuid !== payload.psuid) {
-            return dispatch(cleanup());
+        if (psuid && psuid !== psuidInfo.payload.psuid) {
+            dispatch(cleanup());
         }
 
-        dispatch(setPsuid(payload.psuid));
-        dispatch(setJwtToken(jwtToken));
-        dispatch(loadUserInfo());
+        dispatch(identified({ token: psuidInfo.jwtToken, psuid: psuidInfo.payload.psuid }));
+        await dispatch(loadUserInfo());
+        await dispatch(fetchOrders());
 
         afterLogin?.();
     } catch (err) {
@@ -99,6 +104,11 @@ export const checkSession = (): AppThunk => async(dispatch, getState) => {
 
         if (psuid && (!userId || userId.payload.psuid !== psuid)) {
             dispatch(cleanup());
+        }
+
+        if (userId) {
+            dispatch(identified({ token: userId.jwtToken, psuid: userId.payload.psuid }));
+            dispatch(fetchOrders());
         }
     } catch (err) {
         console.error(err);

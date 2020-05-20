@@ -17,6 +17,7 @@ import EventsListSkeleton from '../../components/EventsList/Skeleton';
 import EventCard from '../../components/EventCard';
 import EventCardSkeleton from '../../components/EventCard/Skeleton';
 import DateFilter from '../../components/DateFilter';
+import { useMetrikaHit } from '../../hooks/useMetrikaHit';
 
 const defaultState: SelectionEventsState['data']['key'] = {
     title: '',
@@ -47,6 +48,8 @@ const SelectionScreen: React.FC<Props> = ({ code }) => {
     const onMoreClick = useCallback(() => {
         dispatch(loadMoreSelectionEvents(code, date));
     }, [dispatch, code, date]);
+
+    useMetrikaHit();
 
     return (
         <>

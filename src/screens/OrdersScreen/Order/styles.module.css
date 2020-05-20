@@ -1,0 +1,62 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+    min-height: 92px;
+    padding: 16px 0;
+}
+
+.logo-container {
+    display: flex;
+    flex: 0 0 48px;
+}
+
+.logo {
+    overflow: hidden;
+
+    height: 60px;
+    margin: auto;
+
+    border-radius: 8px;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+}
+
+.info {
+    flex-grow: 1;
+
+    margin: 0 16px;
+}
+
+.status-container {
+    flex-shrink: 0;
+
+    text-align: right;
+}
+
+.title,
+.cost {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.schedule,
+.status {
+    margin-top: 2px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    color: rgba(0, 0, 0, .4);
+}
+
+.info p,
+.status-container p {
+    margin: 0;
+}

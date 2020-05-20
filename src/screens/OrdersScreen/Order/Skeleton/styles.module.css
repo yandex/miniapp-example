@@ -1,0 +1,34 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 92px;
+    padding: 16px;
+}
+
+.image {
+    flex: 0 0 48px;
+
+    height: 60px;
+
+    border-radius: 8px;
+}
+
+.content {
+    width: 100%;
+    margin: 0 16px;
+}
+
+.right {
+    flex: 0 0 75px;
+}
+
+.short {
+    width: 60%;
+    margin: 4px 0;
+}
+
+.right .short {
+    margin-left: auto;
+}

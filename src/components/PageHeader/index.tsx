@@ -39,10 +39,11 @@ export type Props = {
     hasLogo?: boolean;
     backward?: 'white' | 'black' | '';
     mods?: 'clear' | '';
+    text?: string;
 };
 
 const PageHeader: React.FC<Props> = props => {
-    const { hasMenu, hasLogo, backward, mods } = props;
+    const { hasMenu, hasLogo, backward, mods, text } = props;
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -64,6 +65,7 @@ const PageHeader: React.FC<Props> = props => {
                 </ClearButton>
             )}
             {hasLogo && <Logo />}
+            {text && <span className={styles.text}>{text}</span>}
             <ClearButton className={styles['suggest-button']} onClick={onSearchClick}>
                 <SuggestIcon fill={mods ? 'white' : 'black'} />
             </ClearButton>

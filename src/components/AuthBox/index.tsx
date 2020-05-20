@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { getAvatarUrl, getRetinaAvatarUrl } from '../../lib/url-builder';
 import { RootReducer } from '../../redux';
-import { loadUserInfo, login } from '../../redux/slices/user';
+import { isAuthorizedSelector, login } from '../../redux/slices/user';
 
 import Image from '../Image';
 
@@ -28,21 +28,15 @@ const LoginButton: React.FC = () => {
 };
 
 const AuthBox: React.FC = () => {
-    const { psuid, currentUser: user, authorizedScopes } = useSelector((state: RootReducer) => state.user);
-    const dispatch = useDispatch();
+    const { currentUser: user } = useSelector((state: RootReducer) => state.user);
+    const isAuthorized = useSelector(isAuthorizedSelector);
 
-    const onClick = useCallback(() => {
-        if (psuid && authorizedScopes.length === 0) {
-            dispatch(loadUserInfo());
-        }
-    }, [psuid, authorizedScopes, dispatch]);
-
-    if (!psuid) {
+    if (!isAuthorized) {
         return <LoginButton />;
     }
 
     return (
-        <div className={styles.container} onClick={onClick}>
+        <div className={styles.container}>
             <div className={styles.avatar}>
                 {user.avatar_id ? (
                     <Image

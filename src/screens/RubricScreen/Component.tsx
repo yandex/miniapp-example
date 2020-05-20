@@ -17,6 +17,7 @@ import EventsListSkeleton from '../../components/EventsList/Skeleton';
 import EventCard from '../../components/EventCard';
 import EventCardSkeleton from '../../components/EventCard/Skeleton';
 import DateFilter from '../../components/DateFilter';
+import { useMetrikaHit } from '../../hooks/useMetrikaHit';
 
 const defaultState: RubricEventsState['data']['key'] = {
     title: '',
@@ -46,6 +47,8 @@ const RubricScreen: React.FC<Props> = ({ code }) => {
     const onLoadMore = useCallback(() => {
         dispatch(loadMoreRubricEvents(code, date));
     }, [dispatch, code, date]);
+
+    useMetrikaHit();
 
     return (
         <>

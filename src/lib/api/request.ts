@@ -44,9 +44,9 @@ export async function get<T extends object>(
     host: string,
     path: string,
     query?: QueryParams,
-    signal?: AbortSignal
+    options?: RequestInit
 ): Promise<T> {
-    return request(`${host}${path}${queryParams(query) ? `?${queryParams(query)}` : ''}`, { signal });
+    return request(`${host}${path}${queryParams(query) ? `?${queryParams(query)}` : ''}`, options);
 }
 
 export async function post<T extends object>(host: string, path: string, options: RequestInit): Promise<T> {

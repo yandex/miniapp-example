@@ -4,7 +4,7 @@ import { persistReducer } from 'redux-persist';
 import { fetchEvent } from '../../lib/api';
 import { EventResponse } from '../../lib/api/types';
 import { getPersistConfig, getTransformUIPersistance } from '../helpers/persist';
-import { AppThunk } from '..';
+import { AppThunk, RootReducer } from '..';
 
 export type Event = EventResponse['event'];
 export type ScheduleInfo = EventResponse['scheduleInfo'];
@@ -100,6 +100,8 @@ const slice = createSlice({
 });
 
 export const { fetchStart, fetchSuccess, fetchError, setEvents } = slice.actions;
+
+export const eventPageSelector = (id: string) => (state: RootReducer) => state.event.data[id] ?? {};
 
 export const loadEvent = (id: string): AppThunk => async(dispatch, getState) => {
     const event = getState().event.data[id];

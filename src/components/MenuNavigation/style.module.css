@@ -19,6 +19,14 @@
     border-top: 1px solid #efefef;
 }
 
+.orders {
+    border-top: none;
+}
+
+.orders-text {
+    font-weight: 500;
+}
+
 .link {
     display: block;
 

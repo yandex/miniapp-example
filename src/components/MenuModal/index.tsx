@@ -6,8 +6,8 @@ import AuthBox from '../AuthBox';
 import MenuGeoLabel from '../MenuGeoLabel';
 
 import { RootReducer } from '../../redux';
-import { cleanup } from '../../redux/actions';
 import { setVisible as setMenuVisible } from '../../redux/slices/menu';
+import { isAuthorizedSelector, isIdentifiedSelector, logout } from '../../redux/slices/user';
 
 import styles from './style.module.css';
 
@@ -17,6 +17,8 @@ const MenuModal: React.FC<{
     const dispatch = useDispatch();
 
     const { visible, items } = useSelector((state: RootReducer) => state.menu);
+    const isIdentified = useSelector(isIdentifiedSelector);
+    const isAuthorized = useSelector(isAuthorizedSelector);
     const { psuid } = useSelector((state: RootReducer) => state.user);
     const [wasClosed, setWasClosed] = useState<boolean>(false);
     const className = [
@@ -35,7 +37,7 @@ const MenuModal: React.FC<{
     }, []);
 
     const onLogoutClick = useCallback(() => {
-        dispatch(cleanup());
+        dispatch(logout());
     }, [dispatch]);
 
     return (
@@ -47,12 +49,10 @@ const MenuModal: React.FC<{
                     <MenuList tags={items} onItemClick={onClose} />
                 </div>
                 <div className={styles['menu-modal-footer']}>
-                    {psuid && (
-                        <>
-                            <p className={styles.psuid}>PSUID: {psuid}</p>
-                            <div className={styles.logout} onClick={onLogoutClick}>Выйти</div>
-                        </>
-                    )}
+                    {isIdentified &&
+                        <p className={styles.psuid}>PSUID: {psuid}</p>}
+                    {isAuthorized &&
+                        <div className={styles.logout} onClick={onLogoutClick}>Выйти</div>}
                 </div>
             </div>
         </div>
