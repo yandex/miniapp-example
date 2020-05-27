@@ -74,7 +74,7 @@ export const loadUserInfo = (): AppThunk => async dispatch => {
     }
 };
 
-export const login = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
+export const identifyUser = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
     try {
         const { user: { psuid } } = getState();
         const psuidInfo = await identify();
@@ -84,8 +84,6 @@ export const login = (afterLogin?: () => void): AppThunk => async(dispatch, getS
         }
 
         dispatch(identified({ token: psuidInfo.jwtToken, psuid: psuidInfo.payload.psuid }));
-        await dispatch(loadUserInfo());
-        await dispatch(fetchOrders());
 
         afterLogin?.();
     } catch (err) {
@@ -94,6 +92,13 @@ export const login = (afterLogin?: () => void): AppThunk => async(dispatch, getS
             alert('Не удалось войти. Попробуйте ещё раз');
         }
     }
+};
+
+export const login = (): AppThunk => async dispatch => {
+    await dispatch(identifyUser(() => {
+        dispatch(loadUserInfo());
+        dispatch(fetchOrders());
+    }));
 };
 
 export const checkSession = (): AppThunk => async(dispatch, getState) => {

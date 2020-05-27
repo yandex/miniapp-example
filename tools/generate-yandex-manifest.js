@@ -2,26 +2,16 @@ const fs = require('fs');
 const path = require('path');
 
 const buildDir = path.join(__dirname, '../build/');
-const files = fs.readdirSync(buildDir);
-const isIndexFile = path => path.endsWith('/index.html');
-const baseUrl = process.env.BASE_URL || 'https://yandex.github.io/miniapp-example/';
-const publicUrl = process.env.PUBLIC_URL || 'https://yandex.github.io/miniapp-example';
+const publicUrl = process.env.PUBLIC_URL || '';
+const startUrl = process.env.BASE_URL || `${publicUrl}/`;
 const appVersion = generateVersion();
 
-const precache = files.find(file => file.match(/precache/));
-if (!precache) {
-    throw Error('precache file not found');
-}
-
-global.self = {};
-require(`${buildDir}/${precache}`);
-const assets = self.__precacheManifest;
-
-const filesToCache = assets.map(asset => asset.url).filter(path => !isIndexFile(path));
-
-const staticFiles = [
-    'https://mc.yandex.ru/metrika/tag_turboapp.js',
-];
+const getFileUrls = ({ dir, baseUrl, extensions }) => {
+    return fs
+        .readdirSync(dir)
+        .filter(file => !extensions || extensions.includes(path.extname(file)))
+        .map(file => `${baseUrl}/${file}`);
+};
 
 const manifest = {
     name: 'MiniApp Example',
@@ -45,7 +35,7 @@ const manifest = {
         },
     ],
     lang: 'ru',
-    start_url: baseUrl,
+    start_url: startUrl,
     display: 'standalone',
     theme_color: '#000000',
     background_color: '#ffffff',
@@ -55,10 +45,27 @@ const manifest = {
         app_version: appVersion,
         client_id: '9e445c9aacec4266bf265302facb8293',
         metrika_id: 62405404,
-        base_url: baseUrl,
+        base_url: startUrl,
         splash_screen_color: '#f0f3f5',
         cache: {
-            resources: [baseUrl, ...filesToCache, ...staticFiles],
+            resources: [
+                startUrl,
+                'https://mc.yandex.ru/metrika/tag_turboapp.js',
+                ...getFileUrls({
+                    dir: `${buildDir}/static/js`,
+                    baseUrl: `${publicUrl}/static/js`,
+                    extensions: ['.js'],
+                }),
+                ...getFileUrls({
+                    dir: `${buildDir}/static/css`,
+                    baseUrl: `${publicUrl}/static/css`,
+                    extensions: ['.css'],
+                }),
+                ...getFileUrls({
+                    dir: `${buildDir}/static/media`,
+                    baseUrl: `${publicUrl}/static/media`,
+                }),
+            ],
         },
     },
 };

@@ -77,7 +77,7 @@ export function getPersistConfig<S>(key: string, options?: PersistOptions<S>): P
 }
 
 export function getTransformUIPersistance<T>(defaultUIState: T) {
-    return createTransform((state: State, key) => {
+    return createTransform((state: State[keyof State], key) => {
         if (key === 'ui') {
             return defaultUIState;
         }

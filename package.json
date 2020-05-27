@@ -1,13 +1,13 @@
 {
     "name": "miniapp-example",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "private": true,
     "homepage": "https://yandex.github.io/miniapp-example/",
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build && node ./tools/generate-yandex-manifest.js",
         "deploy": "gh-pages -d build",
-        "predeploy": "REACT_APP_API_HOST=/miniapp-example REACT_APP_PAYMENT_API_HOST=https://miniapp-api.tap.yandex.net npm run build"
+        "predeploy": "PUBLIC_URL=https://yandex.github.io/miniapp-example REACT_APP_API_HOST=/miniapp-example REACT_APP_PAYMENT_API_HOST=https://miniapp-api.tap.yandex.net npm run build"
     },
     "browserslist": {
         "production": [

@@ -1,6 +1,7 @@
-import React, { ReactElement, useRef, MutableRefObject } from 'react';
+import React, { ReactElement, useRef, MutableRefObject, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
+import { logProductView } from '../../lib/metrika/ecommerce';
 import { RootReducer } from '../../redux';
 import { Event, EventPage, ScheduleInfo } from '../../redux/slices/event';
 
@@ -8,7 +9,7 @@ import PageHeader from '../../components/PageHeader';
 import Gallery from '../../components/Gallery';
 import CollapsedText from '../../components/CollapsedText';
 
-import { useScreenRef } from '../../components/StackNavigator';
+import { useScreenRef, useScreenVisible } from '../../components/StackNavigator';
 import { useMetrikaHit } from '../../hooks/useMetrikaHit';
 import { useScrollEffect } from '../../hooks/useScrollEffect';
 import { isIOS } from '../../lib/is-ios';
@@ -39,6 +40,7 @@ const Component: React.FC<Props> = ({ id, skeleton }) => {
     const screenRef = useScreenRef();
     const documentRef = useRef(document);
     const scrollableRef: MutableRefObject<EventTarget | null> = isIOS() ? documentRef : screenRef;
+    const isVisible = useScreenVisible();
 
     const eventPage: Partial<EventPage> = useSelector((state: RootReducer) => state.event.data[id]) || {};
     const event = (eventPage.event || {}) as Event;
@@ -52,6 +54,12 @@ const Component: React.FC<Props> = ({ id, skeleton }) => {
     const isPageHeaderClear = useScrollEffect(scrollableRef, screenRef, isScrollAtTop);
 
     useMetrikaHit();
+
+    useEffect(() => {
+        if (isVisible) {
+            logProductView(event);
+        }
+    }, [isVisible, event]);
 
     if (isLoading) {
         return skeleton;

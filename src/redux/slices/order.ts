@@ -9,9 +9,10 @@ import { createOrder, fetchOrdersHistory } from '../../lib/api';
 import { Event } from '../../lib/api/fragments/event';
 import { CreateOrderResponse, OrderResponse } from '../../lib/api/types';
 import { MetrikaGoals, MetrikaOrderParams, reachGoal } from '../../lib/metrika';
+import { logProductAdd, logProductPurchase } from '../../lib/metrika/ecommerce';
 import { reportGoalReached } from '../../lib/metrika/js-api';
 import { PaymentError, processNativePayment } from '../../lib/payment';
-import { login } from './user';
+import { identifyUser } from './user';
 
 export type Order = {
     data: {
@@ -101,12 +102,14 @@ export const buyTicket = (
     const { jwtToken, psuid, currentUser } = getState().user;
 
     dispatch(paymentStart());
+    logProductAdd(event);
 
     try {
         const currentUserId = await getCurrentUserId();
 
         if (!jwtToken || !psuid || !currentUserId) {
-            await dispatch(login(() => dispatch(buyTicket(event))));
+            await dispatch(identifyUser(() => dispatch(buyTicket(event))));
+
             return dispatch(paymentEnd());
         }
     } catch (err) {
@@ -134,7 +137,7 @@ export const buyTicket = (
         dispatch(paymentEnd());
 
         if (err.status === 401 && retry) {
-            return dispatch(login(() => dispatch(buyTicket(event, false))));
+            return dispatch(identifyUser(() => dispatch(buyTicket(event, false))));
         }
 
         return alert('Произошла ошибка при покупке билета. Попробуйте ещё раз');
@@ -144,6 +147,7 @@ export const buyTicket = (
         await processNativePayment(response, currentUser);
 
         reachGoal(MetrikaGoals.OrderCompleted, metrikaParams);
+        logProductPurchase(event, response.id);
         await reportGoalReached(MetrikaGoals.OrderCompleted, metrikaParams);
     } catch (err) {
         console.error(err);

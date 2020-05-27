@@ -9,6 +9,7 @@ export const initialOptions: YMetrikaInitParams = {
     trackLinks: true,
     trackHash: true,
     accurateTrackBounce: true,
+    ecommerce: 'dataLayer'
 };
 
 export enum MetrikaGoals {
@@ -24,6 +25,7 @@ export type MetrikaOrderParams = {
 }
 
 export function initMetrika() {
+    window.dataLayer = window.dataLayer ?? [];
     window.ym?.(METRIKA_COUNTER_ID, 'init', initialOptions);
 }
 

@@ -1,4 +1,4 @@
-import { YMetrikaInitParams, YMetrikaVisitParams } from './metrika/types';
+import { EcommerceItem, YMetrikaInitParams, YMetrikaVisitParams } from './metrika/types';
 import {
     YandexAuthApiInfo,
     YandexAuthInfo,
@@ -29,5 +29,6 @@ declare global {
                 }
             };
         }
+        dataLayer: EcommerceItem[];
     }
 }
