@@ -2,7 +2,7 @@ import React, { ReactElement, useRef, MutableRefObject, useEffect } from 'react'
 import { useSelector } from 'react-redux';
 
 import { logProductView } from '../../lib/metrika/ecommerce';
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import { Event, EventPage, ScheduleInfo } from '../../redux/slices/event';
 
 import PageHeader from '../../components/PageHeader';
@@ -42,7 +42,7 @@ const Component: React.FC<Props> = ({ id, skeleton }) => {
     const scrollableRef: MutableRefObject<EventTarget | null> = isIOS() ? documentRef : screenRef;
     const isVisible = useScreenVisible();
 
-    const eventPage: Partial<EventPage> = useSelector((state: RootReducer) => state.event.data[id]) || {};
+    const eventPage: Partial<EventPage> = useSelector((state: RootState) => state.event.data[id]) || {};
     const event = (eventPage.event || {}) as Event;
     const schedule = (eventPage.schedule || {}) as ScheduleInfo;
     const isLoading = !event.id;

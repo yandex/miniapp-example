@@ -1,15 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 
-import {
-    authorize,
-    getCurrentUserId,
-    identify,
-    UserInfo,
-    YandexAuthScope,
-} from '../../lib/account-manager';
+import { authorizeScopes, getCurrentUserId, identify, UserInfo, YandexAuthScope } from '../../lib/account-manager';
 
-import { AppThunk, RootReducer } from '../index';
+import { AppThunk, RootState } from '../index';
 import { cleanup } from '../actions';
 import { getPersistConfig } from '../helpers/persist';
 
@@ -20,70 +14,60 @@ export type User = {
     psuid?: string;
     currentUser: UserInfo;
     authorizedScopes: YandexAuthScope[];
+    loggedOutPsuid?: string;
 };
 
 const initialState: User = {
     currentUser: {},
-    authorizedScopes: []
+    authorizedScopes: [],
 };
 
 const user = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        identified(state, action: PayloadAction<{ psuid: string, token: string }>) {
+        authenticated(state, action: PayloadAction<{ psuid: string; token: string }>) {
             state.jwtToken = action.payload.token;
             state.psuid = action.payload.psuid;
+
+            delete state.loggedOutPsuid;
         },
-        authorized(state, action: PayloadAction<{ user: UserInfo, scopes: YandexAuthScope[] }>) {
+        authorized(state, action: PayloadAction<{ user: UserInfo; scopes: YandexAuthScope[] }>) {
             state.currentUser = action.payload.user;
             state.authorizedScopes = action.payload.scopes;
         },
         logout(state) {
-            state.currentUser = {};
-            state.authorizedScopes = [];
+            return {
+                ...initialState,
+                loggedOutPsuid: state.psuid,
+            };
         },
     },
     extraReducers: builder => {
         builder.addCase(cleanup, () => initialState);
-    }
+    },
 });
 
-export const { identified, authorized, logout } = user.actions;
+export const { authenticated, authorized, logout } = user.actions;
 
-export const isIdentifiedSelector = (state: RootReducer) => Boolean(state.user.psuid);
+export const isAuthenticatedSelector = (state: RootState) => Boolean(state.user.psuid);
+export const isAuthorizedSelector = (state: RootState) => Boolean(state.user.currentUser.uid);
+export const userSelector = (state: RootState) => state.user.currentUser;
 
-export const isAuthorizedSelector = (state: RootReducer) => Boolean(state.user.currentUser.uid);
+const SCOPES = [YandexAuthScope.Avatar, YandexAuthScope.Info, YandexAuthScope.Email];
 
-const SCOPES = [
-    YandexAuthScope.Avatar,
-    YandexAuthScope.Info,
-    YandexAuthScope.Email,
-];
-
-export const loadUserInfo = (): AppThunk => async dispatch => {
+export const authenticate = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
     try {
-        const { userInfo, tokenInfo: { authorizedScopes } } = await authorize(SCOPES);
-
-        dispatch(authorized({ user: userInfo.payload, scopes: authorizedScopes }));
-    } catch (err) {
-        console.error(err);
-        if (!['authorization denied', 'authorization cancelled'].includes(err.message)) {
-            alert('Не удалось получить информацию о пользователе');
-        }
-    }
-};
-
-export const identifyUser = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
-    try {
-        const { user: { psuid } } = getState();
+        const {
+            user: { psuid },
+        } = getState();
         const psuidInfo = await identify();
 
         if (psuid && psuid !== psuidInfo.payload.psuid) {
             dispatch(cleanup());
         }
 
-        dispatch(identified({ token: psuidInfo.jwtToken, psuid: psuidInfo.payload.psuid }));
+        dispatch(authenticated({ token: psuidInfo.jwtToken, psuid: psuidInfo.payload.psuid }));
 
         afterLogin?.();
     } catch (err) {
@@ -94,31 +78,58 @@ export const identifyUser = (afterLogin?: () => void): AppThunk => async(dispatc
     }
 };
 
-export const login = (): AppThunk => async dispatch => {
-    await dispatch(identifyUser(() => {
-        dispatch(loadUserInfo());
-        dispatch(fetchOrders());
-    }));
+export const authorize = (): AppThunk => async dispatch => {
+    try {
+        const {
+            userInfo,
+            tokenInfo: { authorizedScopes },
+        } = await authorizeScopes(SCOPES);
+
+        dispatch(authorized({ user: userInfo.payload, scopes: authorizedScopes }));
+    } catch (err) {
+        console.error(err);
+        if (!['authorization denied', 'authorization cancelled'].includes(err.message)) {
+            alert('Не удалось получить информацию о пользователе');
+        }
+    }
 };
 
-export const checkSession = (): AppThunk => async(dispatch, getState) => {
-    const { psuid } = getState().user;
+export const login = (): AppThunk => async dispatch => {
+    await dispatch(
+        authenticate(() => {
+            dispatch(fetchOrders());
+        })
+    );
+};
+
+export const checkUser = (): AppThunk => async(dispatch, getState) => {
+    const oldPsuid = getState().user.psuid;
 
     try {
-        const userId = await getCurrentUserId();
+        const user = await getCurrentUserId();
+        const isUserChanged = oldPsuid && user?.payload.psuid !== oldPsuid;
 
-        if (psuid && (!userId || userId.payload.psuid !== psuid)) {
+        if (isUserChanged) {
             dispatch(cleanup());
         }
 
-        if (userId) {
-            dispatch(identified({ token: userId.jwtToken, psuid: userId.payload.psuid }));
-            dispatch(fetchOrders());
+        if (!user) {
+            return;
         }
+
+        const psuid = user.payload.psuid;
+
+        // Если пользователь разлогинился, то не логиним его автоматически
+        if (psuid === getState().user.loggedOutPsuid) {
+            return;
+        }
+
+        dispatch(authenticated({ token: user.jwtToken, psuid }));
+        dispatch(fetchOrders());
     } catch (err) {
         console.error(err);
 
-        if (psuid) {
+        if (oldPsuid) {
             dispatch(cleanup());
         }
     }

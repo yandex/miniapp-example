@@ -1,6 +1,11 @@
 import React, { memo, useCallback, useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+import { isIOS } from './lib/is-ios';
+import { useWatchAuth } from './hooks/useWatchAuth';
+
+import { loadCityInfo } from './redux/slices/city';
+
 import MainScreen from './screens/MainScreen';
 import EventScreen from './screens/EventScreen';
 import RubricScreen from './screens/RubricScreen';
@@ -11,11 +16,7 @@ import OrdersScreen from './screens/OrdersScreen';
 import MenuModal from './components/MenuModal';
 import CityModal from './components/CityModal';
 
-import { loadCityInfo } from './redux/slices/city';
-
 import { createStackNavigator } from './components/StackNavigator';
-import { isIOS } from './lib/is-ios';
-import { checkSession } from './redux/slices/user';
 
 const Navigator = createStackNavigator(
     [
@@ -78,14 +79,12 @@ const App: React.FC = () => {
     }, [dispatch]);
 
     useEffect(() => {
-        dispatch(checkSession());
-    }, [dispatch]);
-
-    useEffect(() => {
         if (isIOS()) {
             document.body.style.overflow = 'auto';
         }
     }, []);
+
+    useWatchAuth();
 
     return (
         <>

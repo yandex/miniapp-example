@@ -112,22 +112,28 @@ export function fetchRecommendedEvents(options?: GetEventsOptions) {
     return get<RecommendedEventsResponse>(API_HOST, '/api/recommended-events.json', options);
 }
 
-export function createOrder(eventId: string, jwtToken: string) {
+export type OrderData = {
+    eventId: string;
+    amount: number;
+    userInfo: {
+        name: string;
+        email: string;
+        phone: string;
+    };
+};
+export function createOrder(orderData: OrderData, jwtToken: string) {
     return post<CreateOrderResponse>(PAYMENT_API_HOST, '/payment', {
         headers: {
-            Authorization: jwtToken
+            Authorization: jwtToken,
         },
-        body: JSON.stringify({
-            eventId,
-            amount: 1
-        }),
+        body: JSON.stringify(orderData),
     });
 }
 
 export function fetchOrdersHistory(jwtToken: string) {
     return get<OrderResponse[]>(PAYMENT_API_HOST, '/payments', undefined, {
         headers: {
-            Authorization: jwtToken
-        }
+            Authorization: jwtToken,
+        },
     });
 }

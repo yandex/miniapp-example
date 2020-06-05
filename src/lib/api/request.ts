@@ -3,8 +3,8 @@ type QueryParams = {
 };
 
 type RetryOptions = {
-    retryCount: number,
-    retryDelay: number,
+    retryCount: number;
+    retryDelay: number;
 };
 
 const defaultRetryOptions: RetryOptions = {
@@ -54,14 +54,8 @@ async function fetchRetry(url: string, init?: RequestInit, retryOptions: RetryOp
     return Promise.reject('Unable to fetch. Check retryOptions values');
 }
 
-async function request<T extends object>(
-    url: string,
-    options?: RequestInit
-): Promise<T> {
-    const response = await fetchRetry(
-        url,
-        options
-    );
+async function request<T extends object>(url: string, options?: RequestInit): Promise<T> {
+    const response = await fetchRetry(url, options);
 
     if (response.ok) {
         return response.json();
@@ -86,6 +80,6 @@ export async function post<T extends object>(host: string, path: string, options
         headers: {
             ...options.headers,
             'Content-Type': 'application/json',
-        }
+        },
     });
 }

@@ -2,7 +2,7 @@ import React, { useEffect, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { lazyDeferred } from '../../lib/lazy';
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import { loadSelectionEvents } from '../../redux/slices/selection-events';
 
 import PageHeader from '../../components/PageHeader';
@@ -18,7 +18,7 @@ const Component = lazyDeferred(() =>
 
 const SelectionScreen: React.FC<{ code: string }> = ({ code }) => {
     const dispatch = useDispatch();
-    const date = useSelector((state: RootReducer) => state.dateFilter);
+    const date = useSelector((state: RootState) => state.dateFilter);
 
     useEffect(() => {
         dispatch(loadSelectionEvents(code, date));

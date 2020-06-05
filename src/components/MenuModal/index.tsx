@@ -1,13 +1,13 @@
-import React, { MouseEvent, useCallback, useState } from 'react';
+import React, { MouseEvent, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import MenuList from '../MenuNavigation';
 import AuthBox from '../AuthBox';
 import MenuGeoLabel from '../MenuGeoLabel';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import { setVisible as setMenuVisible } from '../../redux/slices/menu';
-import { isAuthorizedSelector, isIdentifiedSelector, logout } from '../../redux/slices/user';
+import { isAuthenticatedSelector, logout } from '../../redux/slices/user';
 
 import styles from './style.module.css';
 
@@ -16,23 +16,16 @@ const MenuModal: React.FC<{
 }> = ({ setCityModalVisibleCallback }) => {
     const dispatch = useDispatch();
 
-    const { visible, items } = useSelector((state: RootReducer) => state.menu);
-    const isIdentified = useSelector(isIdentifiedSelector);
-    const isAuthorized = useSelector(isAuthorizedSelector);
-    const { psuid } = useSelector((state: RootReducer) => state.user);
-    const [wasClosed, setWasClosed] = useState<boolean>(false);
-    const className = [
-        styles['menu-modal'],
-        visible || wasClosed ? styles[`menu-modal-visible_${visible ? 'yes' : 'no'}`] : '',
-    ].join(' ');
+    const { visible, items } = useSelector((state: RootState) => state.menu);
+    const isAuthenticated = useSelector(isAuthenticatedSelector);
+    const { psuid } = useSelector((state: RootState) => state.user);
 
     const onClose = useCallback(() => {
-        setWasClosed(true);
         setCityModalVisibleCallback(false);
         dispatch(setMenuVisible(false));
-    }, [dispatch, setWasClosed, setCityModalVisibleCallback]);
+    }, [dispatch, setCityModalVisibleCallback]);
 
-    const noop = useCallback((e: MouseEvent<HTMLImageElement>) => {
+    const onModalContentClick = useCallback((e: MouseEvent<HTMLImageElement>) => {
         e.stopPropagation();
     }, []);
 
@@ -40,20 +33,28 @@ const MenuModal: React.FC<{
         dispatch(logout());
     }, [dispatch]);
 
+    const className = [styles.modal, visible ? styles.visible : styles.hidden].join(' ');
+
     return (
         <div className={className} onClick={onClose}>
-            <div className={styles['menu-modal-content']} onClick={noop}>
-                <div className={styles['menu-modal-body']}>
-                    <AuthBox />
+            <div className={styles.content} onClick={onModalContentClick}>
+                <div className={styles.body}>
+                    <div className={styles.profile}>
+                        <AuthBox />
+                    </div>
+
                     <MenuGeoLabel setCityModalVisibleCallback={setCityModalVisibleCallback} />
                     <MenuList tags={items} onItemClick={onClose} />
                 </div>
-                <div className={styles['menu-modal-footer']}>
-                    {isIdentified &&
-                        <p className={styles.psuid}>PSUID: {psuid}</p>}
-                    {isAuthorized &&
-                        <div className={styles.logout} onClick={onLogoutClick}>Выйти</div>}
-                </div>
+
+                {isAuthenticated && (
+                    <div className={styles.footer}>
+                        <p className={styles.psuid}>PSUID: {psuid}</p>
+                        <div className={styles.logout} onClick={onLogoutClick}>
+                            Выйти
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

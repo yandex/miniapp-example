@@ -62,7 +62,7 @@ export async function getCurrentUserId(): Promise<YandexAuthPSUIDInfo | null> {
     return window.yandex.app.auth.getCurrentUserId(CLIENT_ID);
 }
 
-export async function authorize(scopes?: YandexAuthScope[]): Promise<YandexAuthInfo> {
+export async function authorizeScopes(scopes?: YandexAuthScope[]): Promise<YandexAuthInfo> {
     const rawData = await window.yandex.app.auth.authorize(CLIENT_ID, scopes);
 
     return {

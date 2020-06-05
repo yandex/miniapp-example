@@ -1,15 +1,13 @@
-.menu-modal {
+.modal {
     position: fixed;
     z-index: 100;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-
-    pointer-events: none;
 }
 
-.menu-modal::before {
+.modal::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -21,9 +19,11 @@
     opacity: 0;
     background: #000;
     will-change: opacity;
+
+    transition: opacity 100ms ease-out;
 }
 
-.menu-modal-content {
+.content {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -37,52 +37,35 @@
 
     background: #fff;
 
+    transition: transform 200ms ease-out;
     transform: translate(-290px);
 
     will-change: transform;
     overscroll-behavior-y: contain;
 }
 
-.menu-modal-visible_yes::before {
+.hidden {
+    pointer-events: none;
+}
+
+.visible::before {
     opacity: .5;
-
-    animation-name: fadeIn;
-    animation-duration: .1s;
-    animation-timing-function: ease-out;
 }
 
-.menu-modal-visible_yes .menu-modal-content {
+.visible .content {
     transform: translate(0);
-    animation-name: slideLeft;
-    animation-duration: .2s;
-    animation-timing-function: ease-out;
 }
 
-.menu-modal-visible_yes {
-    pointer-events: all;
-}
-
-.menu-modal-visible_no::before {
-    opacity: 0;
-
-    animation-name: fadeOut;
-    animation-duration: .1s;
-    animation-timing-function: ease-out;
-}
-
-.menu-modal-visible_no .menu-modal-content {
-    transform: translate(-290px);
-    animation-name: slideRight;
-    animation-duration: .2s;
-    animation-timing-function: ease-out;
-}
-
-.menu-modal-body {
+.body {
     overflow-x: hidden;
     overflow-y: scroll;
     flex-grow: 1;
 
     padding-bottom: 18px;
+}
+
+.profile {
+    margin-bottom: 20px;
 }
 
 .psuid {
@@ -97,44 +80,4 @@
     line-height: 55px;
 
     border-top: 1px solid #efefef;
-}
-
-@keyframes slideLeft {
-    from {
-        transform: translate(-290px);
-    }
-
-    to {
-        transform: translate(0);
-    }
-}
-
-@keyframes slideRight {
-    from {
-        transform: translate(0);
-    }
-
-    to {
-        transform: translate(-290px);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: .5;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: .5;
-    }
-
-    to {
-        opacity: 0;
-    }
 }

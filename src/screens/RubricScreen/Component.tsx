@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import {
     loadMoreRubricEvents,
     rubricEventsSelector,
@@ -42,7 +42,7 @@ const RubricScreen: React.FC<Props> = ({ code }) => {
     const dispatch = useDispatch();
     const { events, hasMoreItems, title } = useSelector(rubricEventsSelector(code)) || defaultState;
     const { isLoading, isLoadingMore } = useSelector(rubricEventsUISelector(code)) || defaultUIState;
-    const date = useSelector((state: RootReducer) => state.dateFilter);
+    const date = useSelector((state: RootState) => state.dateFilter);
 
     const onLoadMore = useCallback(() => {
         dispatch(loadMoreRubricEvents(code, date));

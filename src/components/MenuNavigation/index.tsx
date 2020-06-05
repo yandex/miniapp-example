@@ -6,7 +6,7 @@ import { getOrdersUrl, getRubricUrl } from '../../lib/url-builder';
 
 import { MenuTag } from '../../lib/api/fragments/city';
 
-import { isIdentifiedSelector } from '../../redux/slices/user';
+import { isAuthenticatedSelector } from '../../redux/slices/user';
 import { ordersSelector } from '../../redux/slices/order';
 
 import styles from './style.module.css';
@@ -38,13 +38,13 @@ export type MenuListProps = {
     onItemClick: () => void;
 };
 const MenuList: React.FC<MenuListProps> = props => {
-    const isIdentified = useSelector(isIdentifiedSelector);
+    const isAuthenticated = useSelector(isAuthenticatedSelector);
     const orders = useSelector(ordersSelector);
 
     return (
         <ul className={styles.list}>
-            {isIdentified && (
-                <li className={[styles.item, styles.orders].join(' ')}>
+            {isAuthenticated && (
+                <li className={styles.item}>
                     <NavLink
                         exact
                         onClick={props.onItemClick}

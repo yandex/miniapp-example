@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import {
     loadMoreSelectionEvents,
     selectionEventsSelector,
@@ -41,7 +41,7 @@ type Props = {
 const SelectionScreen: React.FC<Props> = ({ code }) => {
     const dispatch = useDispatch();
 
-    const date = useSelector((state: RootReducer) => state.dateFilter);
+    const date = useSelector((state: RootState) => state.dateFilter);
     const { title, events, hasMoreItems } = useSelector(selectionEventsSelector(code)) || defaultState;
     const { isLoading, isLoadingMore } = useSelector(selectionEventsUISelector(code)) || defaultUIState;
 

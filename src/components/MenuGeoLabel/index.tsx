@@ -1,14 +1,14 @@
 import React, { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 
 import styles from './styles.module.css';
 
 const MenuGeoLabel: React.FC<{
     setCityModalVisibleCallback: (visible: boolean) => void;
 }> = ({ setCityModalVisibleCallback }) => {
-    const currentCity = useSelector((state: RootReducer) => state.city.currentCity);
+    const currentCity = useSelector((state: RootState) => state.city.currentCity);
     const onCitySelectLabelClickHandle = useCallback(() => {
         setCityModalVisibleCallback(true);
     }, [setCityModalVisibleCallback]);

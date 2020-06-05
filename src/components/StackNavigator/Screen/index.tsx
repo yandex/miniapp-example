@@ -1,4 +1,4 @@
-import React, { createRef, useMemo } from 'react';
+import React, { useMemo, useRef } from 'react';
 
 import { StackNavigatorContext } from '../context';
 import { Location, Params, ScreenComponent } from '../index';
@@ -22,7 +22,7 @@ type Props = {
 
 const Screen: React.FC<Props> = ({ isVisible, transitions, screen, onBackward }) => {
     const className = isIOS() ? '' : [styles.screen, !isVisible && !transitions && styles.hidden].filter(Boolean).join(' ');
-    const ref = createRef<HTMLDivElement>();
+    const ref = useRef<HTMLDivElement>(null);
 
     const context = useMemo(() => {
         return {

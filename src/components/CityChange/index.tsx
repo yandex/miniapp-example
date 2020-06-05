@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import { useSelector } from 'react-redux';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 
 import Checkbox from '../Checkbox';
 import ActionButton from '../ActionButton';
@@ -28,7 +28,7 @@ const CityChange: React.FC<CityChangeProps> = ({
     onGeolocationChanged,
     selectedCity,
 }) => {
-    const isFetchingLocation = useSelector((state: RootReducer) => state.city.isFetchingLocation);
+    const isFetchingLocation = useSelector((state: RootState) => state.city.isFetchingLocation);
 
     const className = [
         styles.wrapper,

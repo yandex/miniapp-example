@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import { loadCityList } from '../../redux/slices/city-list';
 
 import { City } from '../CityModal';
@@ -62,7 +62,7 @@ const CitySelectContent: React.FC<CitySelectContentProps> = props => {
 
 const CitySelect: React.FC<CitySelectProps> = ({ visible, onCitySelect, wasClosed }) => {
     const dispatch = useDispatch();
-    const { items, isLoading } = useSelector((state: RootReducer) => state.cityList);
+    const { items, isLoading } = useSelector((state: RootState) => state.cityList);
     const [suggestedItems, setItems] = useState(items);
 
     const className = [

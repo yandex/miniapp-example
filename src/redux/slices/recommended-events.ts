@@ -11,7 +11,7 @@ import {
     getTransformUIPersistance,
 } from '../helpers/persist';
 import { setEvents } from './event';
-import { AppThunk, RootReducer } from '..';
+import { AppThunk, RootState } from '..';
 
 export type RecommendedEvents = {
     top?: ActualEvents;
@@ -79,7 +79,7 @@ const slice = createSlice({
 
 export const { fetchStart, fetchSuccess, fetchError } = slice.actions;
 
-export const recommendedEventsSelector = (state: RootReducer) => {
+export const recommendedEventsSelector = (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         geoid: state.city.currentCity.geoid,
     });
@@ -87,7 +87,7 @@ export const recommendedEventsSelector = (state: RootReducer) => {
     return state.recommendedEvents.data[persistKey];
 };
 
-export const recommendedEventsUISelector = (state: RootReducer) => {
+export const recommendedEventsUISelector = (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         geoid: state.city.currentCity.geoid,
     });

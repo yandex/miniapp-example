@@ -2,7 +2,7 @@ import React, { memo, useCallback, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { isTomorrow, startOfToday, startOfTomorrow } from 'date-fns';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import { setDate } from '../../redux/slices/date-filter';
 import { parseDate, dateToString } from '../../lib/date';
 
@@ -16,7 +16,7 @@ export enum Presets {
 
 const DateFilter: React.FC = () => {
     const dispatch = useDispatch();
-    const { date } = useSelector((state: RootReducer) => state.dateFilter);
+    const { date } = useSelector((state: RootState) => state.dateFilter);
     const parsedDate = useMemo(() => parseDate(date), [date]);
     const [preset, setPreset] = useState(getPresetByDate(parsedDate));
 

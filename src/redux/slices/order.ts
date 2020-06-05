@@ -1,28 +1,29 @@
 import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 
-import { AppThunk, RootReducer } from '../index';
+import { AppThunk, RootState } from '../index';
 import { cleanup } from '../actions';
 import { getPersistConfig, getTransformUIPersistance } from '../helpers/persist';
 import { getCurrentUserId } from '../../lib/account-manager';
-import { createOrder, fetchOrdersHistory } from '../../lib/api';
+import { createOrder, fetchOrdersHistory, OrderData } from '../../lib/api';
 import { Event } from '../../lib/api/fragments/event';
 import { CreateOrderResponse, OrderResponse } from '../../lib/api/types';
 import { MetrikaGoals, MetrikaOrderParams, reachGoal } from '../../lib/metrika';
 import { logProductAdd, logProductPurchase } from '../../lib/metrika/ecommerce';
 import { reportGoalReached } from '../../lib/metrika/js-api';
 import { PaymentError, processNativePayment } from '../../lib/payment';
-import { identifyUser } from './user';
+import { authenticate } from './user';
 
 export type Order = {
     data: {
         orders: OrderResponse[];
-    },
+    };
     ui: {
         isLoading?: boolean;
-        isCreating?: boolean;
-    }
-}
+        isPaymentInProgress?: boolean;
+        isCheckoutInProgress?: boolean;
+    };
+};
 
 const initialState: Order = {
     data: {
@@ -46,30 +47,45 @@ const order = createSlice({
             state.ui.isLoading = false;
         },
         paymentStart(state) {
-            state.ui.isCreating = true;
+            state.ui.isPaymentInProgress = true;
         },
         paymentEnd(state) {
-            state.ui.isCreating = false;
-        }
+            state.ui.isPaymentInProgress = false;
+        },
+        checkoutStart(state) {
+            state.ui.isCheckoutInProgress = true;
+        },
+        checkoutEnd(state) {
+            state.ui.isCheckoutInProgress = false;
+        },
     },
     extraReducers: builder => {
         builder.addCase(cleanup, () => initialState);
-    }
+    },
 });
 
-const { fetchStart, fetchSuccess, fetchError, paymentStart, paymentEnd } = order.actions;
+export const {
+    fetchStart,
+    fetchSuccess,
+    fetchError,
+    paymentStart,
+    paymentEnd,
+    checkoutStart,
+    checkoutEnd,
+} = order.actions;
 
-export const ordersSelector = (state: RootReducer) => state.order.data.orders;
+export const paymentInProgressSelector = (state: RootState) => Boolean(state.order.ui.isPaymentInProgress);
+export const checkoutInProgressSelector = (state: RootState) => Boolean(state.order.ui.isCheckoutInProgress);
+export const ordersSelector = (state: RootState) => state.order.data.orders;
 
-export const orderEventIdsSelector = createSelector(
-    ordersSelector,
-    payments => Array.from(new Set(payments.map(order => order.event.id)))
+export const orderEventIdsSelector = createSelector(ordersSelector, payments =>
+    Array.from(new Set(payments.map(order => order.event.id)))
 );
 
 export const ordersLoadingSelector = createSelector(
     orderEventIdsSelector,
-    (state: RootReducer) => state.order.ui,
-    (state: RootReducer) => state.event.ui,
+    (state: RootState) => state.order.ui,
+    (state: RootState) => state.event.ui,
     (orderEventIds, orderUi, eventsUi) => {
         const isEventLoading = orderEventIds.some(event => eventsUi[event]?.isLoading);
 
@@ -95,10 +111,10 @@ export const fetchOrders = (): AppThunk => async(dispatch, getState) => {
     }
 };
 
-export const buyTicket = (
-    event: Event,
-    retry: boolean = true
-): AppThunk => async(dispatch, getState) => {
+export const buyTicket = (event: Event, userInfo: OrderData['userInfo'], retry: boolean = true): AppThunk => async(
+    dispatch,
+    getState
+) => {
     const { jwtToken, psuid, currentUser } = getState().user;
 
     dispatch(paymentStart());
@@ -108,7 +124,7 @@ export const buyTicket = (
         const currentUserId = await getCurrentUserId();
 
         if (!jwtToken || !psuid || !currentUserId) {
-            await dispatch(identifyUser(() => dispatch(buyTicket(event))));
+            await dispatch(authenticate(() => dispatch(buyTicket(event, userInfo))));
 
             return dispatch(paymentEnd());
         }
@@ -124,11 +140,19 @@ export const buyTicket = (
     let metrikaParams: MetrikaOrderParams;
 
     try {
-        response = await createOrder(event.id, jwtToken);
+        response = await createOrder(
+            {
+                eventId: event.id,
+                amount: 1,
+                userInfo,
+            },
+            jwtToken
+        );
+
         metrikaParams = {
             order_id: response.id,
             price: response.cost,
-            price_without_discount: response.cost
+            price_without_discount: response.cost,
         };
 
         reachGoal(MetrikaGoals.OrderInitiated, metrikaParams);
@@ -137,7 +161,7 @@ export const buyTicket = (
         dispatch(paymentEnd());
 
         if (err.status === 401 && retry) {
-            return dispatch(identifyUser(() => dispatch(buyTicket(event, false))));
+            return dispatch(authenticate(() => dispatch(buyTicket(event, userInfo, false))));
         }
 
         return alert('Произошла ошибка при покупке билета. Попробуйте ещё раз');
@@ -149,6 +173,8 @@ export const buyTicket = (
         reachGoal(MetrikaGoals.OrderCompleted, metrikaParams);
         logProductPurchase(event, response.id);
         await reportGoalReached(MetrikaGoals.OrderCompleted, metrikaParams);
+
+        dispatch(checkoutEnd());
     } catch (err) {
         console.error(err);
 

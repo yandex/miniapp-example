@@ -11,7 +11,7 @@ import {
     getPersistConfig,
     getTransformUIPersistance,
 } from '../helpers/persist';
-import { AppThunk, RootReducer } from '../index';
+import { AppThunk, RootState } from '../index';
 import { DateFilter } from './date-filter';
 
 export type SelectionsState = {
@@ -106,7 +106,7 @@ const slice = createSlice({
 
 export const { fetchStart, fetchSuccess, fetchError } = slice.actions;
 
-export const selectionsSelector = (state: RootReducer) => {
+export const selectionsSelector = (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         geoid: state.city.currentCity.geoid,
         ...state.dateFilter,
@@ -115,7 +115,7 @@ export const selectionsSelector = (state: RootReducer) => {
     return state.selections.data[persistKey];
 };
 
-export const selectionsUISelector = (state: RootReducer) => {
+export const selectionsUISelector = (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         geoid: state.city.currentCity.geoid,
         ...state.dateFilter,

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { getEventUrl } from '../../../lib/url-builder';
-import { RootReducer } from '../../../redux';
+import { RootState } from '../../../redux';
 
 import PopularResultSkeleton from './Skeleton';
 
@@ -13,8 +13,8 @@ type Props = {
     onLinkClick: () => void;
 };
 const Index: React.FC<Props> = ({ onLinkClick }) => {
-    const { events } = useSelector((state: RootReducer) => state.search.data.popularEvents);
-    const { isLoading } = useSelector((state: RootReducer) => state.search.ui.popularEvents);
+    const { events } = useSelector((state: RootState) => state.search.data.popularEvents);
+    const { isLoading } = useSelector((state: RootState) => state.search.ui.popularEvents);
 
     return (
         <section>

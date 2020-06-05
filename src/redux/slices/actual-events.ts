@@ -12,7 +12,7 @@ import {
 } from '../helpers/persist';
 import { setEvents } from './event';
 import { DateFilter } from './date-filter';
-import { AppThunk, RootReducer } from '..';
+import { AppThunk, RootState } from '..';
 
 export type ActualEventsListState = {
     data: {
@@ -80,7 +80,7 @@ const slice = createSlice({
 
 export const { fetchStart, fetchSuccess, fetchError } = slice.actions;
 
-export const actualEventsSelector = (state: RootReducer) => {
+export const actualEventsSelector = (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         geoid: state.city.currentCity.geoid,
         ...state.dateFilter,
@@ -89,7 +89,7 @@ export const actualEventsSelector = (state: RootReducer) => {
     return state.actualEvents.data[persistKey];
 };
 
-export const actualEventsUISelector = (state: RootReducer) => {
+export const actualEventsUISelector = (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         geoid: state.city.currentCity.geoid,
         ...state.dateFilter,

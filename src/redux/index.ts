@@ -49,8 +49,8 @@ const store = configureStore({
     }),
 });
 
-export type RootReducer = ReturnType<typeof rootReducer>;
-export type AppThunk = ThunkAction<void, RootReducer, null, Action<string>>;
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppThunk = ThunkAction<void, RootState, null, Action<string>>;
 
 export const persistor = persistStore(store);
 

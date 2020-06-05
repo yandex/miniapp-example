@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { RootReducer } from '../../../redux';
+import { RootState } from '../../../redux';
 
 import EventsList from '../../../components/EventsList';
 import EventCard from '../../../components/EventCard';
@@ -17,8 +17,8 @@ type Props = {
 const SKELETON_THROTTLE_MS = 250;
 
 const SearchResult: React.FC<Props> = ({ onItemClick }) => {
-    const { groups } = useSelector((state: RootReducer) => state.search.data.results);
-    const { isLoading } = useSelector((state: RootReducer) => state.search.ui.results);
+    const { groups } = useSelector((state: RootState) => state.search.data.results);
+    const { isLoading } = useSelector((state: RootState) => state.search.ui.results);
 
     const isThrottleLoading = useThrottleLoading(isLoading, SKELETON_THROTTLE_MS);
 

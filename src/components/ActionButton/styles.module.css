@@ -3,9 +3,12 @@
 
     border: none;
     border-radius: 100px;
-    background-color: #ffdb4d;
+    outline: none;
+    background: #ffdb4d;
 }
 
-.disabled {
-    opacity: .6;
+.invalid,
+.action[disabled] {
+    color: rgb(128, 128, 128);
+    background: rgb(242, 242, 242);
 }

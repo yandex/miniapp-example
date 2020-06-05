@@ -11,7 +11,7 @@ import {
     getTransformUIPersistance,
 } from '../helpers/persist';
 
-import { AppThunk, RootReducer } from '../index';
+import { AppThunk, RootState } from '../index';
 import { setEvents } from './event';
 import { DateFilter } from './date-filter';
 
@@ -113,7 +113,7 @@ const slice = createSlice({
 
 export const { fetchStart, fetchSuccess, fetchError, fetchMoreStart, fetchMoreSuccess, fetchMoreError } = slice.actions;
 
-export const rubricEventsSelector = (code: string) => (state: RootReducer) => {
+export const rubricEventsSelector = (code: string) => (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         code,
         geoid: state.city.currentCity.geoid,
@@ -123,7 +123,7 @@ export const rubricEventsSelector = (code: string) => (state: RootReducer) => {
     return state.rubricEvents.data[persistKey];
 };
 
-export const rubricEventsUISelector = (code: string) => (state: RootReducer) => {
+export const rubricEventsUISelector = (code: string) => (state: RootState) => {
     const persistKey = createPersistKeyByFilter({
         code,
         geoid: state.city.currentCity.geoid,

@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useClickAway } from 'react-use';
 
-import { RootReducer } from '../../redux';
+import { RootState } from '../../redux';
 import { setCity as saveCity, toggleGeolocation, loadCityInfo, City as stateCity } from '../../redux/slices/city';
 import { usePrevious } from '../../hooks/usePrevious';
 
@@ -18,12 +18,12 @@ const CityModal: React.FC<{
     visible: boolean;
     setCityModalVisibleCallback: (visible: boolean) => void;
 }> = ({ visible: isModalVisible, setCityModalVisibleCallback: setModalVisible }) => {
-    const contentRef = React.createRef<HTMLDivElement>();
+    const contentRef = useRef<HTMLDivElement>(null);
     const dispatch = useDispatch();
     const history = useHistory();
 
-    const currentCity = useSelector((state: RootReducer) => state.city.currentCity);
-    const useGeolocation = useSelector((state: RootReducer) => state.city.useGeolocation);
+    const currentCity = useSelector((state: RootState) => state.city.currentCity);
+    const useGeolocation = useSelector((state: RootState) => state.city.useGeolocation);
 
     const previousCity = usePrevious<City>(currentCity);
 

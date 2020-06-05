@@ -1,17 +1,21 @@
 import React, { useCallback, useRef, useState, useEffect, MutableRefObject } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { createPortal } from 'react-dom';
 
 import { Ticket } from '../../../../lib/api/fragments/ticket';
-import { RootReducer } from '../../../../redux';
+import { isIOS } from '../../../../lib/is-ios';
+
 import { Event } from '../../../../redux/slices/event';
+import { checkoutStart, checkoutEnd, checkoutInProgressSelector } from '../../../../redux/slices/order';
 
 import ActionButton from '../../../../components/ActionButton';
 import TicketPrice from '../../../../components/TicketPrice';
-
 import { useScreenRef } from '../../../../components/StackNavigator';
+
 import { useScrollEffect } from '../../../../hooks/useScrollEffect';
-import { isIOS } from '../../../../lib/is-ios';
-import { buyTicket } from '../../../../redux/slices/order';
+
+import CheckoutModal from '../CheckoutModal';
+
 import styles from './styles.module.css';
 
 const StickyVisibleClasses = {
@@ -37,20 +41,29 @@ type Props = {
     event: Event;
 };
 const TicketButton: React.FC<Props> = ({ event }) => {
-    const ticket = event.tickets && event.tickets[0];
+    const dispatch = useDispatch();
 
     const paymentButtonRef = useRef<HTMLDivElement | null>(null);
-    const dispatch = useDispatch();
-    const isLoading = useSelector((state: RootReducer) => state.order.ui.isCreating);
     const screenRef = useScreenRef();
     const documentRef = useRef(document);
     const scrollableRef: MutableRefObject<EventTarget | null> = isIOS() ? documentRef : screenRef;
+
     const [stickyVisibleClass, setStickyVisibleClass] = useState<string>('');
+    const [screenNode, setScreenNode] = useState(screenRef.current);
+
+    const isCheckoutInProgress = useSelector(checkoutInProgressSelector);
+
     const onPaymentButtonClick = useCallback(() => {
-        dispatch(buyTicket(event));
-    }, [dispatch, event]);
+        dispatch(checkoutStart());
+    }, [dispatch]);
+
+    const onCheckoutClose = useCallback(() => {
+        dispatch(checkoutEnd());
+    }, [dispatch]);
 
     const isStaticPaymentButtonVisible = useScrollEffect(scrollableRef, paymentButtonRef, isElementOutOfViewport);
+    const ticket = event.tickets && event.tickets[0];
+
     useEffect(() => {
         if (!paymentButtonRef.current || !ticket) {
             return;
@@ -67,6 +80,17 @@ const TicketButton: React.FC<Props> = ({ event }) => {
         setStickyVisibleClass(stickyButtonVisibleClass);
     }, [paymentButtonRef, isStaticPaymentButtonVisible, ticket, stickyVisibleClass]);
 
+    useEffect(() => {
+        setScreenNode(screenRef.current);
+    }, [screenRef]);
+
+    useEffect(() => {
+        // Закрываем форму чекаута при удалении компонента.
+        return () => {
+            onCheckoutClose();
+        };
+    }, [onCheckoutClose]);
+
     if (!ticket) {
         return null;
     }
@@ -74,11 +98,21 @@ const TicketButton: React.FC<Props> = ({ event }) => {
     return (
         <>
             <div className={styles.static} ref={paymentButtonRef}>
-                <Button ticket={ticket} disabled={isLoading} onClick={onPaymentButtonClick} />
+                <Button ticket={ticket} onClick={onPaymentButtonClick} />
             </div>
             <div className={[styles.sticky, stickyVisibleClass].join(' ')}>
-                <Button ticket={ticket} disabled={isLoading} onClick={onPaymentButtonClick} />
+                <Button ticket={ticket} onClick={onPaymentButtonClick} />
             </div>
+            {screenNode &&
+                createPortal(
+                    <CheckoutModal
+                        event={event}
+                        ticket={ticket}
+                        visible={isCheckoutInProgress}
+                        onClose={onCheckoutClose}
+                    />,
+                    screenNode
+                )}
         </>
     );
 };
