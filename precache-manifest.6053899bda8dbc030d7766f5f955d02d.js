@@ -1,91 +1,91 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "476bbc93beb42149a26c842a420d7883",
+    "revision": "7f83eb30c53c95b708a1103e228cae78",
     "url": "https://yandex.github.io/miniapp-example/index.html"
   },
   {
-    "revision": "f79aca5424ed1ef830d5",
-    "url": "https://yandex.github.io/miniapp-example/static/css/event-screen.2da73b4d.chunk.css"
+    "revision": "c82b2380e45efd1012a3",
+    "url": "https://yandex.github.io/miniapp-example/static/css/event-screen.9d5f6c84.chunk.css"
   },
   {
-    "revision": "583bbf3509c59b5af0a8",
+    "revision": "820013b9eb264804b408",
     "url": "https://yandex.github.io/miniapp-example/static/css/main-screen.d57bf633.chunk.css"
   },
   {
-    "revision": "713437ca6be490e9212d",
+    "revision": "24fb38ffcc2c93e227df",
     "url": "https://yandex.github.io/miniapp-example/static/css/main.cafe3c26.chunk.css"
   },
   {
-    "revision": "9880e58f14c9435f3838",
+    "revision": "41e0f16a9a9ba1d41d11",
     "url": "https://yandex.github.io/miniapp-example/static/css/orders-screen.dca61f6c.chunk.css"
   },
   {
-    "revision": "a538d1c729a681e50ece",
+    "revision": "10855da1268091a31ee9",
     "url": "https://yandex.github.io/miniapp-example/static/css/recommended-events.3010c848.chunk.css"
   },
   {
-    "revision": "1ed40542dbe0e53e9cea",
+    "revision": "3f9b772fab9860f6eaa9",
     "url": "https://yandex.github.io/miniapp-example/static/css/rubric-screen.6dd3e5ce.chunk.css"
   },
   {
-    "revision": "5992a18b3b8d62552531",
+    "revision": "d322540bd6ef6be43881",
     "url": "https://yandex.github.io/miniapp-example/static/css/selection-screen.6dd3e5ce.chunk.css"
   },
   {
-    "revision": "244d2d568d430c469b9e",
-    "url": "https://yandex.github.io/miniapp-example/static/js/10.2c002791.chunk.js"
+    "revision": "87aacd5b12dc54017acd",
+    "url": "https://yandex.github.io/miniapp-example/static/js/10.094c17fc.chunk.js"
   },
   {
-    "revision": "07963cf4e0f7fd308fb0",
-    "url": "https://yandex.github.io/miniapp-example/static/js/11.e5f525f5.chunk.js"
+    "revision": "a364eff4b77d6c04ef18",
+    "url": "https://yandex.github.io/miniapp-example/static/js/11.cd45635a.chunk.js"
   },
   {
-    "revision": "38b245f13b545bb2305e",
-    "url": "https://yandex.github.io/miniapp-example/static/js/12.db325fc1.chunk.js"
+    "revision": "8ef6fe83acdb024fe8b8",
+    "url": "https://yandex.github.io/miniapp-example/static/js/12.4976a287.chunk.js"
   },
   {
-    "revision": "e6f7d4a45ccd97daef08",
-    "url": "https://yandex.github.io/miniapp-example/static/js/9.bf00b1b5.chunk.js"
+    "revision": "40ff4e2ca8b6977d480a",
+    "url": "https://yandex.github.io/miniapp-example/static/js/9.630a73d6.chunk.js"
   },
   {
     "revision": "f2fc174cadbfea3a39f9fff01c952a60",
-    "url": "https://yandex.github.io/miniapp-example/static/js/9.bf00b1b5.chunk.js.LICENSE.txt"
+    "url": "https://yandex.github.io/miniapp-example/static/js/9.630a73d6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f79aca5424ed1ef830d5",
-    "url": "https://yandex.github.io/miniapp-example/static/js/event-screen.25eb3c91.chunk.js"
+    "revision": "c82b2380e45efd1012a3",
+    "url": "https://yandex.github.io/miniapp-example/static/js/event-screen.68e8e836.chunk.js"
   },
   {
-    "revision": "583bbf3509c59b5af0a8",
-    "url": "https://yandex.github.io/miniapp-example/static/js/main-screen.ca562883.chunk.js"
+    "revision": "820013b9eb264804b408",
+    "url": "https://yandex.github.io/miniapp-example/static/js/main-screen.72663b3e.chunk.js"
   },
   {
-    "revision": "713437ca6be490e9212d",
-    "url": "https://yandex.github.io/miniapp-example/static/js/main.883d980a.chunk.js"
+    "revision": "24fb38ffcc2c93e227df",
+    "url": "https://yandex.github.io/miniapp-example/static/js/main.4002b3d2.chunk.js"
   },
   {
-    "revision": "9880e58f14c9435f3838",
-    "url": "https://yandex.github.io/miniapp-example/static/js/orders-screen.68728ea7.chunk.js"
+    "revision": "41e0f16a9a9ba1d41d11",
+    "url": "https://yandex.github.io/miniapp-example/static/js/orders-screen.031325fb.chunk.js"
   },
   {
-    "revision": "a538d1c729a681e50ece",
-    "url": "https://yandex.github.io/miniapp-example/static/js/recommended-events.77a89d1a.chunk.js"
+    "revision": "10855da1268091a31ee9",
+    "url": "https://yandex.github.io/miniapp-example/static/js/recommended-events.b089c84f.chunk.js"
   },
   {
-    "revision": "1ed40542dbe0e53e9cea",
-    "url": "https://yandex.github.io/miniapp-example/static/js/rubric-screen.f5ae5c68.chunk.js"
+    "revision": "3f9b772fab9860f6eaa9",
+    "url": "https://yandex.github.io/miniapp-example/static/js/rubric-screen.bf7967a4.chunk.js"
   },
   {
-    "revision": "4cf7ee1fd7663216905a",
-    "url": "https://yandex.github.io/miniapp-example/static/js/runtime-main.1d9b684c.js"
+    "revision": "9db7f8db1ac5d01cf23e",
+    "url": "https://yandex.github.io/miniapp-example/static/js/runtime-main.94369710.js"
   },
   {
-    "revision": "5992a18b3b8d62552531",
-    "url": "https://yandex.github.io/miniapp-example/static/js/selection-screen.fd89dd73.chunk.js"
+    "revision": "d322540bd6ef6be43881",
+    "url": "https://yandex.github.io/miniapp-example/static/js/selection-screen.2e78dc9a.chunk.js"
   },
   {
-    "revision": "de4cdd70172f24078806",
-    "url": "https://yandex.github.io/miniapp-example/static/js/ya-map-modal.d67e0b4c.chunk.js"
+    "revision": "29442e79e2b0b74ae760",
+    "url": "https://yandex.github.io/miniapp-example/static/js/ya-map-modal.9f36091a.chunk.js"
   },
   {
     "revision": "f75d2cebeaee6889ed53f36ef8bc63ce",
