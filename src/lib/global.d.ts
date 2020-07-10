@@ -5,6 +5,7 @@ import {
     YandexAuthPSUIDInfo,
     YandexAuthScope
 } from './account-manager';
+import { YandexTransactionPushToken } from './push-notification';
 
 declare global {
     interface Window {
@@ -26,6 +27,9 @@ declare global {
                     getCurrentUserId: (clientId: string) => Promise<YandexAuthPSUIDInfo | null>;
                     authorize: (clientId: string, scopes?: YandexAuthScope[]) => Promise<YandexAuthApiInfo>;
                     updateUserInfo: (authToken: string) => Promise<YandexAuthInfo>;
+                },
+                push: {
+                    getPushTokenForTransaction: (paymentToken: string) => Promise<YandexTransactionPushToken | null>
                 }
             };
         }

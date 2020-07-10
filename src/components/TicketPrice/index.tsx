@@ -20,7 +20,7 @@ const TicketPrice: React.FC<Props> = ({ ticket, exact }) => {
         (ticket.price.min || 0) / 100,
         space,
         getCurrencySymbol(ticket.price.currency),
-    ].join('');
+    ].filter(Boolean).join(space);
 
     return <>{text}</>;
 };

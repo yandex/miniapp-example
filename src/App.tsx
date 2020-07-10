@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 
 import { isIOS } from './lib/is-ios';
 import { useWatchAuth } from './hooks/useWatchAuth';
-
 import { loadCityInfo } from './redux/slices/city';
 
 import MainScreen from './screens/MainScreen';

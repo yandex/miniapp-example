@@ -23,6 +23,10 @@
 
     color: rgba(0, 0, 0, .8);
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgb(207, 207, 207);
     background: none;
+}
+
+.input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px #fff inset;
 }

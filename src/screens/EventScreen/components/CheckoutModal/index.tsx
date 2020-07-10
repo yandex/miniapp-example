@@ -5,14 +5,13 @@ import { useClickAway } from 'react-use';
 import { Ticket } from '../../../../lib/api/fragments/ticket';
 
 import { Event } from '../../../../redux/slices/event';
-import { buyTicket, paymentInProgressSelector } from '../../../../redux/slices/order';
+import { buyTicket, paymentInProgressSelector, orderCreationInProgressSelector } from '../../../../redux/slices/order';
 import { isAuthenticatedSelector, isAuthorizedSelector, authorize, userSelector } from '../../../../redux/slices/user';
 
 import ActionButton from '../../../../components/ActionButton';
 
 import CheckoutEventInfo from './components/CheckoutEventInfo';
 import CheckoutTextInput from './components/CheckoutTextInput';
-import CheckoutTotal from './components/CheckoutTotal';
 
 import styles from './styles.module.css';
 
@@ -38,6 +37,7 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
     const isAuthorized = useSelector(isAuthorizedSelector);
     const userInfo = useSelector(userSelector);
     const isPaymentInProgress = useSelector(paymentInProgressSelector);
+    const isOrderCreationInProgress = useSelector(orderCreationInProgressSelector);
 
     const className = [styles.modal, visible ? styles.visible : styles.hidden].join(' ');
 
@@ -72,7 +72,9 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
         (e: FormEvent) => {
             e.preventDefault();
 
-            (document.activeElement as HTMLElement).blur();
+            if (document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur();
+            }
 
             dispatch(
                 buyTicket(event, {
@@ -100,7 +102,9 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
 
     useEffect(() => {
         if (!visible) {
-            (document.activeElement as HTMLElement).blur();
+            if (document.activeElement instanceof HTMLElement) {
+                document.activeElement.blur();
+            }
         }
     }, [visible]);
 
@@ -123,6 +127,7 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
                     <CheckoutTextInput
                         className={styles.input}
                         label="Имя и фамилия"
+                        name="full_name"
                         value={name}
                         onChange={setName}
                         onFocus={onInputFocus}
@@ -145,12 +150,11 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
                         onFocus={onInputFocus}
                         required
                     />
-                    <CheckoutTotal className={styles.total} ticket={ticket} />
                     <ActionButton
                         type="submit"
                         className={styles.button}
                         formInvalid={!formRef.current?.checkValidity()}
-                        disabled={isPaymentInProgress}
+                        disabled={isPaymentInProgress || isOrderCreationInProgress}
                     >
                         {buttonText}
                     </ActionButton>

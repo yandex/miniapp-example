@@ -6,7 +6,7 @@ import { Ticket } from '../../../../lib/api/fragments/ticket';
 import { isIOS } from '../../../../lib/is-ios';
 
 import { Event } from '../../../../redux/slices/event';
-import { checkoutStart, checkoutEnd, checkoutInProgressSelector } from '../../../../redux/slices/order';
+import { checkoutEnd, checkoutInProgressSelector, createOrder } from '../../../../redux/slices/order';
 
 import ActionButton from '../../../../components/ActionButton';
 import TicketPrice from '../../../../components/TicketPrice';
@@ -54,15 +54,15 @@ const TicketButton: React.FC<Props> = ({ event }) => {
     const isCheckoutInProgress = useSelector(checkoutInProgressSelector);
 
     const onPaymentButtonClick = useCallback(() => {
-        dispatch(checkoutStart());
-    }, [dispatch]);
+        dispatch(createOrder(event));
+    }, [dispatch, event]);
 
     const onCheckoutClose = useCallback(() => {
         dispatch(checkoutEnd());
     }, [dispatch]);
 
     const isStaticPaymentButtonVisible = useScrollEffect(scrollableRef, paymentButtonRef, isElementOutOfViewport);
-    const ticket = event.tickets && event.tickets[0];
+    const ticket = event.tickets?.[0];
 
     useEffect(() => {
         if (!paymentButtonRef.current || !ticket) {

@@ -8,13 +8,15 @@ type Props = {
     className: string;
     label: string;
     type?: string;
+    name?: string;
     value: string;
     onChange: (value: string) => void;
     onFocus?: () => void;
     required?: boolean;
 };
 
-const CheckoutTextInput: React.FC<Props> = ({ className, label, type, value, onChange, onFocus, required }) => {
+const CheckoutTextInput: React.FC<Props> = props => {
+    const { className, label, type, name, value, onChange, onFocus, required } = props;
     const onInputChange = useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
             onChange(e.target.value);
@@ -28,6 +30,7 @@ const CheckoutTextInput: React.FC<Props> = ({ className, label, type, value, onC
             <TextInput
                 className={styles.input}
                 type={type}
+                name={name}
                 value={value}
                 onChange={onInputChange}
                 onFocus={onFocus}

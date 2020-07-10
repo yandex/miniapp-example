@@ -12,6 +12,7 @@ import {
     RecommendedEventsResponse,
     CreateOrderResponse,
     OrderResponse,
+    UserInfo,
 } from './types';
 import { City } from './fragments/city';
 
@@ -115,11 +116,6 @@ export function fetchRecommendedEvents(options?: GetEventsOptions) {
 export type OrderData = {
     eventId: string;
     amount: number;
-    userInfo: {
-        name: string;
-        email: string;
-        phone: string;
-    };
 };
 export function createOrder(orderData: OrderData, jwtToken: string) {
     return post<CreateOrderResponse>(PAYMENT_API_HOST, '/payment', {
@@ -127,6 +123,20 @@ export function createOrder(orderData: OrderData, jwtToken: string) {
             Authorization: jwtToken,
         },
         body: JSON.stringify(orderData),
+    });
+}
+
+export type OrderUserInfo = {
+    userInfo: UserInfo;
+    paymentId: number;
+    pushToken?: string;
+};
+export function saveUserInfo(orderUserInfo: OrderUserInfo, jwtToken: string) {
+    return post(PAYMENT_API_HOST, '/payment/user-info', {
+        headers: {
+            Authorization: jwtToken,
+        },
+        body: JSON.stringify(orderUserInfo),
     });
 }
 
