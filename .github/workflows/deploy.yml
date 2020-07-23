@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install and Build
+        run: |
+          export PUBLIC_URL=https://yandex.github.io/miniapp-example
+          export REACT_APP_API_HOST=/miniapp-example 
+          export REACT_APP_PAYMENT_API_HOST=https://miniapp-api.tap.yandex.net 
+          npm ci
+          npm run build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.5.7
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
