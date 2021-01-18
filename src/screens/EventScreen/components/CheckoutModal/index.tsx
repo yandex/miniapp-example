@@ -5,8 +5,9 @@ import { useClickAway } from 'react-use';
 import { Ticket } from '../../../../lib/api/fragments/ticket';
 
 import { Event } from '../../../../redux/slices/event';
+import { autofill, isAutofilledSelector, autofilledUserSelector } from '../../../../redux/slices/autofill';
 import { buyTicket, paymentInProgressSelector, orderCreationInProgressSelector } from '../../../../redux/slices/order';
-import { isAuthenticatedSelector, isAuthorizedSelector, authorize, userSelector } from '../../../../redux/slices/user';
+import { authorize, userSelector, isAuthorizedSelector, isAuthenticatedSelector } from '../../../../redux/slices/user';
 
 import ActionButton from '../../../../components/ActionButton';
 
@@ -31,11 +32,14 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
+    const [address, setAddress] = useState('');
     const [isAuthorizationRequested, setAuthorizationRequested] = useState(false);
 
     const isAuthenticated = useSelector(isAuthenticatedSelector);
     const isAuthorized = useSelector(isAuthorizedSelector);
-    const userInfo = useSelector(userSelector);
+    const isAutofilled = useSelector(isAutofilledSelector);
+    const currentUser = useSelector(userSelector);
+    const autofilledUser = useSelector(autofilledUserSelector);
     const isPaymentInProgress = useSelector(paymentInProgressSelector);
     const isOrderCreationInProgress = useSelector(orderCreationInProgressSelector);
 
@@ -81,24 +85,33 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
                     name,
                     phone,
                     email,
+                    address,
                 })
             );
         },
-        [dispatch, event, name, email, phone]
+        [dispatch, event, name, email, phone, address]
     );
 
     const onInputFocus = useCallback(() => {
-        if (isAuthenticated && !isAuthorized && !isAuthorizationRequested) {
+        if (isAuthenticated && !isAutofilled && !isAuthorized && !isAuthorizationRequested) {
             setAuthorizationRequested(true);
 
             dispatch(authorize());
         }
-    }, [dispatch, isAuthenticated, isAuthorized, isAuthorizationRequested]);
+    }, [dispatch, isAuthenticated, isAutofilled, isAuthorized, isAuthorizationRequested]);
 
     useEffect(() => {
-        setName(value => value || userInfo.name || '');
-        setEmail(value => value || userInfo.email || '');
-    }, [userInfo]);
+        if (visible && !isAutofilled) {
+            dispatch(autofill());
+        }
+    }, [dispatch, visible, isAutofilled]);
+
+    useEffect(() => {
+        setName(value => value || autofilledUser?.name || currentUser.name || '');
+        setPhone(value => value || autofilledUser?.phone || '');
+        setEmail(value => value || autofilledUser?.email || currentUser.email || '');
+        setAddress(value => value || autofilledUser?.address || '');
+    }, [visible, currentUser, autofilledUser]);
 
     useEffect(() => {
         if (!visible) {
@@ -115,6 +128,8 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
         buttonText = 'Укажите телефон';
     } else if (!email) {
         buttonText = 'Укажите email';
+    } else if (!address) {
+        buttonText = 'Укажите адрес доставки';
     } else if (isPaymentInProgress) {
         buttonText = 'Оплата…';
     }
@@ -122,6 +137,7 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
     return (
         <div className={className} onTouchStart={onTouchStart}>
             <div ref={contentRef} className={styles.content}>
+                <div className={styles.title}>Заказ билетов с доставкой</div>
                 <CheckoutEventInfo className={styles.event} event={event} ticket={ticket} />
                 <form ref={formRef} action="" onSubmit={onBuyTicket}>
                     <CheckoutTextInput
@@ -147,6 +163,15 @@ const CheckoutModal: React.FC<Props> = ({ event, ticket, visible, onClose }) => 
                         type="email"
                         value={email}
                         onChange={setEmail}
+                        onFocus={onInputFocus}
+                        required
+                    />
+                    <CheckoutTextInput
+                        className={styles.input}
+                        label="Адрес доставки"
+                        type="address"
+                        value={address}
+                        onChange={setAddress}
                         onFocus={onInputFocus}
                         required
                     />

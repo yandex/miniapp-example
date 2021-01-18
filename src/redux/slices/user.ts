@@ -1,45 +1,71 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, createSelector, PayloadAction } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 
-import { authorizeScopes, getCurrentUserId, identify, UserInfo, YandexAuthScope } from '../../lib/account-manager';
-
-import { AppThunk, RootState } from '../index';
 import { cleanup } from '../actions';
+import { AppErrorCode } from '../../lib/error';
+import { fetchUserInfo } from '../../lib/api';
 import { getPersistConfig } from '../helpers/persist';
-
+import { getOauthToken, redirectToOauthAuthorize } from '../../lib/oauth';
+import {
+    identify as jsApiIdentify,
+    authorize as jsApiAuthorize,
+    UserInfo,
+    YandexAuthScope,
+    getCurrentUserId,
+} from '../../lib/js-api/auth';
 import { fetchOrders } from './order';
+import { AppThunk, RootState } from '..';
 
 export type User = {
-    jwtToken?: string;
-    psuid?: string;
-    currentUser: UserInfo;
-    authorizedScopes: YandexAuthScope[];
-    loggedOutPsuid?: string;
+    persist: {
+        currentUser: UserInfo;
+        psuid?: string;
+        jwtToken?: string;
+        oauthToken?: string;
+        loggedOutPsuid?: string;
+    },
+    nonpersist: {
+        isSessionLoggedOut?: boolean;
+    },
 };
 
 const initialState: User = {
-    currentUser: {},
-    authorizedScopes: [],
+    persist: {
+        currentUser: {},
+    },
+    nonpersist: {},
 };
 
 const user = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        authenticated(state, action: PayloadAction<{ psuid: string; token: string }>) {
-            state.jwtToken = action.payload.token;
-            state.psuid = action.payload.psuid;
+        authenticated(state, action: PayloadAction<{ oauthToken: string } | { psuid: string; jwtToken: string }>) {
+            const payload = action.payload;
 
-            delete state.loggedOutPsuid;
+            if ('psuid' in payload) {
+                state.persist.psuid = payload.psuid;
+                state.persist.jwtToken = payload.jwtToken;
+            } else {
+                state.persist.oauthToken = payload.oauthToken;
+            }
+
+            delete state.persist.loggedOutPsuid;
+            delete state.nonpersist.isSessionLoggedOut;
         },
-        authorized(state, action: PayloadAction<{ user: UserInfo; scopes: YandexAuthScope[] }>) {
-            state.currentUser = action.payload.user;
-            state.authorizedScopes = action.payload.scopes;
+        authorized(state, action: PayloadAction<{ user: UserInfo }>) {
+            state.persist.currentUser = action.payload.user;
         },
         logout(state) {
             return {
-                ...initialState,
-                loggedOutPsuid: state.psuid,
+                persist: {
+                    ...initialState.persist,
+                    loggedOutPsuid: state.persist.psuid,
+                },
+                nonpersist: {
+                    ...initialState.nonpersist,
+                    isSessionLoggedOut: true,
+                },
             };
         },
     },
@@ -50,47 +76,125 @@ const user = createSlice({
 
 export const { authenticated, authorized, logout } = user.actions;
 
-export const isAuthenticatedSelector = (state: RootState) => Boolean(state.user.psuid);
-export const isAuthorizedSelector = (state: RootState) => Boolean(state.user.currentUser.uid);
-export const userSelector = (state: RootState) => state.user.currentUser;
+const loggedOutPsuidSelector = (state: RootState) => state.user.persist.loggedOutPsuid;
+const isSessionLoggedOutSelector = (state: RootState) => Boolean(state.user.nonpersist.isSessionLoggedOut);
+export const userSelector = (state: RootState) => state.user.persist.currentUser;
+export const psuidSelector = (state: RootState) => state.user.persist.psuid;
+export const jwtTokenSelector = (state: RootState) => state.user.persist.jwtToken;
+export const oauthTokenSelector = (state: RootState) => state.user.persist.oauthToken;
+export const isAuthorizedSelector = (state: RootState) => Boolean(state.user.persist.currentUser.uid);
+export const isAuthenticatedSelector = createSelector(
+    jwtTokenSelector,
+    oauthTokenSelector,
+    (jwtToken, oauthSelector) => Boolean(jwtToken ?? oauthSelector)
+);
 
 const SCOPES = [YandexAuthScope.Avatar, YandexAuthScope.Info, YandexAuthScope.Email];
 
+const oauthUpdateUserAndOrders = (oauthToken: string): AppThunk => async dispatch => {
+    dispatch(authenticated({ oauthToken }));
+    dispatch(fetchOrders());
+
+    try {
+        const userInfo = await fetchUserInfo(oauthToken);
+
+        dispatch(authorized({ user: userInfo }));
+    } catch (err) {
+        console.error(err);
+        alert('Не удалось получить информацию о пользователе');
+    }
+};
+
+const oauthCheckUser = (): AppThunk => async(dispatch, getState) => {
+    const state = getState();
+
+    const oldOauthToken = oauthTokenSelector(state);
+    const isSessionLoggedOut = isSessionLoggedOutSelector(state);
+
+    // Если пользователь разлогинился, то не логиним его автоматически
+    if (isSessionLoggedOut) {
+        return;
+    }
+
+    try {
+        const oauthToken = getOauthToken({ withError: true });
+
+        if (!oauthToken) {
+            if (oldOauthToken) {
+                dispatch(oauthUpdateUserAndOrders(oldOauthToken));
+            }
+
+            return;
+        }
+
+        const isUserChanged = oldOauthToken && oldOauthToken !== oauthToken;
+
+        if (isUserChanged) {
+            dispatch(cleanup());
+        }
+
+        dispatch(oauthUpdateUserAndOrders(oauthToken));
+    } catch (err) {
+        const { code } = err;
+
+        if (oldOauthToken) {
+            dispatch(cleanup());
+        }
+
+        switch (code) {
+            case AppErrorCode.OauthAccessDenied:
+                return console.warn(err);
+            default:
+                console.error(err);
+        }
+    }
+};
+
 export const authenticate = (afterLogin?: () => void): AppThunk => async(dispatch, getState) => {
     try {
-        const {
-            user: { psuid },
-        } = getState();
-        const psuidInfo = await identify();
+        const psuid = psuidSelector(getState());
+        const psuidInfo = await jsApiIdentify();
 
         if (psuid && psuid !== psuidInfo.payload.psuid) {
             dispatch(cleanup());
         }
 
-        dispatch(authenticated({ token: psuidInfo.jwtToken, psuid: psuidInfo.payload.psuid }));
+        dispatch(authenticated({ jwtToken: psuidInfo.jwtToken, psuid: psuidInfo.payload.psuid }));
 
         afterLogin?.();
     } catch (err) {
-        console.error(err);
-        if (err.message !== 'user not logged') {
-            alert('Не удалось войти. Попробуйте ещё раз');
+        const { code } = err;
+
+        switch (code) {
+            case AppErrorCode.JsApiCancelled:
+                return console.warn(err);
+            case AppErrorCode.JsApiMethodNotAvailable:
+                return redirectToOauthAuthorize();
         }
+
+        console.error(err);
+        alert('Не удалось войти. Попробуйте ещё раз');
     }
 };
 
 export const authorize = (): AppThunk => async dispatch => {
     try {
-        const {
-            userInfo,
-            tokenInfo: { authorizedScopes },
-        } = await authorizeScopes(SCOPES);
+        const { userInfo } = await jsApiAuthorize(SCOPES);
 
-        dispatch(authorized({ user: userInfo.payload, scopes: authorizedScopes }));
+        dispatch(authorized({ user: userInfo.payload }));
     } catch (err) {
-        console.error(err);
-        if (!['authorization denied', 'authorization cancelled'].includes(err.message)) {
-            alert('Не удалось получить информацию о пользователе');
+        const { code } = err;
+
+        switch (code) {
+            case AppErrorCode.JsApiDenied:
+            case AppErrorCode.JsApiCancelled:
+                return console.warn(err);
+            case AppErrorCode.JsApiMethodNotAvailable:
+                return redirectToOauthAuthorize();
         }
+
+        console.error(err);
+        alert('Не удалось получить информацию о пользователе');
     }
 };
 
@@ -103,7 +207,7 @@ export const login = (): AppThunk => async dispatch => {
 };
 
 export const checkUser = (): AppThunk => async(dispatch, getState) => {
-    const oldPsuid = getState().user.psuid;
+    const oldPsuid = psuidSelector(getState());
 
     try {
         const user = await getCurrentUserId();
@@ -118,22 +222,32 @@ export const checkUser = (): AppThunk => async(dispatch, getState) => {
         }
 
         const psuid = user.payload.psuid;
+        const loggedOutPsuid = loggedOutPsuidSelector(getState());
 
         // Если пользователь разлогинился, то не логиним его автоматически
-        if (psuid === getState().user.loggedOutPsuid) {
+        if (psuid === loggedOutPsuid) {
             return;
         }
 
-        dispatch(authenticated({ token: user.jwtToken, psuid }));
+        dispatch(authenticated({ jwtToken: user.jwtToken, psuid }));
         dispatch(fetchOrders());
     } catch (err) {
-        console.error(err);
+        const { code } = err;
 
         if (oldPsuid) {
             dispatch(cleanup());
         }
+
+        switch (code) {
+            case AppErrorCode.JsApiCancelled:
+                return console.warn(err);
+            case AppErrorCode.JsApiMethodNotAvailable:
+                return dispatch(oauthCheckUser());
+            default:
+                console.error(err);
+        }
     }
 };
 
-const persistConfig = getPersistConfig<User>('user');
+const persistConfig = getPersistConfig<User>('user', { whitelist: ['persist'] });
 export default persistReducer(persistConfig, user.reducer);

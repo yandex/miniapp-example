@@ -30,7 +30,7 @@ export type Action = {
 export type ActionField = {
     id: string;
     coupon?: string;
-    goal_id?: number; // eslint-disable-line camelcase
+    goal_id?: number;
     revenue?: number;
 }
 

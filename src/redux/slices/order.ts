@@ -4,16 +4,15 @@ import { persistReducer } from 'redux-persist';
 import { AppThunk, RootState } from '../index';
 import { cleanup } from '../actions';
 import { getPersistConfig, getTransformUIPersistance } from '../helpers/persist';
-import { getCurrentUserId } from '../../lib/account-manager';
-import { getTransactionPushToken, YandexTransactionPushToken } from '../../lib/push-notification';
-import { createOrder as createOrderAPI, saveUserInfo as saveUserInfoAPI, fetchOrdersHistory } from '../../lib/api';
+import { getPushTokenForTransaction, YandexPushTokenForTransaction } from '../../lib/js-api/push';
+import { fetchOrdersHistory, createOrder as createOrderAPI, saveUserInfo as saveUserInfoAPI } from '../../lib/api';
 import { Event } from '../../lib/api/fragments/event';
 import { CreateOrderResponse, OrderResponse, UserInfo } from '../../lib/api/types';
-import { MetrikaGoals, MetrikaOrderParams, reachGoal } from '../../lib/metrika';
+import { MetrikaGoals, MetrikaOrderParams, reachGoal, reportGoalReached } from '../../lib/metrika';
 import { logProductAdd, logProductPurchase } from '../../lib/metrika/ecommerce';
-import { reportGoalReached } from '../../lib/metrika/js-api';
-import { PaymentError, processNativePayment } from '../../lib/payment';
-import { authenticate } from './user';
+import { processNativePayment } from '../../lib/payment';
+import { AppErrorCode } from '../../lib/error';
+import { authenticate, jwtTokenSelector, oauthTokenSelector } from './user';
 
 export type Order = {
     data: {
@@ -91,6 +90,7 @@ export const {
 export const paymentInProgressSelector = (state: RootState) => Boolean(state.order.ui.isPaymentInProgress);
 export const checkoutInProgressSelector = (state: RootState) => Boolean(state.order.ui.isCheckoutInProgress);
 export const orderCreationInProgressSelector = (state: RootState) => Boolean(state.order.ui.isOrderCreationInProgress);
+export const activeOrderSelector = (state: RootState) => state.order.data.activeOrder;
 export const ordersSelector = (state: RootState) => state.order.data.orders;
 
 export const orderEventIdsSelector = createSelector(ordersSelector, payments =>
@@ -109,16 +109,19 @@ export const ordersLoadingSelector = createSelector(
 );
 
 export const fetchOrders = (): AppThunk => async(dispatch, getState) => {
-    const { jwtToken } = getState().user;
+    const state = getState();
 
-    if (!jwtToken) {
+    const jwtToken = jwtTokenSelector(state);
+    const oauthToken = oauthTokenSelector(state);
+
+    if (!jwtToken && !oauthToken) {
         return;
     }
 
     dispatch(fetchStart());
 
     try {
-        const orders = await fetchOrdersHistory(jwtToken);
+        const orders = await fetchOrdersHistory({ jwtToken, oauthToken });
         dispatch(fetchSuccess(orders));
     } catch (err) {
         console.error(err);
@@ -131,25 +134,12 @@ export const createOrder = (
     onOrderCreated: () => void = () => {},
     retry: boolean = true
 ): AppThunk => async(dispatch, getState) => {
-    const { jwtToken, psuid } = getState().user;
+    const state = getState();
+
+    const jwtToken = jwtTokenSelector(state);
+    const oauthToken = oauthTokenSelector(state);
 
     dispatch(orderCreationStart());
-
-    try {
-        const currentUserId = await getCurrentUserId();
-
-        if (!jwtToken || !psuid || !currentUserId) {
-            await dispatch(authenticate(() => dispatch(createOrder(event, onOrderCreated))));
-
-            return dispatch(orderCreationEnd());
-        }
-    } catch (err) {
-        console.error(err);
-
-        alert('Не удалось получить информацию о текущем пользователе');
-
-        return dispatch(orderCreationEnd());
-    }
 
     let response: CreateOrderResponse;
 
@@ -159,7 +149,10 @@ export const createOrder = (
                 eventId: event.id,
                 amount: 1,
             },
-            jwtToken
+            {
+                jwtToken,
+                oauthToken,
+            }
         );
 
         const metrikaParams = {
@@ -169,7 +162,7 @@ export const createOrder = (
         };
 
         reachGoal(MetrikaGoals.OrderInitiated, metrikaParams);
-        await reportGoalReached(MetrikaGoals.OrderInitiated, metrikaParams);
+        reportGoalReached(MetrikaGoals.OrderInitiated, metrikaParams);
 
         dispatch(orderCreationSuccess(response));
 
@@ -187,26 +180,13 @@ export const buyTicket = (event: Event, userInfo: UserInfo): AppThunk => async(
     dispatch,
     getState
 ) => {
-    const { currentUser, jwtToken, psuid } = getState().user;
-    const { activeOrder } = getState().order.data;
+    const state = getState();
+
+    const jwtToken = jwtTokenSelector(state);
+    const oauthToken = oauthTokenSelector(state);
+    const activeOrder = activeOrderSelector(state);
 
     dispatch(paymentStart());
-
-    try {
-        const currentUserId = await getCurrentUserId();
-
-        if (!jwtToken || !psuid || !currentUserId) {
-            await dispatch(authenticate(() => dispatch(buyTicket(event, userInfo))));
-
-            return dispatch(paymentEnd());
-        }
-    } catch (err) {
-        console.error(err);
-
-        alert('Не удалось получить информацию о текущем пользователе');
-
-        return dispatch(paymentEnd());
-    }
 
     if (orderCreationInProgressSelector(getState())) {
         throw new Error('Payment is not available. Order creating now');
@@ -226,29 +206,31 @@ export const buyTicket = (event: Event, userInfo: UserInfo): AppThunk => async(
     };
 
     try {
-        await processNativePayment(activeOrder, currentUser);
+        await processNativePayment(activeOrder, userInfo);
 
         const { pushToken } = (await fetchPushToken(activeOrder.paymentToken)) ?? {};
-        saveUserInfoAPI({ userInfo, paymentId: activeOrder.id, pushToken }, jwtToken)
+        saveUserInfoAPI({ userInfo, paymentId: activeOrder.id, pushToken }, { jwtToken, oauthToken })
             .catch((error: Error) => console.error(error));
 
         reachGoal(MetrikaGoals.OrderCompleted, metrikaParams);
+        reportGoalReached(MetrikaGoals.OrderCompleted, metrikaParams);
         logProductPurchase(event, activeOrder.id);
-        await reportGoalReached(MetrikaGoals.OrderCompleted, metrikaParams);
 
         dispatch(checkoutEnd());
     } catch (err) {
-        console.error(err);
+        const { code } = err;
 
         reachGoal(MetrikaGoals.OrderError, metrikaParams);
 
-        switch (err.message) {
-            case PaymentError.Shown:
-            case PaymentError.Cancelled:
+        switch (code) {
+            case AppErrorCode.JsApiCancelled:
+            case AppErrorCode.JsApiAlreadyShown:
                 return;
-            case PaymentError.NotSupported:
+            case AppErrorCode.JsApiMethodNotAvailable:
+                console.warn(err);
                 return alert('Платежи не поддерживаются в текущей версии браузера');
             default:
+                console.error(err);
                 alert('Произошла ошибка при покупке билета. Попробуйте ещё раз');
         }
     } finally {
@@ -258,12 +240,12 @@ export const buyTicket = (event: Event, userInfo: UserInfo): AppThunk => async(
 };
 
 async function fetchPushToken(paymentToken: string) {
-    let pushToken: YandexTransactionPushToken | null = null;
+    let pushToken: YandexPushTokenForTransaction | null = null;
 
     try {
-        pushToken = await getTransactionPushToken(paymentToken);
-    } catch (error) {
-        console.error(error);
+        pushToken = await getPushTokenForTransaction(paymentToken);
+    } catch (err) {
+        console.warn(err);
     }
 
     return pushToken;

@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+import { reportGoalReached as jsApiReportGoalReached } from '../js-api/metrika';
 import { YMetrikaInitParams, YMetrikaVisitParams } from './types';
 
 const METRIKA_COUNTER_ID = 62405404;
@@ -19,8 +19,8 @@ export enum MetrikaGoals {
 }
 
 export type MetrikaOrderParams = {
-    order_id: number;
     price: number;
+    order_id: number;
     price_without_discount: number;
 }
 
@@ -35,4 +35,8 @@ export function hit(url: string, options?: { params?: YMetrikaVisitParams }) {
 
 export function reachGoal(name: MetrikaGoals, params: MetrikaOrderParams) {
     window.ym?.(METRIKA_COUNTER_ID, 'reachGoal', name, params);
+}
+
+export function reportGoalReached(goal: MetrikaGoals, params: MetrikaOrderParams) {
+    jsApiReportGoalReached(goal, params);
 }

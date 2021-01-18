@@ -4,6 +4,7 @@ import { persistStore } from 'redux-persist';
 import * as PERSIST_CONTSTANS from 'redux-persist/lib/constants';
 
 import eventReducer from './slices/event';
+import autofillReducer from './slices/autofill';
 import actualEventsReducer from './slices/actual-events';
 import rubricEventsReducer from './slices/rubric-events';
 import selectionsReducer from './slices/selections';
@@ -27,6 +28,7 @@ const PERSIST_ACTIONS = [
 ];
 const rootReducer = combineReducers({
     event: eventReducer,
+    autofill: autofillReducer,
     actualEvents: actualEventsReducer,
     rubricEvents: rubricEventsReducer,
     selections: selectionsReducer,

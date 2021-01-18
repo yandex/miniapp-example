@@ -63,6 +63,14 @@
     pointer-events: none;
 }
 
+.title {
+    margin-bottom: 16px;
+
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
 .event {
     margin-bottom: 20px;
 }

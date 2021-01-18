@@ -1,5 +1,5 @@
 import { getDistanceBetweenPoints } from '../geolocation';
-import { get, post } from './request';
+import { get, post } from '../request';
 import {
     RubricEventsResponse,
     ActualEventsResponse,
@@ -13,6 +13,7 @@ import {
     CreateOrderResponse,
     OrderResponse,
     UserInfo,
+    UserInfoResponse,
 } from './types';
 import { City } from './fragments/city';
 
@@ -76,12 +77,12 @@ export async function fetchCityInfo(options: GetCityInfoOptions): Promise<CityIn
 
     const nearestCity: City = citiesWithDistance.reduce<City>(
         (nearestCity, city) => {
-            if (city.distance < minDistance) {
-                minDistance = city.distance;
+            const { distance, ...restCity } = city;
 
-                delete city.distance;
+            if (distance < minDistance) {
+                minDistance = distance;
 
-                return city;
+                return restCity;
             }
 
             return nearestCity;
@@ -113,37 +114,60 @@ export function fetchRecommendedEvents(options?: GetEventsOptions) {
     return get<RecommendedEventsResponse>(API_HOST, '/api/recommended-events.json', options);
 }
 
-export type OrderData = {
+type OrderData = {
     eventId: string;
     amount: number;
 };
-export function createOrder(orderData: OrderData, jwtToken: string) {
-    return post<CreateOrderResponse>(PAYMENT_API_HOST, '/payment', {
-        headers: {
-            Authorization: jwtToken,
-        },
-        body: JSON.stringify(orderData),
-    });
-}
 
-export type OrderUserInfo = {
+type OrderUserInfo = {
     userInfo: UserInfo;
     paymentId: number;
     pushToken?: string;
 };
-export function saveUserInfo(orderUserInfo: OrderUserInfo, jwtToken: string) {
-    return post(PAYMENT_API_HOST, '/payment/user-info', {
-        headers: {
+
+type AuthOptions = {
+    jwtToken?: string;
+    oauthToken?: string;
+};
+
+function buildHeaders(authOptions: AuthOptions): Record<string, string> | undefined {
+    const { jwtToken, oauthToken } = authOptions;
+
+    if (jwtToken) {
+        return {
             Authorization: jwtToken,
-        },
-        body: JSON.stringify(orderUserInfo),
+        };
+    }
+
+    if (oauthToken) {
+        return {
+            Authorization: `OAuth ${oauthToken}`,
+        };
+    }
+}
+
+export function createOrder(orderData: OrderData, authOptions: AuthOptions) {
+    return post<CreateOrderResponse>(PAYMENT_API_HOST, '/payment', {
+        body: JSON.stringify(orderData),
+        headers: buildHeaders(authOptions),
     });
 }
 
-export function fetchOrdersHistory(jwtToken: string) {
+export function saveUserInfo(orderUserInfo: OrderUserInfo, authOptions: AuthOptions) {
+    return post(PAYMENT_API_HOST, '/payment/user-info', {
+        body: JSON.stringify(orderUserInfo),
+        headers: buildHeaders(authOptions),
+    });
+}
+
+export function fetchOrdersHistory(authOptions: AuthOptions) {
     return get<OrderResponse[]>(PAYMENT_API_HOST, '/payments', undefined, {
-        headers: {
-            Authorization: jwtToken,
-        },
+        headers: buildHeaders(authOptions),
+    });
+}
+
+export function fetchUserInfo(oauthToken: string) {
+    return get<UserInfoResponse>(PAYMENT_API_HOST, '/user-info', undefined, {
+        headers: buildHeaders({ oauthToken }),
     });
 }

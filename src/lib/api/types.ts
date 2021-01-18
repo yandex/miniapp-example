@@ -59,6 +59,7 @@ export type UserInfo = {
     name: string;
     email: string;
     phone: string;
+    address: string;
 };
 
 export type CreateOrderResponse = {
@@ -88,4 +89,14 @@ export type OrderResponse = {
         id: string;
         title: string;
     }
+}
+
+export type UserInfoResponse = {
+    uid: string;
+    login: string;
+    name?: string;
+    email?: string;
+    psuid?: string;
+    avatar_id?: string;
+    display_name?: string;
 }

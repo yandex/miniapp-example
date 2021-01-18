@@ -7,7 +7,7 @@ import MenuGeoLabel from '../MenuGeoLabel';
 
 import { RootState } from '../../redux';
 import { setVisible as setMenuVisible } from '../../redux/slices/menu';
-import { isAuthenticatedSelector, logout } from '../../redux/slices/user';
+import { psuidSelector, isAuthenticatedSelector, logout } from '../../redux/slices/user';
 
 import styles from './style.module.css';
 
@@ -18,7 +18,7 @@ const MenuModal: React.FC<{
 
     const { visible, items } = useSelector((state: RootState) => state.menu);
     const isAuthenticated = useSelector(isAuthenticatedSelector);
-    const { psuid } = useSelector((state: RootState) => state.user);
+    const psuid = useSelector(psuidSelector);
 
     const onClose = useCallback(() => {
         setCityModalVisibleCallback(false);
@@ -49,7 +49,7 @@ const MenuModal: React.FC<{
 
                 {isAuthenticated && (
                     <div className={styles.footer}>
-                        <p className={styles.psuid}>PSUID: {psuid}</p>
+                        {psuid && <p className={styles.psuid}>PSUID: {psuid}</p>}
                         <div className={styles.logout} onClick={onLogoutClick}>
                             Выйти
                         </div>

@@ -1,11 +1,7 @@
+import { YandexTransactionPushToken } from './js-api/push';
+import { YandexProfileData, YandexProfileField } from './js-api/autofill';
+import { YandexAuthInfo, YandexAuthPSUIDInfo, YandexAuthScope } from './js-api/auth';
 import { EcommerceItem, YMetrikaInitParams, YMetrikaVisitParams } from './metrika/types';
-import {
-    YandexAuthApiInfo,
-    YandexAuthInfo,
-    YandexAuthPSUIDInfo,
-    YandexAuthScope
-} from './account-manager';
-import { YandexTransactionPushToken } from './push-notification';
 
 declare global {
     interface Window {
@@ -19,20 +15,23 @@ declare global {
             cb?: () => void,
             ctx?: object
         ): void;
-        yandex: {
-            app: {
-                reportGoalReached: (goal: string, data: object) => Promise<void>;
-                auth: {
-                    identify: (clientId: string) => Promise<YandexAuthPSUIDInfo>;
-                    getCurrentUserId: (clientId: string) => Promise<YandexAuthPSUIDInfo | null>;
-                    authorize: (clientId: string, scopes?: YandexAuthScope[]) => Promise<YandexAuthApiInfo>;
-                    updateUserInfo: (authToken: string) => Promise<YandexAuthInfo>;
-                },
-                push: {
-                    getPushTokenForTransaction: (paymentToken: string) => Promise<YandexTransactionPushToken | null>
-                }
+        dataLayer: Array<EcommerceItem>;
+        yandex?: {
+            app?: {
+                auth?: {
+                    identify?: (clientId: string) => Promise<YandexAuthPSUIDInfo>;
+                    authorize?: (clientId: string, scopes?: Array<YandexAuthScope>) => Promise<YandexAuthInfo>;
+                    updateUserInfo?: (authToken: string) => Promise<YandexAuthInfo>;
+                    getCurrentUserId?: (clientId: string) => Promise<YandexAuthPSUIDInfo | null>;
+                };
+                push?: {
+                    getPushTokenForTransaction?: (paymentToken: string) => Promise<YandexTransactionPushToken | null>;
+                };
+                reportGoalReached?: (goal: string, data: object) => Promise<void>;
             };
-        }
-        dataLayer: EcommerceItem[];
+            autofill?: {
+                getProfileData?: (profileFields: Array<YandexProfileField>) => Promise<YandexProfileData>;
+            };
+        };
     }
 }

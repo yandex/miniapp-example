@@ -88,7 +88,6 @@ const App: React.FC = () => {
     return (
         <>
             <Navigator />
-
             <MenuModal setCityModalVisibleCallback={setCityModalVisibleCallback} />
             <CityModal setCityModalVisibleCallback={setCityModalVisibleCallback} visible={cityModalVisible} />
         </>
