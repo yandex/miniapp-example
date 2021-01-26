@@ -1,0 +1,2 @@
+(this["webpackJsonpminiapp-example"]=this["webpackJsonpminiapp-example"]||[]).push([[8],{348:function(e,t,n){"use strict";n.r(t);var a=n(0),i=n.n(a),r=n(341);t.default=function(e){var t=e.point,n=Object(a.useMemo)((function(){return{center:t,zoom:15}}),[t]);return i.a.createElement(r.c,null,i.a.createElement(r.a,{width:"100%",height:"100%",defaultState:n},i.a.createElement(r.b,{geometry:t})))}}}]);
+//# sourceMappingURL=ya-map-modal.f755c1d6.chunk.js.map
