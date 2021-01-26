@@ -76,17 +76,21 @@ const user = createSlice({
 
 export const { authenticated, authorized, logout } = user.actions;
 
+const jwtTokenSelector = (state: RootState) => state.user.persist.jwtToken;
+const oauthTokenSelector = (state: RootState) => state.user.persist.oauthToken;
 const loggedOutPsuidSelector = (state: RootState) => state.user.persist.loggedOutPsuid;
 const isSessionLoggedOutSelector = (state: RootState) => Boolean(state.user.nonpersist.isSessionLoggedOut);
 export const userSelector = (state: RootState) => state.user.persist.currentUser;
 export const psuidSelector = (state: RootState) => state.user.persist.psuid;
-export const jwtTokenSelector = (state: RootState) => state.user.persist.jwtToken;
-export const oauthTokenSelector = (state: RootState) => state.user.persist.oauthToken;
 export const isAuthorizedSelector = (state: RootState) => Boolean(state.user.persist.currentUser.uid);
-export const isAuthenticatedSelector = createSelector(
+export const authOptionsSelector = createSelector(
     jwtTokenSelector,
     oauthTokenSelector,
-    (jwtToken, oauthSelector) => Boolean(jwtToken ?? oauthSelector)
+    (jwtToken, oauthToken) => ({ jwtToken, oauthToken })
+);
+export const isAuthenticatedSelector = createSelector(
+    authOptionsSelector,
+    authOptions => Boolean(authOptions.jwtToken ?? authOptions.oauthToken)
 );
 
 const SCOPES = [YandexAuthScope.Avatar, YandexAuthScope.Info, YandexAuthScope.Email];

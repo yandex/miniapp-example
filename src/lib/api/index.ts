@@ -115,8 +115,9 @@ export function fetchRecommendedEvents(options?: GetEventsOptions) {
 }
 
 type OrderData = {
-    eventId: string;
     amount: number;
+    eventId: string;
+    deliveryId?: string;
 };
 
 type OrderUserInfo = {
@@ -125,7 +126,7 @@ type OrderUserInfo = {
     pushToken?: string;
 };
 
-type AuthOptions = {
+export type AuthOptions = {
     jwtToken?: string;
     oauthToken?: string;
 };

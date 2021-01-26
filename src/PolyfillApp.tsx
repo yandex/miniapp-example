@@ -8,10 +8,6 @@ if (!('IntersectionObserver' in window)) {
     // @ts-ignore
     polyfillPromises.push(import('intersection-observer'));
 }
-if (!('fetch' in window)) {
-    // @ts-ignore
-    polyfillPromises.push(import('whatwg-fetch'));
-}
 
 const PolyfillApp: React.FC = () => {
     const [canRender, setCanRender] = useState(Boolean(!polyfillPromises.length));

@@ -1,3 +1,4 @@
+import { AppErrorCode } from '../error';
 import { callJsApi } from './utils';
 
 export async function reportGoalReached(goal: string, params: object): Promise<void> {
@@ -9,6 +10,12 @@ export async function reportGoalReached(goal: string, params: object): Promise<v
             method: 'reportGoalReached',
         });
     } catch (err) {
+        const { code } = err;
+
+        if (code === AppErrorCode.JsApiMethodNotAvailable) {
+            return;
+        }
+
         console.error(err);
     }
 }

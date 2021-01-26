@@ -1,18 +1,31 @@
-import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSelector, createSlice, PayloadAction, nanoid } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 
-import { AppThunk, RootState } from '../index';
-import { cleanup } from '../actions';
-import { getPersistConfig, getTransformUIPersistance } from '../helpers/persist';
-import { getPushTokenForTransaction, YandexPushTokenForTransaction } from '../../lib/js-api/push';
-import { fetchOrdersHistory, createOrder as createOrderAPI, saveUserInfo as saveUserInfoAPI } from '../../lib/api';
 import { Event } from '../../lib/api/fragments/event';
-import { CreateOrderResponse, OrderResponse, UserInfo } from '../../lib/api/types';
-import { MetrikaGoals, MetrikaOrderParams, reachGoal, reportGoalReached } from '../../lib/metrika';
-import { logProductAdd, logProductPurchase } from '../../lib/metrika/ecommerce';
-import { processNativePayment } from '../../lib/payment';
+import { cleanup } from '../actions';
 import { AppErrorCode } from '../../lib/error';
-import { authenticate, jwtTokenSelector, oauthTokenSelector } from './user';
+import { processNativePayment } from '../../lib/payment';
+import { logProductAdd, logProductPurchase } from '../../lib/metrika/ecommerce';
+import { getPersistConfig, getTransformUIPersistance } from '../helpers/persist';
+import { CreateOrderResponse, OrderResponse, UserInfo } from '../../lib/api/types';
+import { logOrderInitiated, logOrderCompleted, logOrderError } from '../../lib/metrika/event';
+import { getPushTokenForTransaction, YandexPushTokenForTransaction } from '../../lib/js-api/push';
+import {
+    AuthOptions,
+    fetchOrdersHistory,
+    createOrder as createOrderAPI,
+    saveUserInfo as saveUserInfoAPI,
+} from '../../lib/api';
+import {
+    createCheckoutRequest,
+    getCheckoutTotalAmount,
+    getCheckoutPaymentOptions,
+    getSelectedShippingOption,
+    getSelectedShippingAddress,
+    isCheckoutRequestAvailable,
+} from '../../lib/checkout';
+import { authenticate, authOptionsSelector } from './user';
+import { AppThunk, RootState } from '..';
 
 export type Order = {
     data: {
@@ -109,19 +122,16 @@ export const ordersLoadingSelector = createSelector(
 );
 
 export const fetchOrders = (): AppThunk => async(dispatch, getState) => {
-    const state = getState();
+    const authOptions = authOptionsSelector(getState());
 
-    const jwtToken = jwtTokenSelector(state);
-    const oauthToken = oauthTokenSelector(state);
-
-    if (!jwtToken && !oauthToken) {
+    if (!authOptions.jwtToken && !authOptions.oauthToken) {
         return;
     }
 
     dispatch(fetchStart());
 
     try {
-        const orders = await fetchOrdersHistory({ jwtToken, oauthToken });
+        const orders = await fetchOrdersHistory(authOptions);
         dispatch(fetchSuccess(orders));
     } catch (err) {
         console.error(err);
@@ -134,10 +144,11 @@ export const createOrder = (
     onOrderCreated: () => void = () => {},
     retry: boolean = true
 ): AppThunk => async(dispatch, getState) => {
-    const state = getState();
+    if (isCheckoutRequestAvailable) {
+        return dispatch(buyTicketByCheckout(event));
+    }
 
-    const jwtToken = jwtTokenSelector(state);
-    const oauthToken = oauthTokenSelector(state);
+    const authOptions = authOptionsSelector(getState());
 
     dispatch(orderCreationStart());
 
@@ -149,20 +160,10 @@ export const createOrder = (
                 eventId: event.id,
                 amount: 1,
             },
-            {
-                jwtToken,
-                oauthToken,
-            }
+            authOptions
         );
 
-        const metrikaParams = {
-            order_id: response.id,
-            price: response.cost,
-            price_without_discount: response.cost,
-        };
-
-        reachGoal(MetrikaGoals.OrderInitiated, metrikaParams);
-        reportGoalReached(MetrikaGoals.OrderInitiated, metrikaParams);
+        await logOrderInitiated(response);
 
         dispatch(orderCreationSuccess(response));
 
@@ -182,8 +183,7 @@ export const buyTicket = (event: Event, userInfo: UserInfo): AppThunk => async(
 ) => {
     const state = getState();
 
-    const jwtToken = jwtTokenSelector(state);
-    const oauthToken = oauthTokenSelector(state);
+    const authOptions = authOptionsSelector(state);
     const activeOrder = activeOrderSelector(state);
 
     dispatch(paymentStart());
@@ -199,36 +199,23 @@ export const buyTicket = (event: Event, userInfo: UserInfo): AppThunk => async(
 
     logProductAdd(event);
 
-    const metrikaParams: MetrikaOrderParams = {
-        order_id: activeOrder.id,
-        price: activeOrder.cost,
-        price_without_discount: activeOrder.cost,
-    };
-
     try {
-        await processNativePayment(activeOrder, userInfo);
+        await processPayment(activeOrder, userInfo);
+        await saveUserInfo(activeOrder, userInfo, authOptions);
 
-        const { pushToken } = (await fetchPushToken(activeOrder.paymentToken)) ?? {};
-        saveUserInfoAPI({ userInfo, paymentId: activeOrder.id, pushToken }, { jwtToken, oauthToken })
-            .catch((error: Error) => console.error(error));
-
-        reachGoal(MetrikaGoals.OrderCompleted, metrikaParams);
-        reportGoalReached(MetrikaGoals.OrderCompleted, metrikaParams);
+        await logOrderCompleted(activeOrder);
         logProductPurchase(event, activeOrder.id);
 
         dispatch(checkoutEnd());
     } catch (err) {
         const { code } = err;
 
-        reachGoal(MetrikaGoals.OrderError, metrikaParams);
+        logOrderError(activeOrder);
 
         switch (code) {
             case AppErrorCode.JsApiCancelled:
             case AppErrorCode.JsApiAlreadyShown:
                 return;
-            case AppErrorCode.JsApiMethodNotAvailable:
-                console.warn(err);
-                return alert('Платежи не поддерживаются в текущей версии браузера');
             default:
                 console.error(err);
                 alert('Произошла ошибка при покупке билета. Попробуйте ещё раз');
@@ -238,6 +225,101 @@ export const buyTicket = (event: Event, userInfo: UserInfo): AppThunk => async(
         dispatch(fetchOrders());
     }
 };
+
+export function buyTicketByCheckout(event: Event): AppThunk {
+    return async(dispatch, getState) => {
+        const orderId = nanoid();
+        const authOptions = authOptionsSelector(getState());
+
+        let response: CreateOrderResponse;
+
+        try {
+            const checkoutRequest = createCheckoutRequest(orderId, event);
+
+            checkoutRequest.addEventListener('shippingOptionChange', checkoutEvent => {
+                const shippingOption = getSelectedShippingOption(orderId, checkoutEvent.checkoutState);
+
+                if (shippingOption) {
+                    const total = getCheckoutTotalAmount(shippingOption.id, event);
+
+                    return checkoutEvent.updateWith({ total });
+                }
+            });
+
+            checkoutRequest.addEventListener('paymentStart', checkoutEvent => {
+                const getCheckoutUpdateDetails = async() => {
+                    const shippingOption = getSelectedShippingOption(orderId, checkoutEvent.checkoutState);
+
+                    try {
+                        response = await createOrderAPI(
+                            {
+                                amount: 1,
+                                eventId: event.id,
+                                deliveryId: shippingOption?.id,
+                            },
+                            authOptions
+                        );
+
+                        await logOrderInitiated(response);
+
+                        return {
+                            paymentOptions: getCheckoutPaymentOptions(response.paymentToken),
+                        };
+                    } catch (err) {
+                        console.error(err);
+
+                        return {
+                            validationErrors: {
+                                error: 'Ошибка оплаты. Не удалось получить токен оплаты. Попробуйте снова',
+                            },
+                        };
+                    }
+                };
+
+                checkoutEvent.updateWith(getCheckoutUpdateDetails());
+            });
+
+            logProductAdd(event);
+
+            const checkoutState = await checkoutRequest.show();
+            const { rawAddress: address = '' } = getSelectedShippingAddress(orderId, checkoutState) ?? {};
+            const { name = '', phone = '', email = '' } = checkoutState.payerDetails ?? {};
+
+            response = response!;
+
+            await saveUserInfo(response, { name, phone, email, address }, authOptions);
+
+            await logOrderCompleted(response);
+            logProductPurchase(event, response.id);
+        } catch (err) {
+            const { name } = err;
+
+            if (name === 'AbortError') {
+                return;
+            }
+
+            console.error(err);
+            alert('Произошла ошибка при покупке билета. Попробуйте ещё раз');
+        } finally {
+            dispatch(fetchOrders());
+        }
+    };
+}
+
+async function processPayment(response: CreateOrderResponse, userInfo: UserInfo) {
+    try {
+        await processNativePayment(response, userInfo);
+    } catch (err) {
+        const { code } = err;
+
+        switch (code) {
+            case AppErrorCode.JsApiMethodNotAvailable:
+                return;
+            default:
+                throw err;
+        }
+    }
+}
 
 async function fetchPushToken(paymentToken: string) {
     let pushToken: YandexPushTokenForTransaction | null = null;
@@ -249,6 +331,17 @@ async function fetchPushToken(paymentToken: string) {
     }
 
     return pushToken;
+}
+
+async function saveUserInfo(response: CreateOrderResponse, userInfo: UserInfo, authOptions: AuthOptions) {
+    const { pushToken } = (await fetchPushToken(response.paymentToken)) ?? {};
+    const { id: paymentId } = response;
+
+    try {
+        saveUserInfoAPI({ userInfo, paymentId, pushToken }, authOptions);
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 const persistConfig = getPersistConfig<Order>('order', {
